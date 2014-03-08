@@ -28,7 +28,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 @Mod(name = Strings.MOD_NAME, modid = Strings.MOD_ID, version = "1.0.0a")
 public class TechliumCraft {
 	
-	@Instance("tcgg")
+	@Instance("techliumcraft")
 	public static TechliumCraft instance;
 	
 	@SidedProxy(clientSide = "kkaylium.TechliumCraft.proxy.ClientProxy", serverSide = "kkaylium.TechliumCraft.proxy.CommonProxy")

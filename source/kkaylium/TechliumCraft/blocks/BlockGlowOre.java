@@ -89,7 +89,8 @@ public class BlockGlowOre extends Block{
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister){
+	@Override
+    public void registerBlockIcons(IIconRegister iconRegister){
             this.icons = new IIcon[oreNames.length];
             
             for(int i = 0; i < this.icons.length; i++) {

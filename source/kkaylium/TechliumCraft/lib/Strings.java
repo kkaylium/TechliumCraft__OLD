@@ -6,8 +6,8 @@ public class Strings {
 
 	public static final String MOD_NAME = "TechliumCraft + GlowGlass";
 	public static final String MOD_ID = "techliumcraft";
-	public static final ResourceLocation INFUSERL1 = new ResourceLocation("tcgg:textures/models/Infuser/InfuserL1OBJ.obj");
-	public static final ResourceLocation INFUSERL1_TEXTURE = new ResourceLocation("tcgg:textures/models/Infuser/InfuserL1.png");
+	public static final ResourceLocation INFUSERL1 = new ResourceLocation("techliumcraft:textures/models/Infuser/InfuserL1OBJ.obj");
+	public static final ResourceLocation INFUSERL1_TEXTURE = new ResourceLocation("techliumcraft:textures/models/Infuser/InfuserL1.png");
 	
 	public static String GLOW_DIRT_NAME = "Glow Dirt";
 		public static String GLOW_DIRT_KEY = "glowDirt";

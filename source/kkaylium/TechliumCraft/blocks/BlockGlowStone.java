@@ -63,7 +63,8 @@ public class BlockGlowStone extends Block{
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister iconRegister){
+	@Override
+    public void registerBlockIcons(IIconRegister iconRegister){
             this.icons = new IIcon[stoneNames.length];
             
             for(int i = 0; i < this.icons.length; i++) {
