@@ -1,8 +1,8 @@
-package kkaylium.TechliumCraft.blocks;
+package Old;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.gen.glowLand.GlowLandTeleporter;
+import kkaylium.TechliumCraft.gen.glowLandOLD.GlowLandTeleporter;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.lib.Reference;
 import kkaylium.TechliumCraft.lib.Strings;

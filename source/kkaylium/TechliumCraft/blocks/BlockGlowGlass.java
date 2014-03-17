@@ -24,7 +24,7 @@ public class BlockGlowGlass extends BlockContainer{
 	@SideOnly(Side.CLIENT)
 	private IIcon[] textures = new IIcon[13];
 	public String[] iconNames = new String[] { "GGWhite", "GGBlack", "GGRed", "GGOrange", "GGYellow", "GGLime", "GGGreen", "GGSky", "GGBlue", "GGLilac", "GGPurple", "GGPink", "GGSpecial", "GGBase" };
-
+	
 	public BlockGlowGlass() {
 		super(Material.glass);
 		this.setCreativeTab(TechliumCraft.GGTab);
@@ -43,7 +43,7 @@ public class BlockGlowGlass extends BlockContainer{
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
-                    if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals))
+                    if (player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 13)))
                     {
                         ((TileEntityGlowGlass) t).getCrystalUsed(player.inventory.getCurrentItem().getItemDamage());
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);

@@ -29,7 +29,7 @@ public class BlockGlowDirt extends Block{
 	
 	public BlockGlowDirt() {
 		super(Material.ground);
-		this.lightValue = 5;
+		this.setLightLevel(0.5F);
 		this.setCreativeTab(TechliumCraft.GGTab);
 		this.setBlockTextureName("glowDirt");
 		this.setHardness(2.0F);

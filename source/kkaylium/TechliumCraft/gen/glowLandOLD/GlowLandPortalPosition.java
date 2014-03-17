@@ -1,4 +1,4 @@
-package kkaylium.TechliumCraft.gen.glowLand;
+package kkaylium.TechliumCraft.gen.glowLandOLD;
 
 import net.minecraft.util.ChunkCoordinates;
 

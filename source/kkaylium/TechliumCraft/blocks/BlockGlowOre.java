@@ -91,7 +91,7 @@ public class BlockGlowOre extends Block{
 	@SideOnly(Side.CLIENT)
 	@Override
     public void registerBlockIcons(IIconRegister iconRegister){
-            this.icons = new IIcon[oreNames.length];
+            //this.icons = new IIcon[oreNames.length];
             
             for(int i = 0; i < this.icons.length; i++) {
                     this.icons[i] = iconRegister.registerIcon(Strings.MOD_ID + ":" + this.getTextureName() + oreNames[i]);

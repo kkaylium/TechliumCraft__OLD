@@ -39,7 +39,7 @@ public class ItemGlowCrystals extends Item{
 		StringBuilder unlocalizedName = new StringBuilder();
         int meta = MathHelper.clamp_int(itemstack.getItemDamage(), 0, 12);
         
-      //  unlocalizedName.append("item.");
+        unlocalizedName.append("item.");
         unlocalizedName.append(Strings.MOD_ID + ":");
         unlocalizedName.append("GC");
         unlocalizedName.append(crystalNames[meta]);

@@ -1,4 +1,4 @@
-package kkaylium.TechliumCraft.gen.glowLand;
+package kkaylium.TechliumCraft.gen.glowLandOLD;
 
 import kkaylium.TechliumCraft.inits.BiomesInit;
 import kkaylium.TechliumCraft.lib.Reference;

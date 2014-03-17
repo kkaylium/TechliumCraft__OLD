@@ -2,3 +2,6 @@ itemGroup.Glow Glass = Glow Glass
 itemGroup.TechliumCraft = TechliumCraft
 
 entity.RainbowSlime.name = Rainbow Slime
+item.techliumcraft:GCWhite.name = Glow Crystal: White
+item.techliumcraft:GCBlack.name = Glow Crystal: Black
+item.techliumcraft:GCRed.name = Glow Crystal: Red

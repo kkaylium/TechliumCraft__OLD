@@ -1,4 +1,4 @@
-package kkaylium.TechliumCraft.gen.glowLand;
+package kkaylium.TechliumCraft.gen.glowLandOLD;
 
 import java.util.List;
 import java.util.Random;

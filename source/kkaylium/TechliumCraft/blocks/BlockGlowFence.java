@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
@@ -41,7 +42,7 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
 		super(par2String, Material.glass);
 		this.field_94464_a = par2String;
 		this.setCreativeTab(TechliumCraft.GGTab);
-		this.lightValue = 10;
+		this.setLightLevel(0.5F);
 		this.setHardness(4.0F);
 		this.setResistance(10.0F);
 	}
@@ -67,11 +68,11 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
-                    if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals))
+                    if ((player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 13))))
                     {
                         ((TileEntityGlowFence) t).getCrystalUsed(player.inventory.getCurrentItem().getItemDamage());
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
-                        this.lightValue = 10;
+                        this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
                         return true;
                     }
@@ -224,17 +225,8 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
 	@Override
 	public boolean canConnectFenceTo(IBlockAccess par1BlockAccess, int par2, int par3, int par4)
 	{
-		//Block l = par1BlockAccess.getBlock(par2, par3, par4);
-
-//		if(l != this && l != Blocks.fence_gate && l != BlocksInit.glowFence)
-//		{
-//			Block block = Block.blocksList[l];
-//			return block != null && block.blockMaterial.isOpaque() && block.renderAsNormalBlock() ? block.blockMaterial != Material.pumpkin : false;
-//		}
-//	    else
-//		{
-			return true;
-		//}
+	    Block block = par1BlockAccess.getBlock(par2, par3, par4);
+	    return block != this && block != Blocks.fence_gate ? block.isOpaqueCube() && block.renderAsNormalBlock() : true;   
 	}
 	
 	@SideOnly(Side.CLIENT)

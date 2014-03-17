@@ -1,4 +1,4 @@
-package kkaylium.TechliumCraft.gen.glowLand.biomes;
+package kkaylium.TechliumCraft.gen.glowLandOLD.biomes;
 
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import net.minecraft.block.material.Material;

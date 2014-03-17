@@ -2,14 +2,13 @@ package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.blocks.BlockGlowBlock;
 import kkaylium.TechliumCraft.blocks.BlockGlowDirt;
+import kkaylium.TechliumCraft.blocks.BlockGlowDoor;
 import kkaylium.TechliumCraft.blocks.BlockGlowFence;
 import kkaylium.TechliumCraft.blocks.BlockGlowGlass;
-import kkaylium.TechliumCraft.blocks.BlockGlowLandPortal;
 import kkaylium.TechliumCraft.blocks.BlockGlowLeaves;
 import kkaylium.TechliumCraft.blocks.BlockGlowLog;
 import kkaylium.TechliumCraft.blocks.BlockGlowOre;
 import kkaylium.TechliumCraft.blocks.BlockGlowPlanks;
-import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowDirt;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
@@ -83,8 +82,8 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowGlass, Strings.GLOW_GLASS_KEY);
 		glowFence = new BlockGlowFence(Strings.GLOW_FENCE_KEY).setBlockName(Strings.GLOW_FENCE_KEY);
 			GameRegistry.registerBlock(glowFence, Strings.GLOW_FENCE_KEY);
-//		glowDoor = new BlockGlowFence(BlockIds.GLOW_DOOR_ID, Strings.GLOW_DOOR_KEY).setBlockName(Strings.GLOW_DOOR_ITEM_KEY);
-//			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
+		glowDoor = new BlockGlowDoor().setBlockName(Strings.GLOW_DOOR_ITEM_KEY);
+			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
 			
 		infuserT1 = new BlockInfuserT1().setBlockName("infuserT1");
 			GameRegistry.registerBlock(infuserT1, "infuserL1");

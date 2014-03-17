@@ -2,8 +2,6 @@ package kkaylium.TechliumCraft.blocks;
 
 import java.util.Random;
 
-import javax.swing.Icon;
-
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
@@ -55,7 +53,7 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	  {
 	   return this.blockIcon;
 	  }
-	  int meta = getFullMetadata(par1IBlockAccess, par2, par3, par4);
+	  int meta = func_150012_g(par1IBlockAccess, par2, par3, par4);
 	  boolean flag = (meta & 4) != 0;
 	  int halfMeta = meta & 3;
 	  boolean flipped = false;
@@ -140,7 +138,7 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
 	    {
 
-		int i1 = this.getFullMetadata(par1World, par2, par3, par4);
+		int i1 = this.func_150012_g(par1World, par2, par3, par4);
         int j1 = i1 & 7;
         j1 ^= 4;
 
@@ -186,11 +184,11 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	  @Override
 	  public boolean shouldSideBeRendered(IBlockAccess iBlockAccess, int x, int y, int z, int s) 
 	  {
-	        if(s==0 && iBlockAccess.getBlockId(x, y-1, z) == blockID)
+	        if(s==0 && iBlockAccess.getBlock(x, y-1, z) == this)
 	        {
 	            return false;
 	        }
-	        else if(s==1 && iBlockAccess.getBlockId(x, y+1, z) == blockID)
+	        else if(s==1 && iBlockAccess.getBlock(x, y+1, z) == this)
 	        {
 	            return false;
 	        }
