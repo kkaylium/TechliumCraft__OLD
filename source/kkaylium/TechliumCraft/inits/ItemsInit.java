@@ -1,9 +1,6 @@
 package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.items.ItemGlowCrystals;
-import kkaylium.TechliumCraft.items.ItemGlowDoor;
-import kkaylium.TechliumCraft.items.ItemGlowSticks;
-import kkaylium.TechliumCraft.lib.ItemIds;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;

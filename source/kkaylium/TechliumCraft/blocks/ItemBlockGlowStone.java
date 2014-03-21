@@ -26,7 +26,7 @@ public class ItemBlockGlowStone extends ItemBlock{
 		unlocalizedName.append("item.");
 		unlocalizedName.append(Strings.MOD_ID + ":");
 		unlocalizedName.append("glowStone");
-		unlocalizedName.append(BlockGlowDirt.dirtNames[meta]);
+		unlocalizedName.append(BlockGlowStone.stoneNames[meta]);
 		
 		return unlocalizedName.toString();
 	}

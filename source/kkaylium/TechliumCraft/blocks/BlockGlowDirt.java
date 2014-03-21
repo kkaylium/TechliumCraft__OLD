@@ -32,7 +32,7 @@ public class BlockGlowDirt extends Block{
 		this.setLightLevel(0.5F);
 		this.setCreativeTab(TechliumCraft.GGTab);
 		this.setBlockTextureName("glowDirt");
-		this.setHardness(2.0F);
+		this.setHardness(0.8F);
 		this.setResistance(10.0F);
 		this.setStepSound(soundTypeGrass);
 	}

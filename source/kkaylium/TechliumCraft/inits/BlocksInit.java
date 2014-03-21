@@ -1,5 +1,6 @@
 package kkaylium.TechliumCraft.inits;
 
+import kkaylium.TechliumCraft.blocks.BlockDarkBlock;
 import kkaylium.TechliumCraft.blocks.BlockGlowBlock;
 import kkaylium.TechliumCraft.blocks.BlockGlowDirt;
 import kkaylium.TechliumCraft.blocks.BlockGlowDoor;
@@ -16,8 +17,8 @@ import kkaylium.TechliumCraft.blocks.ItemBlockGlowStone;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyFlowing;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyStill;
 import kkaylium.TechliumCraft.blocks.machines.BlockInfuserT1;
-import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.lib.Strings;
+import kkaylium.TechliumCraft.tileentities.TileEntityDarkBlock;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
@@ -49,6 +50,8 @@ public class BlocksInit {
 	public static Block glowFence;
 	public static Block glowGate;
 	public static Block glowDoor;
+	
+	public static Block darkBlock;
 	
 	public static Block infuserT1;
 	
@@ -84,6 +87,9 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowFence, Strings.GLOW_FENCE_KEY);
 		glowDoor = new BlockGlowDoor().setBlockName(Strings.GLOW_DOOR_ITEM_KEY);
 			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
+			
+		darkBlock = new BlockDarkBlock().setBlockName("hi");
+			GameRegistry.registerBlock(darkBlock, "hi");
 			
 		infuserT1 = new BlockInfuserT1().setBlockName("infuserT1");
 			GameRegistry.registerBlock(infuserT1, "infuserL1");
@@ -147,6 +153,8 @@ public class BlocksInit {
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_FENCE_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_DOOR_KEY);
 		GameRegistry.registerTileEntity(TileEntityInfuserT1.class, "TileEntityInfuserT1");
+		
+		GameRegistry.registerTileEntity(TileEntityDarkBlock.class, "TEDark");
 	}
 
 }

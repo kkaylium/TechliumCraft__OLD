@@ -26,7 +26,7 @@ public class BlockGlowStone extends Block{
 		this.lightValue = 10;
 		this.setCreativeTab(TechliumCraft.GGTab);
 		this.setBlockTextureName("glowStone");
-		this.setHardness(4.0F);
+		this.setHardness(3.0F);
 		this.setResistance(10.0F);
 		this.setStepSound(soundTypeStone);
 	}

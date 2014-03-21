@@ -5,16 +5,13 @@ import java.util.Random;
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowDoor;
 import net.minecraft.block.BlockDoor;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.IconFlipped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
@@ -28,7 +25,7 @@ import cpw.mods.fml.relauncher.SideOnly;
  * @version 1.0.1a
  *
  */
-public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
+public class BlockGlowDoor extends BlockDoor{
 
 	@SideOnly(Side.CLIENT)
 	public IIcon[] topDoorIcons = new IIcon[13];
@@ -41,7 +38,7 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	public BlockGlowDoor() {
 		super(Material.glass);
 		this.setCreativeTab(TechliumCraft.GGTab);
-		this.lightValue = 10;
+		this.setLightLevel(1.0F);
 		float f = 0.5F;
 		float f1 = 1.0F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);
@@ -74,12 +71,12 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	    if ((meta & 16) != 0)flipped = !flipped;
 	    }
 	  
-	  TileEntity t = par1IBlockAccess.getTileEntity(par2, par3, par4);
-      if (t instanceof TileEntityGlowDoor)
-      {
-          if (((TileEntityGlowDoor)t).color <= 13) return (meta & 8) != 0 ? topDoorIcons[((TileEntityGlowDoor)t).color] : textures[((TileEntityGlowDoor)t).color];
-          else return this.blockIcon;
-      }
+//	  TileEntity t = par1IBlockAccess.getTileEntity(par2, par3, par4);
+//      if (t instanceof TileEntityGlowDoor)
+//      {
+//          if (((TileEntityGlowDoor)t).color <= 13) return (meta & 8) != 0 ? topDoorIcons[((TileEntityGlowDoor)t).color] : textures[((TileEntityGlowDoor)t).color];
+//          else return this.blockIcon;
+//      }
 
 	  if (flipped) return flippedIcons[(meta & 8) != 0 ? 1 : 0];
 	  else return (meta & 8) != 0 ? this.topDoorIcon : this.blockIcon;
@@ -154,30 +151,31 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
         }
 
         par1World.playAuxSFXAtEntity(par5EntityPlayer, 1003, par2, par3, par4, 0);
+		return true;
 
-        if (!par1World.isRemote)
-        {
-            TileEntity t = par1World.getTileEntity(par2, par3, par4);
-            if (t instanceof TileEntityGlowDoor && ((TileEntityGlowDoor)t).color == 14)
-            {
-                if (par5EntityPlayer.inventory.getCurrentItem() != null)
-                {
-                    if (par5EntityPlayer.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals))
-                    {
-                        ((TileEntityGlowDoor)t).getCrystalUsed(par5EntityPlayer.inventory.getCurrentItem().getItemDamage());
-                        par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
-                        this.setLightLevel(1.0F);
-                        par5EntityPlayer.inventory.getCurrentItem().stackSize--;
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+//        if (!par1World.isRemote)
+//        {
+//            TileEntity t = par1World.getTileEntity(par2, par3, par4);
+//            if (t instanceof TileEntityGlowDoor && ((TileEntityGlowDoor)t).color == 14)
+//            {
+//                if (par5EntityPlayer.inventory.getCurrentItem() != null)
+//                {
+//                    if (par5EntityPlayer.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals))
+//                    {
+//                        ((TileEntityGlowDoor)t).getCrystalUsed(par5EntityPlayer.inventory.getCurrentItem().getItemDamage());
+//                        par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
+//                        this.setLightLevel(1.0F);
+//                        par5EntityPlayer.inventory.getCurrentItem().stackSize--;
+//                        return true;
+//                    }
+//                }
+//            }
+//            return false;
+//        }
+//        else
+//        {
+//            return true;
+//        }
 	    }
 
 	  @SideOnly(Side.CLIENT)
@@ -195,9 +193,10 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 
 	        return super.shouldSideBeRendered(iBlockAccess, x,y,z,s);
 	    }
+	  
 
-	@Override
-	public TileEntity createNewTileEntity(World world, int i) {
-		return new TileEntityGlowDoor();
-	}
+//	@Override
+//	public TileEntity createNewTileEntity(World world, int i) {
+//		return new TileEntityGlowDoor();
+//	}
 }

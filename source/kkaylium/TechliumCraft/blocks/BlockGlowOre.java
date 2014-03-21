@@ -25,7 +25,7 @@ public class BlockGlowOre extends Block{
 		super(Material.rock);
 		this.setBlockTextureName("GO");
 		this.setCreativeTab(TechliumCraft.GGTab);
-		this.setLightLevel(0.39F);
+		this.setLightLevel(0.5F);
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
 		this.setStepSound(soundTypeStone);

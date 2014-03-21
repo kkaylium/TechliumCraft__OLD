@@ -2,14 +2,12 @@ package kkaylium.TechliumCraft;
 
 import kkaylium.TechliumCraft.creativetabs.GGTab;
 import kkaylium.TechliumCraft.creativetabs.TCTab;
+import kkaylium.TechliumCraft.gen.OverworldBiomeOreGen;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
-import kkaylium.TechliumCraft.mobs.entities.EntityRainbowSlime;
 import kkaylium.TechliumCraft.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,7 +15,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
  * 
@@ -45,7 +43,6 @@ public class TechliumCraft {
 		
 		//TCBasicRecipes.initBasicRecipes();
 		
-		//GameRegistry.registerWorldGenerator(new OverworldBiomeOreGen(), 3);
 		//MinecraftForge.EVENT_BUS.register(new EventClass());
 	}
 	
@@ -64,6 +61,8 @@ public class TechliumCraft {
 		BlocksInit.blocksInit();
 		BlocksInit.registerTileEntities();
 		ItemsInit.initItems();
+		
+		GameRegistry.registerWorldGenerator(new OverworldBiomeOreGen(), 3);
 		
 //		proxy.registerRenderInformation();
 //		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
