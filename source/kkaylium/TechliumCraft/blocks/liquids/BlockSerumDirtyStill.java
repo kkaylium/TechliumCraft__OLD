@@ -14,6 +14,7 @@ public class BlockSerumDirtyStill extends BlockStaticLiquid{
 
 	public BlockSerumDirtyStill(Material par2Material) {
 		super(par2Material);
+		//this.setCreativeTab(TechliumCraft.GGTab);
 		this.disableStats();
 		this.setHardness(100.0F);
 		this.setLightOpacity(3);

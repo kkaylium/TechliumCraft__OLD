@@ -22,7 +22,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * @author kkaylium
  * @version 1.0.1a
  *
- */
+ */	
 @Mod(name = Strings.MOD_NAME, modid = Strings.MOD_ID, version = "1.0.0a")
 public class TechliumCraft {
 	
@@ -30,7 +30,7 @@ public class TechliumCraft {
 	public static TechliumCraft instance;
 	
 	@SidedProxy(clientSide = "kkaylium.TechliumCraft.proxy.ClientProxy", serverSide = "kkaylium.TechliumCraft.proxy.CommonProxy")
-	public static CommonProxy proxy;
+public static CommonProxy proxy;
 	
 	public static CreativeTabs GGTab = new GGTab(CreativeTabs.getNextID(), "Glow Glass");
 	public static CreativeTabs TCTab = new TCTab(CreativeTabs.getNextID(), "Techlium Craft");
@@ -38,9 +38,9 @@ public class TechliumCraft {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		
+		  
 		//MinecraftForge.EVENT_BUS.register(new DropRainbowCrystals());
-		
+		   
 		//TCBasicRecipes.initBasicRecipes();
 		
 		//MinecraftForge.EVENT_BUS.register(new EventClass());
