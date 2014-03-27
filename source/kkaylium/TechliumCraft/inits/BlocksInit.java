@@ -10,6 +10,7 @@ import kkaylium.TechliumCraft.blocks.BlockGlowLeaves;
 import kkaylium.TechliumCraft.blocks.BlockGlowLog;
 import kkaylium.TechliumCraft.blocks.BlockGlowOre;
 import kkaylium.TechliumCraft.blocks.BlockGlowPlanks;
+import kkaylium.TechliumCraft.blocks.BlockGlowPortal;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowDirt;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
@@ -86,6 +87,9 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowFence, Strings.GLOW_FENCE_KEY);
 		glowDoor = new BlockGlowDoor().setBlockName(Strings.GLOW_DOOR_ITEM_KEY);
 			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
+			
+		glowLandPortal = new BlockGlowPortal();
+			GameRegistry.registerBlock(glowLandPortal, "Glow Portal Block");
 			
 		darkBlock = new BlockDarkBlock().setBlockName("hi");
 			GameRegistry.registerBlock(darkBlock, "hi");

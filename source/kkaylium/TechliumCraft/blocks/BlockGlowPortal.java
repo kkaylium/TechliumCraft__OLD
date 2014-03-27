@@ -2,6 +2,7 @@ package kkaylium.TechliumCraft.blocks;
 
 import java.util.Random;
 
+import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.gen.glowLandOLD.GlowLandTeleporter;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.lib.Reference;
@@ -28,7 +29,7 @@ public class BlockGlowPortal extends BlockBreakable{
             this.setHardness(-1.0F);
             this.setStepSound(soundTypeGlass);
             this.setLightLevel(0.75F);
-            this.setCreativeTab(CreativeTabs.tabBlock);
+            this.setCreativeTab(TechliumCraft.GGTab);
     }
 	
     public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
