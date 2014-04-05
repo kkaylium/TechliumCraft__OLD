@@ -13,7 +13,7 @@ public class TileEntityGlowGlass extends TileEntity{
 
     public TileEntityGlowGlass()
     {
-        color = 14;
+        color = 12;
     }
 
     @Override
@@ -28,8 +28,8 @@ public class TileEntityGlowGlass extends TileEntity{
 
     public int getCrystalUsed(int cc)
     {
-        if (cc <= 13) color = cc;
-        else color = 14;
+        if (cc <= 12) color = cc;
+        else color = 12;
         isDirty = true;
         return color;
     }

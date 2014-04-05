@@ -81,7 +81,7 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowPlanks, Strings.GLOW_PLANKS_KEY);
 		glowBlock = new BlockGlowBlock().setBlockName(Strings.GLOW_BLOCK_KEY);
 			GameRegistry.registerBlock(glowBlock, Strings.GLOW_BLOCK_KEY);
-		glowGlass = new BlockGlowGlass().setBlockName(Strings.GLOW_GLASS_KEY);
+		glowGlass = new BlockGlowGlass("glass", false).setBlockName(Strings.GLOW_GLASS_KEY).setBlockTextureName(Strings.MOD_ID + ":GlowGlass");
 			GameRegistry.registerBlock(glowGlass, Strings.GLOW_GLASS_KEY);
 		glowFence = new BlockGlowFence(Strings.GLOW_FENCE_KEY).setBlockName(Strings.GLOW_FENCE_KEY);
 			GameRegistry.registerBlock(glowFence, Strings.GLOW_FENCE_KEY);

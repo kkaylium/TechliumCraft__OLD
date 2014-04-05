@@ -6,6 +6,7 @@ import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
@@ -28,8 +29,8 @@ public class BlockGlowBlock extends BlockContainer
 {
 
     @SideOnly(Side.CLIENT)
-    private IIcon[] textures = new IIcon[13];
-    public String[] iconNames = new String[] {"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial", "GBBase"};
+    private IIcon[] textures = new IIcon[12];
+    public int[] iconColor = new int[]{0xFFFFFF, 0x363638, 0xB81A1A, 0xF0760C, 0xF2D94B, 0x21ED2F, 0x097A25, 0x4CECF5, 0x0010C4, 0xC977FC, 0x6F05B0, 0xFF57C4, 0xEBF2FA};
 
     public BlockGlowBlock()
     {
@@ -39,6 +40,18 @@ public class BlockGlowBlock extends BlockContainer
         this.setResistance(10.0F);
         this.setLightLevel(0.5F);
     }
+    
+    @SideOnly(Side.CLIENT)
+    public int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
+    {
+    	int color = 12;
+    	TileEntityGlowBlock tile = (TileEntityGlowBlock) p_149720_1_.getTileEntity(p_149720_2_, p_149720_3_, p_149720_4_);
+    	if (tile != null)
+    	{
+    		color = tile.color;
+    	}
+   		return iconColor[color];
+    }
 
     @Override
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9)
@@ -46,7 +59,7 @@ public class BlockGlowBlock extends BlockContainer
         if (!par1World.isRemote)
         {
             TileEntity t = par1World.getTileEntity(par2, par3, par4);
-            if (t instanceof TileEntityGlowBlock && ((TileEntityGlowBlock)t).color == 14)
+            if (t instanceof TileEntityGlowBlock && ((TileEntityGlowBlock)t).color == 12)
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
@@ -56,6 +69,7 @@ public class BlockGlowBlock extends BlockContainer
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
                         this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
+                        par1World.markBlockForUpdate(par2, par3, par4);
                         return true;
                     }
                 }
@@ -68,38 +82,35 @@ public class BlockGlowBlock extends BlockContainer
         }
     }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public IIcon getIcon(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
-    {
-    	TileEntity t = par1IBlockAccess.getTileEntity(par2, par3, par4);
-        if (t instanceof TileEntityGlowBlock)
-        {
-            if (((TileEntityGlowBlock)t).color <= 13) return textures[((TileEntityGlowBlock)t).color];
-            else return this.blockIcon;
-        }
-        else
-        {
-            return this.blockIcon;
-        }
-    }
+//    @Override
+//    @SideOnly(Side.CLIENT)
+//    public IIcon getIcon(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+//    {
+//    	TileEntity t = par1IBlockAccess.getTileEntity(par2, par3, par4);
+//        if (t instanceof TileEntityGlowBlock)
+//        {
+//            if (((TileEntityGlowBlock)t).color <= 11) 
+//            	return textures[((TileEntityGlowBlock)t).color];
+//            else return this.blockIcon;
+//        }
+//        else
+//        {
+//            return this.blockIcon;
+//        }
+//    }
     
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconregister)
     {
-    	for (int i = 0; i < textures.length; i++)
-        {
-            textures[i] = iconregister.registerIcon(Strings.MOD_ID + ":" + iconNames[i]);
-        }
-        blockIcon = iconregister.registerIcon(Strings.MOD_ID + ":GBBase");
+        blockIcon = iconregister.registerIcon(Strings.MOD_ID + ":GlowBlock");
     }
     
     @Override
     public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6){       
         TileEntity t = par1World.getTileEntity(par2, par3, par4);
         EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(ItemsInit.glowCrystals, 1, ((TileEntityGlowBlock)t).color));
-        if (t instanceof TileEntityGlowBlock && ((TileEntityGlowBlock)t).color != 14){
+        if (t instanceof TileEntityGlowBlock && ((TileEntityGlowBlock)t).color != 12){
         	par1World.spawnEntityInWorld(entityCrystal);
         }
         par1World.removeTileEntity(par2, par3, par4);

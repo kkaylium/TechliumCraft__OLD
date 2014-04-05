@@ -8,13 +8,13 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityGlowBlock extends TileEntity
 {
 
-    public int color; // 14 is base color
+    public int color; // 0 is base color
 
     public boolean isDirty = false;
 
     public TileEntityGlowBlock()
     {
-        color = 14;
+        color = 12;
     }
 
     @Override
@@ -29,8 +29,8 @@ public class TileEntityGlowBlock extends TileEntity
 
     public int getCrystalUsed(int cc)
     {
-        if (cc <= 13) color = cc;
-        else color = 14;
+        if (cc <= 12) color = cc;
+        else color = 12;
         isDirty = true;
         return color;
     }
