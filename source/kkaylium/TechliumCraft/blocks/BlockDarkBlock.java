@@ -1,7 +1,7 @@
 package kkaylium.TechliumCraft.blocks;
 
 import kkaylium.TechliumCraft.TechliumCraft;
-import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityDarkBlock;
 import net.minecraft.block.Block;
@@ -21,13 +21,12 @@ public class BlockDarkBlock extends Block implements ITileEntityProvider{
     private IIcon[] textures = new IIcon[13];
     public String[] iconNames = new String[] {"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial", "GBBase"};
 
-	
 	public BlockDarkBlock() {
 		super(Material.rock);
 		this.setCreativeTab(TechliumCraft.GGTab);
 		this.setHardness(5.0F);
         this.setResistance(10.0F);
-        this.setLightOpacity(0);
+        this.setLightOpacity(1000);
         this.setBlockTextureName(Strings.MOD_ID + ":DBBlack");
 	}
 
@@ -41,7 +40,7 @@ public class BlockDarkBlock extends Block implements ITileEntityProvider{
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
-                    if ((player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 13))))
+                    if ((player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 13))))
                     {
                         ((TileEntityDarkBlock) t).getCrystalUsed(player.inventory.getCurrentItem().getItemDamage());
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);                    
@@ -49,7 +48,7 @@ public class BlockDarkBlock extends Block implements ITileEntityProvider{
                         return true;
                     }
                 }
-            }
+            }         
             return false;
         }
         else
@@ -57,6 +56,16 @@ public class BlockDarkBlock extends Block implements ITileEntityProvider{
             return false;
         }
     }
+	
+	 @Override
+	    public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6){       
+	       // TileEntity t = par1World.getTileEntity(par2, par3, par4);
+	       // EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(TCInits.glowCrystals, 1, ((TileEntityGlowBlock)t).color));
+//	        if (t instanceof TileEntityDarkBlock && ((TileEntityDarkBlock)t).color != 12){
+//	        	par1World.spawnEntityInWorld(entityCrystal);
+//	        }
+	        par1World.removeTileEntity(par2, par3, par4);
+	    }
 	
 	@Override
 	public TileEntity createNewTileEntity(World var1, int var2) {

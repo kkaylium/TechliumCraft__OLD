@@ -1,7 +1,7 @@
 package kkaylium.TechliumCraft.handlers;
 
 import kkaylium.TechliumCraft.TechliumCraft;
-import kkaylium.TechliumCraft.gui.GuiInfuserLevelOne;
+import kkaylium.TechliumCraft.guis.GuiGlowFurnaceL1;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -25,7 +25,7 @@ public class GuiHandler implements IGuiHandler{
 		switch (ID)
 		{
 		case 0:
-			return new GuiInfuserLevelOne();
+			return new GuiGlowFurnaceL1();
 		default:
 			return null;
 		}

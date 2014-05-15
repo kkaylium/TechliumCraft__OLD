@@ -1,10 +1,10 @@
-package kkaylium.TechliumCraft.dimention.glowLand;
+package kkaylium.TechliumCraft.gen.dimention.glowLand;
 
 import java.util.List;
 import java.util.Random;
 
 import kkaylium.TechliumCraft.gen.glowLandOLD.gen.MapGenGlowCaves;
-import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.IProgressUpdate;
@@ -126,7 +126,7 @@ public class ChunkProviderGlowLand implements IChunkProvider{
 									 * Main filler block fill's all the
 									 * underground, replaces block stone
 									 **/
-									par3ArrayOfByte[j2 += short1] = (byte) BlocksInit.glowStone.blockID;//
+									par3ArrayOfByte[j2 += short1] = (byte) TCInits.glowStone.blockID;//
 								} else if (k1 * 8 + l1 < b2) {
 									par3ArrayOfByte[j2 += short1] = (byte) Block.waterStill.blockID;
 								} else {

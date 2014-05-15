@@ -4,4 +4,8 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGlowFurnace extends TileEntity{
 
+	public TileEntityGlowFurnace(){
+		
+	}
+		
 }

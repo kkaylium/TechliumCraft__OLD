@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import kkaylium.TechliumCraft.TechliumCraft;
+import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -40,16 +41,18 @@ public class BlockGlowOre extends Block{
 		}
 		return this.icons[meta];
 	}
+	
+	@Override
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    {
+    	switch(p_149650_3_){
+		case 0:
+			return TCInits.glowCrystals;
+		default:
+			return TCInits.glowCrystals;
+		}
+    }
 
-//	@Override
-//	public int idDropped(int par1, Random rand, int par3){
-//		switch(par3){
-//		case 0:
-//			return ItemsInit.glowCrystals.itemID;
-//		default:
-//			return ItemsInit.glowCrystals.itemID;
-//		}
-//	}
 	
 	@Override
 	public int damageDropped(int damage){

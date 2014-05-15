@@ -1,6 +1,7 @@
 package kkaylium.TechliumCraft.mobs.entities;
 
-import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.inits.TCInits;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,7 +20,7 @@ public class EntityRainbowSlime extends EntitySlime{
     public float prevSquishFactor;
 
     //The particle effect
-    String glowSlimeParticle = "iconcrack_" + ItemsInit.glowCrystals + "_11"; 
+    String glowSlimeParticle = "iconcrack_" + Strings.GLOW_CRYSTALS_KEY; 
     
     /** the time between each jump of the slime */
     private int slimeJumpDelay;
@@ -83,11 +84,11 @@ public class EntityRainbowSlime extends EntitySlime{
     /**
      * Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
      */
-    @Override
-    protected String getSlimeParticle()
-    {
-        return glowSlimeParticle;
-    }
+//    @Override
+//    protected String getSlimeParticle()
+//    {
+//        return glowSlimeParticle;
+//    }
 
     /**
      * Returns the name of the sound played when the slime jumps.
@@ -153,7 +154,7 @@ public class EntityRainbowSlime extends EntitySlime{
     protected void updateEntityActionState()
     {
         this.despawnEntity();
-        EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 0.5D);
+        EntityPlayer entityplayer = this.worldObj.getClosestVulnerablePlayerToEntity(this, 0.9D);
 
         if (entityplayer != null)
         {
@@ -222,7 +223,7 @@ public class EntityRainbowSlime extends EntitySlime{
         if (!this.worldObj.isRemote && i > 1 && this.getHealth() <= 0.0F)
         {
            // int j = 2 + this.rand.nextInt(3);
-        	int j = 1;
+        	int j = 2;
 
             for (int k = 0; k < j; ++k)
             {
@@ -307,13 +308,13 @@ public class EntityRainbowSlime extends EntitySlime{
     
     protected Item getDropItem()
     {
-        return (Item) (this.getSlimeSize() == 1 ? ItemsInit.glowCrystals.getDamage(new ItemStack(ItemsInit.glowCrystals)) : Item.getItemById(0));
+    	ItemStack crystal = new ItemStack(TCInits.glowCrystals, 0, 11);
+        return (Item) (this.getSlimeSize() == 1 ? TCInits.glowCrystals: null);
     }
 
       @Override
       public boolean getCanSpawnHere()
-      {
-    	  
+      {  	  
     	  return true;
       }
 //    @Override

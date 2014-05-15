@@ -17,7 +17,7 @@ public class ClientProxy extends CommonProxy {
 	public void registerRenderInformation()
 	{
 		super.registerRenderInformation();
-		//RenderingRegistry.registerEntityRenderingHandler(EntityRainbowSlime.class, new RenderRainbowSlime(ModelSlime(16), 0.5F));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityRainbowSlime.class, new RenderRainbowSlimes(new ModelSlime(16), 0.5F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityRainbowSlime.class, new RenderRainbowSlimes(new ModelRainbowSlime(16), new ModelRainbowSlime(0), 0.5F));
 	}
 }

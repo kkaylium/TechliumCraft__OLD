@@ -1,7 +1,7 @@
 package kkaylium.TechliumCraft.blocks;
 
 import kkaylium.TechliumCraft.TechliumCraft;
-import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
 import net.minecraft.block.Block;
@@ -43,9 +43,15 @@ public class BlockGlowGlass extends BlockContainer{
         this.setResistance(10.0F);
 	}
 	
-	public IIcon[] getIcons ()
+	@Override
+    public int getRenderBlockPass()
     {
-        return icons;
+        return renderPass;
+    }
+	
+	public IIcon getIcons ()
+    {
+        return icons[0];
     }
 	
     @SideOnly(Side.CLIENT)
@@ -70,7 +76,7 @@ public class BlockGlowGlass extends BlockContainer{
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
-                    if (player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 13)))
+                    if (player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 13)))
                     {
                         ((TileEntityGlowGlass) t).getCrystalUsed(player.inventory.getCurrentItem().getItemDamage());
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
@@ -114,20 +120,13 @@ public class BlockGlowGlass extends BlockContainer{
     @Override
     public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6){       
         TileEntity t = par1World.getTileEntity(par2, par3, par4);
-        EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(ItemsInit.glowCrystals, 1, ((TileEntityGlowGlass)t).color));
+        EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(TCInits.glowCrystals, 1, ((TileEntityGlowGlass)t).color));
         if (t instanceof TileEntityGlowGlass && ((TileEntityGlowGlass)t).color != 12){
         	par1World.spawnEntityInWorld(entityCrystal);
         }
         par1World.removeTileEntity(par2, par3, par4);
     }
 	
-	@SideOnly(Side.CLIENT)
-    @Override
-    public int getRenderBlockPass()
-    {
-        return 1;
-    }
-
     @Override
     public boolean isOpaqueCube()
     {

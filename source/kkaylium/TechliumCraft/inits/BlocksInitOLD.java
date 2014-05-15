@@ -36,7 +36,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  * @version 1.0.1a
  *
  */
-public class BlocksInit {
+public class BlocksInitOLD {
 
 	public static Block glowOres;
 	public static Block glowDirt;

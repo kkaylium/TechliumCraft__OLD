@@ -3,7 +3,7 @@ package kkaylium.TechliumCraft.gen;
 import java.util.LinkedList;
 import java.util.Random;
 
-import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
@@ -43,83 +43,83 @@ public class OverworldBiomeOreGen implements IWorldGenerator{
 		oreList = new LinkedList<OreInfo>();
 		OreInfo info;
 		
-		info = new OreInfo(60, 1, 12, 2, 2, BlocksInit.glowOres, 0, BiomeGenBase.extremeHills); //White
+		info = new OreInfo(60, 1, 12, 4, 10, TCInits.glowOres, 0, BiomeGenBase.extremeHills); //White
 		 oreList.add(info);
-		info = new OreInfo(60, 1, 12, 2, 2, BlocksInit.glowOres, 0, BiomeGenBase.extremeHillsEdge); //White
+		info = new OreInfo(60, 1, 12, 4, 10, TCInits.glowOres, 0, BiomeGenBase.extremeHillsEdge); //White
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 1, BiomeGenBase.extremeHills); //Black
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 1, BiomeGenBase.extremeHills); //Black
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 1, BiomeGenBase.extremeHillsEdge); //Black
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 1, BiomeGenBase.extremeHillsEdge); //Black
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 2, BiomeGenBase.desert); //Red
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 2, BiomeGenBase.desert); //Red
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 2, BiomeGenBase.desertHills); //Red
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 2, BiomeGenBase.desertHills); //Red
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 2, BiomeGenBase.beach); //Red
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 2, BiomeGenBase.beach); //Red
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 3, BiomeGenBase.desert); //Orange
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 3, BiomeGenBase.desert); //Orange
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 3, BiomeGenBase.desertHills); //Orange
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 3, BiomeGenBase.desertHills); //Orange
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 3, BiomeGenBase.beach); //Orange
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 3, BiomeGenBase.beach); //Orange
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 4, BiomeGenBase.desert); //Yellow
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 4, BiomeGenBase.desert); //Yellow
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 4, BiomeGenBase.desertHills); //Yellow
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 4, BiomeGenBase.desertHills); //Yellow
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 4, BiomeGenBase.beach); //Yellow
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 4, BiomeGenBase.beach); //Yellow
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 5, BiomeGenBase.jungle); //Lime
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 5, BiomeGenBase.jungle); //Lime
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 5, BiomeGenBase.jungleHills); //Lime
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 5, BiomeGenBase.jungleHills); //Lime
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 6, BiomeGenBase.forest); //Green
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 6, BiomeGenBase.forest); //Green
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 6, BiomeGenBase.forestHills); //Green
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 6, BiomeGenBase.forestHills); //Green
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 6, BiomeGenBase.swampland); //Green
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 6, BiomeGenBase.swampland); //Green
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 6, BiomeGenBase.taiga); //Green
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 6, BiomeGenBase.taiga); //Green
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 6, BiomeGenBase.taigaHills); //Green
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 6, BiomeGenBase.taigaHills); //Green
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.frozenOcean); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.frozenOcean); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.frozenRiver); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.frozenRiver); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.iceMountains); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.iceMountains); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.icePlains); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.icePlains); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.taiga); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.taiga); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 7, BiomeGenBase.taigaHills); //Sky
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 7, BiomeGenBase.taigaHills); //Sky
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.frozenOcean); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.frozenOcean); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.frozenRiver); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.frozenRiver); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.iceMountains); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.iceMountains); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.icePlains); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.icePlains); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.ocean); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.ocean); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 8, BiomeGenBase.river); //Blue
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 8, BiomeGenBase.river); //Blue
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 9, BiomeGenBase.plains); //Lilac
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 9, BiomeGenBase.plains); //Lilac
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 9, BiomeGenBase.forest); //Lilac
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 9, BiomeGenBase.forest); //Lilac
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 9, BiomeGenBase.forestHills); //Lilac
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 9, BiomeGenBase.forestHills); //Lilac
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 10, BiomeGenBase.plains); //Purple
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 10, BiomeGenBase.plains); //Purple
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 10, BiomeGenBase.forest); //Purple
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 10, BiomeGenBase.forest); //Purple
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 10, BiomeGenBase.forestHills); //Purple
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 10, BiomeGenBase.forestHills); //Purple
 		 oreList.add(info);
-		info = new OreInfo(40, 1, 12, 2, 2, BlocksInit.glowOres, 11, BiomeGenBase.plains); //Pink
+		info = new OreInfo(40, 1, 12, 4, 10, TCInits.glowOres, 11, BiomeGenBase.plains); //Pink
 		 oreList.add(info);
 	}
 	

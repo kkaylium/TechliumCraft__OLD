@@ -53,12 +53,15 @@ public class Strings {
 	public static String GLOW_DOOR_NAME = "Glow Door";
 		public static String GLOW_DOOR_KEY = "glowDoor";
 			public static String TE_GLOW_DOOR_KEY = "TileEntityGlowDoor";
-			
-	public static String SERUM_DIRTY_STILL_NAME = "Polluted Serum: Still";
-		public static String SERUM_DIRTY_STILL_KEY = "serumDirtyStill";
 	
-	public static String SERUM_DIRTY_FLOWING_NAME = "Polluted Serum";
-		public static String SERUM_DIRTY_FLOWING_KEY ="serumDirtyFlowing";
+	public static String DARK_BLOCK_NAME = "Dark Block";		
+		public static final String DARK_BLOCK_KEY = "darkBlock";
+		    public static final String TE_DARK_BLOCK_KEY = "TileEntityDarkBlock";
+	
+	//Liquids		
+	public static final String PLAIN_SERUM_KEY = "plainSerum";
+	
+	public static final String DILUTION_LIQUID_KEY = "dilutionLiquid";
 			
 	//Items
 	public static String GLOW_STICKS_NAME = "Glow Sticks";
@@ -69,5 +72,8 @@ public class Strings {
 		
 	public static String GLOW_DOOR_ITEM_NAME = "Glow Door";
 		public static String GLOW_DOOR_ITEM_KEY = "glowDoorItem";
+		
+	public static final String DARK_CRYSTALS_NAME = "Dark Crystal";	
+		public static final String DARK_CRYSTALS_KEY = "darkCrystal";
 	
 }

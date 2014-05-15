@@ -8,7 +8,6 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityDarkBlock extends TileEntity{
 	 	
 		public int color; // 14 is base color
-
 	    private boolean isDirty = false;
 
 	    public TileEntityDarkBlock()
@@ -23,7 +22,7 @@ public class TileEntityDarkBlock extends TileEntity{
 	        {
 	            isDirty = false;
 	            worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);   
-	        }
+	        }        
 	    }
 
 	    public int getCrystalUsed(int cc)

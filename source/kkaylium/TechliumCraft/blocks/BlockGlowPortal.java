@@ -4,12 +4,11 @@ import java.util.Random;
 
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.gen.glowLandOLD.GlowLandTeleporter;
-import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
@@ -137,7 +136,7 @@ public class BlockGlowPortal extends BlockBreakable{
                     {
                             for (i1 = 0; i1 < 3; ++i1)
                             {
-                                    par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, BlocksInit.glowLandPortal, 0, 2);
+                                    par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, TCInits.glowLandPortal, 0, 2);
                             }
                     }
                     return true;

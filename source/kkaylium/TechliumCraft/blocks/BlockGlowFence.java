@@ -3,7 +3,7 @@ package kkaylium.TechliumCraft.blocks;
 import java.util.List;
 
 import kkaylium.TechliumCraft.TechliumCraft;
-import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
 import net.minecraft.block.Block;
@@ -68,7 +68,7 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
             {
                 if (player.inventory.getCurrentItem() != null)
                 {
-                    if ((player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(ItemsInit.glowCrystals, 0, 13))))
+                    if ((player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 1)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 2)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 3)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 4)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 5)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 6)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 7)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 8)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 9)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 10)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 11)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 12)) || player.inventory.getCurrentItem().isItemEqual(new ItemStack(TCInits.glowCrystals, 0, 13))))
                     {
                         ((TileEntityGlowFence) t).getCrystalUsed(player.inventory.getCurrentItem().getItemDamage());
                         par1World.setBlockMetadataWithNotify(par2, par3, par4, 1, 3);
@@ -238,7 +238,7 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
     @Override
     public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6){       
         TileEntity t = par1World.getTileEntity(par2, par3, par4);
-        EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(ItemsInit.glowCrystals, 1, ((TileEntityGlowFence)t).color));
+        EntityItem entityCrystal = new EntityItem(par1World, (double)(par2), (double)(par3), (double)(par4), new ItemStack(TCInits.glowCrystals, 1, ((TileEntityGlowFence)t).color));
         if (t instanceof TileEntityGlowFence && ((TileEntityGlowFence)t).color != 14){
         	par1World.spawnEntityInWorld(entityCrystal);
         }

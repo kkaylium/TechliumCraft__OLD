@@ -1,5 +1,6 @@
 package kkaylium.TechliumCraft.creativetabs;
 
+import kkaylium.TechliumCraft.inits.TCInits;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -17,7 +18,7 @@ public class TCTab extends CreativeTabs{
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem()
 	{
-		return Items.glass_bottle;
+		return TCInits.darkCrystals;
 	}
 
 }
