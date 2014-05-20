@@ -2,6 +2,9 @@ itemGroup.Glow Glass=Glow Glass
 itemGroup.Techlium Craft=Techlium Craft
 
 entity.RainbowSlime.name=Rainbow Slime
+entity.RainbowTurtle.name=Rainbow Turtle
+entity.DarkTurtle.name=Dark Turtle
+
 item.techliumcraft:GCWhite.name=Glow Crystal: White
 item.techliumcraft:GCBlack.name=Glow Crystal: Black
 item.techliumcraft:GCRed.name=Glow Crystal: Red

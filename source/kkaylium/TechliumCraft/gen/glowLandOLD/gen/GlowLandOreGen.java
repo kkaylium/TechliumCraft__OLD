@@ -2,7 +2,7 @@ package kkaylium.TechliumCraft.gen.glowLandOLD.gen;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -46,14 +46,14 @@ public class GlowLandOreGen implements IWorldGenerator{
                     int xCoord = chunkX + random.nextInt(16);
                     int yCoord = random.nextInt(128);
                     int zCoord = chunkZ + random.nextInt(16);
-                    new GlowWorldGenMinable(BlocksInit.glowOres.blockID, 15).generate(world, random, xCoord, yCoord, zCoord);
+                    new GlowWorldGenMinable(TCInits.glowOres, 15).generate(world, random, xCoord, yCoord, zCoord);
             }
             for (int i = 0; i < 50; i++)
             {
                     int xCoord = chunkX + random.nextInt(16);
                     int yCoord = random.nextInt(128);
                     int zCoord = chunkZ + random.nextInt(16);
-                    new GlowWorldGenMinable(BlocksInit.glowOres.blockID, 15).generate(world, random, xCoord, yCoord, zCoord);
+                    new GlowWorldGenMinable(TCInits.glowOres, 15).generate(world, random, xCoord, yCoord, zCoord);
             }
     }
 	

@@ -11,7 +11,7 @@ public class GuiHandler implements IGuiHandler{
 
 	public GuiHandler()
 	{
-		NetworkRegistry.instance().registerGuiHandler(TechliumCraft.instance, this);
+		//NetworkRegistry.instance().registerGuiHandler(TechliumCraft.instance, this);
 	}
 	
 	@Override

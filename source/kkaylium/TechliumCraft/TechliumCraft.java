@@ -86,13 +86,13 @@ public class TechliumCraft {
 		
 		proxy.registerRenderInformation();
 		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
-        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 100, 300, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 2, 10, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Kkaylium says to tell you that TechliumCraft is now initialized");
-		logger.warning("Just Kidding! (What? why would you do that TechliumCraft?!)");
+		logger.warning("Just Kidding! (What? Why would you do that TechliumCraft?!)");
 	}
 
 }

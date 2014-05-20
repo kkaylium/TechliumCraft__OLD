@@ -2,13 +2,15 @@ package kkaylium.TechliumCraft.gen.glowLandOLD.gen;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.TCInits;
 import net.minecraft.block.Block;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class GlowWorldGenMinable extends WorldGenerator{
+
+    //TODO Rewrite this class as well
 
 	private int minableBlockId;
 	private int minableBlockMeta = 0;
@@ -17,8 +19,8 @@ public class GlowWorldGenMinable extends WorldGenerator{
 	private int numberOfBlocks;
 	private int field_94523_c;
 
-	public GlowWorldGenMinable(int par1, int par2) {
-		this(par1, par2, BlocksInit.glowStone.blockID);
+	public GlowWorldGenMinable(Block par1, int par2) {
+		//this(par1, par2, TCInits.glowStone);
 	}
 
 	public GlowWorldGenMinable(int par1, int par2, int par3) {
@@ -75,24 +77,24 @@ public class GlowWorldGenMinable extends WorldGenerator{
 					for (int l2 = j1; l2 <= i2; ++l2) {
 						double d13 = ((double) l2 + 0.5D - d7) / (d11 / 2.0D);
 
-						if (d12 * d12 + d13 * d13 < 1.0D) {
-							for (int i3 = k1; i3 <= j2; ++i3) {
-								double d14 = ((double) i3 + 0.5D - d8)
-										/ (d10 / 2.0D);
-
-								Block block = Block.blocksList[par1World
-										.getBlockId(k2, l2, i3)];
-								if (d12 * d12 + d13 * d13 + d14 * d14 < 1.0D
-										&& (block != null && block
-												.isGenMineableReplaceable(
-														par1World, k2, l2, i3,
-														field_94523_c))) {
-									par1World.setBlock(k2, l2, i3,
-											this.minableBlockId,
-											minableBlockMeta, 2);
-								}
-							}
-						}
+//						if (d12 * d12 + d13 * d13 < 1.0D) {
+//							for (int i3 = k1; i3 <= j2; ++i3) {
+//								double d14 = ((double) i3 + 0.5D - d8)
+//										/ (d10 / 2.0D);
+//
+//								Block block = Block.blocksList[par1World
+//										.getBlockId(k2, l2, i3)];
+//								if (d12 * d12 + d13 * d13 + d14 * d14 < 1.0D
+//										&& (block != null && block
+//												.isGenMineableReplaceable(
+//														par1World, k2, l2, i3,
+//														field_94523_c))) {
+//									par1World.setBlock(k2, l2, i3,
+//											this.minableBlockId,
+//											minableBlockMeta, 2);
+//								}
+//							}
+//						}
 					}
 				}
 			}
