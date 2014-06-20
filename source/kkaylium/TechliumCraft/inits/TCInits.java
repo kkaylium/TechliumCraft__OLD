@@ -21,8 +21,10 @@ public class TCInits {
 	
 	/**TechliumCraft Blocks**/
 	public static Block glowOres;
-	public static Block glowDirt;
+
+    public static Block glowDirt;
 	public static Block glowStone;
+
 	public static Block glowLog;
 	public static Block glowLeaves;
 	public static Block glowSapling;

@@ -55,6 +55,8 @@ public class TCRegisters {
 			GameRegistry.registerBlock(TCInits.glowDirt, ItemBlockGlowDirt.class, Strings.GLOW_DIRT_KEY);
 		TCInits.glowStone = new BlockGlowStone().setBlockName(Strings.GLOW_STONE_KEY);
 			GameRegistry.registerBlock(TCInits.glowStone, ItemBlockGlowStone.class, Strings.GLOW_STONE_KEY);
+
+
 		TCInits.glowLog = new BlockGlowLog().setBlockName(Strings.GLOW_LOG_KEY);
 			GameRegistry.registerBlock(TCInits.glowLog, Strings.GLOW_LOG_KEY);
 		TCInits.glowLeaves = new BlockGlowLeaves().setBlockName(Strings.GLOW_LEAVES_KEY);

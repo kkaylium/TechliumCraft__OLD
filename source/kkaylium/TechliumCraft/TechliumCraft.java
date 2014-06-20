@@ -2,19 +2,28 @@ package kkaylium.TechliumCraft;
 
 import java.util.logging.Logger;
 
+import kkaylium.TechliumCraft.blocks.DLPortalBlock;
 import kkaylium.TechliumCraft.creativetabs.GGTab;
 import kkaylium.TechliumCraft.creativetabs.TCTab;
 import kkaylium.TechliumCraft.gen.OverworldBiomeOreGen;
+import kkaylium.TechliumCraft.gen.dimention.darkLand.DLWorldProvider;
 import kkaylium.TechliumCraft.handlers.TCBucketHandler;
+import kkaylium.TechliumCraft.inits.BiomesInit;
 import kkaylium.TechliumCraft.inits.TCInits;
 import kkaylium.TechliumCraft.inits.TCRegisters;
+import kkaylium.TechliumCraft.lib.Misc;
+import kkaylium.TechliumCraft.lib.Reference;
 import kkaylium.TechliumCraft.lib.Strings;
+import kkaylium.TechliumCraft.mobs.darkSlimes.EntityDarkSlime;
 import kkaylium.TechliumCraft.mobs.entities.EntityRainbowSlime;
 import kkaylium.TechliumCraft.proxy.CommonProxy;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -50,10 +59,20 @@ public class TechliumCraft {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		TCBucketHandler.INSTANCE.buckets.put(TCInits.dilutionLiquid, TCInits.dilutionLiquidBucket);
-		MinecraftForge.EVENT_BUS.register(TCBucketHandler.INSTANCE);  
-		
-		TCRegisters.biomeRegisters();
-		BiomeDictionary.registerAllBiomesAndGenerateEvents();
+		MinecraftForge.EVENT_BUS.register(TCBucketHandler.INSTANCE);
+
+        Block portal = new DLPortalBlock();
+        GameRegistry.registerBlock(portal, "portal");
+        TCRegisters.itemRegisters();
+        TCRegisters.blockRegisters();
+        TCRegisters.liquidRegisters();
+        TCRegisters.machineRegisters();
+        TCRegisters.miscRegisters();
+
+        TCRegisters.tileentityRegisters();
+		//TCRegisters.biomeRegisters();
+        BiomesInit.biomesInit();
+		//BiomeDictionary.registerAllBiomesAndGenerateEvents();
 		
 		//MinecraftForge.EVENT_BUS.register(new DropRainbowCrystals());
 		   
@@ -64,35 +83,29 @@ public class TechliumCraft {
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
-		//BiomesInit.biomesInit();
 		
 		//GameRegistry.registerWorldGenerator(new OverworldTreeGenerator(), 5);
 		//GameRegistry.registerWorldGenerator(new GlowLandOreGen(), 4);
 		
-		//DimensionManager.registerProviderType(Reference.GLOW_LAND_dimensionId, WorldProviderGlowLand.class, true);
-		//DimensionManager.registerDimension(Reference.GLOW_LAND_dimensionId, Reference.GLOW_LAND_dimensionId);
+		DimensionManager.registerProviderType(Misc.DarkLandID, DLWorldProvider.class, true);
+		DimensionManager.registerDimension(Misc.DarkLandID, Misc.DarkLandID);
 		
 		//OreDictionary.registerOre(TCInits.glowOres.getUnlocalizedName(), new ItemStack(TCInits.glowCrystals));
 
-		TCRegisters.itemRegisters();
-		TCRegisters.blockRegisters();
-		TCRegisters.liquidRegisters();
-		TCRegisters.machineRegisters();
-		TCRegisters.miscRegisters();
-		
-		TCRegisters.tileentityRegisters();
+
 		
 		GameRegistry.registerWorldGenerator(new OverworldBiomeOreGen(), 3);
 		
 		proxy.registerRenderInformation();
 		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
-        EntityRegistry.addSpawn(EntityRainbowSlime.class, 20, 2, 10, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 30, 2, 10, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
+        EntityRegistry.registerModEntity(EntityDarkSlime.class, "DarkSlime", 3, this, 40, 3, true);
+        EntityRegistry.addSpawn(EntityDarkSlime.class, 30, 2, 10, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.desertHills);
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		logger.info("Kkaylium says to tell you that TechliumCraft is now initialized");
-		logger.warning("Just Kidding! (What? Why would you do that TechliumCraft?!)");
 	}
 
 }
