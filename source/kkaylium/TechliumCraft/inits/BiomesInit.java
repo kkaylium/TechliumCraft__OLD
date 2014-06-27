@@ -14,8 +14,8 @@ import net.minecraftforge.common.BiomeManager;
 
 public class BiomesInit {
 	
-	public static BiomeGenBase DarkBiomeBLUE = (new DLBiomeBlue(4)).setBiomeName("Bluebluebluebliebliehnlekjelaj");
-    public static final BiomeGenBase forestTest = (new BiomeGenForest(4, 0)).setColor(999999).setBiomeName("Superlongtestingnameheresoyoucanseeifitworkslol").setDisableRain().setTemperatureRainfall(5.0F, 5.0F);
+	public static BiomeGenBase DarkBiomeBLUE = (new DLBiomeBlue(41)).setBiomeName("Bluebluebluebliebliehnlekjelaj");
+    public static final BiomeGenBase forestTest = (new BiomeGenForest(40, 0)).setColor(999999).setBiomeName("Superlongtestingnameheresoyoucanseeifitworkslol").setDisableRain().setTemperatureRainfall(5.0F, 5.0F);
 
     public static void biomesInit(){
         BiomeManager.coolBiomes.add(new BiomeManager.BiomeEntry(forestTest, 10));
