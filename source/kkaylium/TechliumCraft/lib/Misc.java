@@ -7,6 +7,8 @@ public class Misc {
     public static final int DarkLandID = 15;
     public static final int GlowLandID = 16;
 
-	public static final BiomeGenBase.Height height_Default = new BiomeGenBase.Height(0.1F, 0.2F);
+    public static final int idBiomeDarkForest = 50;
+
+	public static final int glowfurnace_gui = 20;
 
 }
