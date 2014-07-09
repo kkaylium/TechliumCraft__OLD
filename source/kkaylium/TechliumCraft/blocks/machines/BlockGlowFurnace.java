@@ -53,12 +53,12 @@ public class BlockGlowFurnace extends BlockContainer implements IMachineBlock{
         }
     }
 
-    @Overide
-    public void breakBlock(World world, int x, int y, int z, Block block, int meta){
-        TileEntity te = world.getTileEntity(x, y, z);
-        if(te instanceof TileEntityGlowFurnace){
-            ((TileEntityGlowFurnace)te).dropContents();
-        }
-    }
+//    @Override
+//    public void breakBlock(World world, int x, int y, int z, Block block, int meta){
+//        TileEntity te = world.getTileEntity(x, y, z);
+//        if(te instanceof TileEntityGlowFurnace){
+//            ((TileEntityGlowFurnace)te).dropContents();
+//        }
+//    }
 
 }

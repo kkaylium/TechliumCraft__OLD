@@ -188,7 +188,8 @@ public class BlockGlowGlass extends BlockContainer{
         }
         else
         {
-            return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
+            //return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
+            return AxisAlignedBB.getBoundingBox(0D, 0D, 0D, 0D, 0D, 0D);
         }
     }
     

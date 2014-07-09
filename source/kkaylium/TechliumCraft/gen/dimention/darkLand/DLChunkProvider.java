@@ -69,7 +69,7 @@ public class DLChunkProvider implements IChunkProvider {
     /** Holds ravine generator */
     private MapGenBase ravineGenerator = new MapGenRavine();
     /** The biomes that are used to generate the chunk */
-    private BiomeGenBase[] biomesForGeneration = {BiomesInit.DarkBiomeBLUE, BiomesInit.forestTest};
+    private BiomeGenBase[] biomesForGeneration = {BiomesInit.DarkBiomeBLUE, BiomesInit.glowPlainsRED};
     double[] field_147427_d;
     double[] field_147428_e;
     double[] field_147425_f;
@@ -198,6 +198,7 @@ public class DLChunkProvider implements IChunkProvider {
 
     public void replaceBlocksForBiome(int p_147422_1_, int p_147422_2_, Block[] p_147422_3_, byte[] p_147422_4_, BiomeGenBase[] p_147422_5_)
     {
+        p_147422_5_ = biomesForGeneration;
         ChunkProviderEvent.ReplaceBiomeBlocks event = new ChunkProviderEvent.ReplaceBiomeBlocks(this, p_147422_1_, p_147422_2_, p_147422_3_, p_147422_4_, p_147422_5_);
         MinecraftForge.EVENT_BUS.post(event);
         if (event.getResult() == Event.Result.DENY) return;

@@ -378,12 +378,12 @@ public class TileEntityGlowFurnace extends TileEntity implements ISidedInventory
         return 0;
     }
 
-    public void dropContents()
-    {
-        for (ItemStack stack : inventory)
-        {
-            ItemHelper.spawnItemStackInWorld(stack, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-        }
-    }
+//    public void dropContents()
+//    {
+//        for (ItemStack stack : inventory)
+//        {
+//            ItemHelper.spawnItemStackInWorld(stack, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
+//        }
+//    }
 
 }

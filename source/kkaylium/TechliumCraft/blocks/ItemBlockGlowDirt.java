@@ -3,13 +3,14 @@ package kkaylium.TechliumCraft.blocks;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemBlockWithMetadata;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
-public class ItemBlockGlowDirt extends ItemBlock{
+public class ItemBlockGlowDirt extends ItemBlockWithMetadata{
 	
-	public ItemBlockGlowDirt(Block p_i45328_1_) {
-		super(p_i45328_1_);
+	public ItemBlockGlowDirt(Block par1) {
+		super(par1, par1);
 		this.setHasSubtypes(true);
 	}
 

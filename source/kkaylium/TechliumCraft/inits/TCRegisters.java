@@ -22,12 +22,7 @@ import kkaylium.TechliumCraft.items.ItemGlowSticks;
 import kkaylium.TechliumCraft.items.ItemSmallCrystal;
 import kkaylium.TechliumCraft.lib.Misc;
 import kkaylium.TechliumCraft.lib.Strings;
-import kkaylium.TechliumCraft.tileentities.TileEntityDarkBlock;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowDoor;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
+import kkaylium.TechliumCraft.tileentities.*;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.fluids.Fluid;
@@ -104,13 +99,15 @@ public class TCRegisters {
 		GameRegistry.registerTileEntity(TileEntityGlowPlanks.class, Strings.TE_GLOW_PLANKS_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_FENCE_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowDoor.class, Strings.TE_GLOW_DOOR_KEY);
+        GameRegistry.registerTileEntity(TileEntityGlowLog.class, "GlowLogTE");
+        GameRegistry.registerTileEntity(TileEntityGlowLeaves.class, "GlowLeavesTE");
 		
 		GameRegistry.registerTileEntity(TileEntityDarkBlock.class, Strings.TE_DARK_BLOCK_KEY);
 	}
 	
 	public static void biomeRegisters(){
-		TCInits.glowForest = new BiomeGenGlowForest(50).setColor(00000).setBiomeName("Glow Forest").setHeight(Misc.height_Default).setDisableRain();
-			BiomeManager.addSpawnBiome(TCInits.glowForest);
+//		TCInits.glowForest = new BiomeGenGlowForest(50).setColor(00000).setBiomeName("Glow Forest").setHeight(Misc.height_Default).setDisableRain();
+//			BiomeManager.addSpawnBiome(TCInits.glowForest);
 	}
 		
 	public static void miscRegisters(){
