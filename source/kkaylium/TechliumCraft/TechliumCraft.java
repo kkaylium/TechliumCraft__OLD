@@ -2,11 +2,9 @@ package kkaylium.TechliumCraft;
 
 import java.util.logging.Logger;
 
-import kkaylium.TechliumCraft.blocks.DLPortalBlock;
 import kkaylium.TechliumCraft.creativetabs.GGTab;
 import kkaylium.TechliumCraft.creativetabs.TCTab;
 import kkaylium.TechliumCraft.gen.OverworldBiomeOreGen;
-import kkaylium.TechliumCraft.gen.dimention.darkLand.DLWorldProvider;
 import kkaylium.TechliumCraft.handlers.TCBucketHandler;
 import kkaylium.TechliumCraft.inits.BiomesInit;
 import kkaylium.TechliumCraft.inits.TCInits;
@@ -61,8 +59,6 @@ public class TechliumCraft {
 		TCBucketHandler.INSTANCE.buckets.put(TCInits.dilutionLiquid, TCInits.dilutionLiquidBucket);
 		MinecraftForge.EVENT_BUS.register(TCBucketHandler.INSTANCE);
 
-        Block portal = new DLPortalBlock();
-        GameRegistry.registerBlock(portal, "portal");
         TCRegisters.itemRegisters();
         TCRegisters.blockRegisters();
         TCRegisters.liquidRegisters();
@@ -86,9 +82,8 @@ public class TechliumCraft {
 		
 		//GameRegistry.registerWorldGenerator(new OverworldTreeGenerator(), 5);
 		//GameRegistry.registerWorldGenerator(new GlowLandOreGen(), 4);
-		
-		DimensionManager.registerProviderType(Misc.DarkLandID, DLWorldProvider.class, true);
-		DimensionManager.registerDimension(Misc.DarkLandID, Misc.DarkLandID);
+
+		//DimensionManager.registerDimension(Misc.DarkLandID, Misc.DarkLandID);
 		
 		//OreDictionary.registerOre(TCInits.glowOres.getUnlocalizedName(), new ItemStack(TCInits.glowCrystals));
 
