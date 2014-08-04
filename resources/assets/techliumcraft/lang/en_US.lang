@@ -1,0 +1,41 @@
+itemGroup.Glow Glass=Glow Glass
+itemGroup.Techlium Craft=Techlium Craft
+
+item.glowcrystal0.name=Glow Crystal: White
+item.glowcrystal1.name=Glow Crystal: Black
+item.glowcrystal2.name=Glow Crystal: Red
+item.glowcrystal3.name=Glow Crystal: Orange
+item.glowcrystal4.name=Glow Crystal: Yellow
+item.glowcrystal5.name=Glow Crystal: Lime
+item.glowcrystal6.name=Glow Crystal: Green
+item.glowcrystal7.name=Glow Crystal: Sky
+item.glowcrystal8.name=Glow Crystal: Blue
+item.glowcrystal9.name=Glow Crystal: Lilac
+item.glowcrystal10.name=Glow Crystal: Purple
+item.glowcrystal11.name=Glow Crystal: Pink
+
+item.darkcrystal0.name=Dark Crystal: White
+item.darkcrystal1.name=Dark Crystal: Black
+item.darkcrystal2.name=Dark Crystal: Red
+item.darkcrystal3.name=Dark Crystal: Orange
+item.darkcrystal4.name=Dark Crystal: Yellow
+item.darkcrystal5.name=Dark Crystal: Lime
+item.darkcrystal6.name=Dark Crystal: Green
+item.darkcrystal7.name=Dark Crystal: Sky
+item.darkcrystal8.name=Dark Crystal: Blue
+item.darkcrystal9.name=Dark Crystal: Lilac
+item.darkcrystal10.name=Dark Crystal: Purple
+item.darkcrystal11.name=Dark Crystal: Pink
+
+tile.glowore0.name=Glow Ore: White
+tile.glowore1.name=Glow Ore: Black
+tile.glowore2.name=Glow Ore: Red
+tile.glowore3.name=Glow Ore: Orange
+tile.glowore4.name=Glow Ore: Yellow
+tile.glowore5.name=Glow Ore: Lime
+tile.glowore6.name=Glow Ore: Green
+tile.glowore7.name=Glow Ore: Sky
+tile.glowore8.name=Glow Ore: Blue
+tile.glowore9.name=Glow Ore: Lilac
+tile.glowore10.name=Glow Ore: Purple
+tile.glowore11.name=Glow Ore: Pink
