@@ -1,13 +1,11 @@
 package net.kkaylium.mods.TechliumCraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.kkaylium.mods.TechliumCraft.blocks.BlockDarkOre;
-import net.kkaylium.mods.TechliumCraft.blocks.BlockGlowBlock;
-import net.kkaylium.mods.TechliumCraft.blocks.BlockGlowOre;
+import net.kkaylium.mods.TechliumCraft.blocks.*;
 import net.kkaylium.mods.TechliumCraft.items.ItemDarkCrystal;
 import net.kkaylium.mods.TechliumCraft.items.ItemGlowCrystal;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowBlock;
+import net.kkaylium.mods.TechliumCraft.tileentities.*;
 
 /**
  * Created by Kayla Marie on 7/29/14.
@@ -97,7 +95,27 @@ public class TCRegisters {
 
         TCInits.glowBlock = new BlockGlowBlock();
             GameRegistry.registerBlock(TCInits.glowBlock, TCNames.glowBlockName);
+        TCInits.darkBlock = new BlockDarkBlock();
+            GameRegistry.registerBlock(TCInits.darkBlock, TCNames.darkBlockName);
 
+        TCInits.glowGlass = new BlockGlowGlass("glowglass", false);
+            GameRegistry.registerBlock(TCInits.glowGlass, TCNames.glowGlassName);
+        TCInits.darkGlass = new BlockDarkGlass("darkglass", false);
+            GameRegistry.registerBlock(TCInits.darkGlass, TCNames.darkGlassName);
+
+        TCInits.glowLeaves = new BlockGlowLeaves();
+            GameRegistry.registerBlock(TCInits.glowLeaves, TCNames.glowLeavesName);
+        TCInits.darkLeaves = new BlockDarkLeaves();
+            GameRegistry.registerBlock(TCInits.darkLeaves, TCNames.darkLeavesName);
+        TCInits.glowGenLeaves = new BlockGenLeaves(0);
+            GameRegistry.registerBlock(TCInits.glowGenLeaves, TCNames.glowGenLeavesName);
+        TCInits.darkGenLeaves = new BlockGenLeaves(1);
+            GameRegistry.registerBlock(TCInits.darkGenLeaves, TCNames.darkGenLeavesName);
+
+        TCInits.glowFence = new BlockGlowFence();
+            GameRegistry.registerBlock(TCInits.glowFence, TCNames.glowFenceName);
+        TCInits.darkFence = new BlockDarkFence();
+            GameRegistry.registerBlock(TCInits.darkFence, TCNames.darkFenceName);
     }
 
     public static void registerMachines(){
@@ -114,5 +132,13 @@ public class TCRegisters {
 
     public static void registerTileEntities(){
         GameRegistry.registerTileEntity(TEGlowBlock.class, TCNames.teGlowBlockId);
+        GameRegistry.registerTileEntity(TEDarkBlock.class, TCNames.teDarkBlockId);
+        GameRegistry.registerTileEntity(TEGlowGlass.class, TCNames.teGlowGlassId);
+        GameRegistry.registerTileEntity(TEDarkGlass.class, TCNames.teDarkGlassId);
+        GameRegistry.registerTileEntity(TEGlowLeaves.class, TCNames.teGlowLeavesId);
+        GameRegistry.registerTileEntity(TEDarkLeaves.class, TCNames.teDarkLeavesId);
+        GameRegistry.registerTileEntity(TEGenLeaves.class, TCNames.teGenLeavesId);
+        GameRegistry.registerTileEntity(TEGlowFence.class, TCNames.teGlowFenceId);
+        GameRegistry.registerTileEntity(TEDarkFence.class, TCNames.teDarkFenceId);
     }
 }

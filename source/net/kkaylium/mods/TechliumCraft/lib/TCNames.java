@@ -17,4 +17,22 @@ public class TCNames {
         public static String teGlowBlockId = "teglowblock";
     public static String darkBlockName = "darkblock";
         public static String teDarkBlockId = "tedarkblock";
+
+    public static String glowGlassName = "glowglass";
+        public static String teGlowGlassId = "teglowglass";
+    public static String darkGlassName = "darkglass";
+        public static String teDarkGlassId = "tedarkglass";
+
+    public static String glowLeavesName = "glowleaves";
+        public static String teGlowLeavesId = "teglowleaves";
+    public static String glowGenLeavesName = "glowgenleaves";
+    public static String darkLeavesName = "darkleaves";
+        public static String teDarkLeavesId = "tedarkleaves";
+    public static String darkGenLeavesName = "darkgenleaves";
+            public static String teGenLeavesId = "tegenleaves";
+
+    public static String glowFenceName = "glowfence";
+        public static String teGlowFenceId = "teglowfence";
+    public static String darkFenceName = "darkfence";
+        public static String teDarkFenceId = "tedarkfence";
 }

@@ -65,6 +65,7 @@ public class TCInits {
     public static Block glowPlanks;
     public static Block glowLog;
     public static Block glowLeaves;
+    public static Block glowGenLeaves;
 
     public static Block darkBlock;
     public static Block darkGlass;
@@ -72,4 +73,5 @@ public class TCInits {
     public static Block darkPlanks;
     public static Block darkLog;
     public static Block darkLeaves;
+    public static Block darkGenLeaves;
 }

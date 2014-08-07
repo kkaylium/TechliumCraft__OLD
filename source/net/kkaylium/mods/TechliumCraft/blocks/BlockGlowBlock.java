@@ -38,12 +38,12 @@ public class BlockGlowBlock extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconregister) {
-        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":GlowBlock");
+        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "glowBlock");
     }
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-        if(world.isRemote){
+        if(!world.isRemote){
             TileEntity te = world.getTileEntity(x, y, z);
             ItemStack item = player.inventory.getCurrentItem();
             if(te instanceof TEGlowBlock && ((TEGlowBlock) te).color == 12){
@@ -58,12 +58,10 @@ public class BlockGlowBlock extends BlockContainer {
                     }
                 }
             }
-            return true;
+            return false;
+        }else{
+            return false;
         }
-//        }else{
-//            return true;
-//        }
-        return true;
     }
 
     @SideOnly(Side.CLIENT)
@@ -177,6 +175,7 @@ public class BlockGlowBlock extends BlockContainer {
                     break;
             }
         }
+        world.removeTileEntity(x, y, z);
     }
 
     @Override
