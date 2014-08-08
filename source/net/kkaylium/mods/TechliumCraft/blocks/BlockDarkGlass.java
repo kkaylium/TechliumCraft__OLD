@@ -6,9 +6,7 @@ import net.kkaylium.mods.TechliumCraft.TechliumCraft;
 import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEDarkGlass;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowBlock;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowGlass;
+import net.kkaylium.mods.TechliumCraft.tileentities.TEDarkColor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -46,6 +44,7 @@ public class BlockDarkGlass extends BlockContainer {
         this.setLightLevel(0.5F);
         this.setHardness(0.6F);
         this.setResistance(10.0F);
+        this.setStepSound(soundTypeGlass);
     }
 
     @Override
@@ -60,7 +59,7 @@ public class BlockDarkGlass extends BlockContainer {
     @SideOnly(Side.CLIENT)
     public int colorMultiplier(IBlockAccess iBlockAccess, int x, int y, int z) {
         int crystalColor;
-        TEDarkGlass te = (TEDarkGlass) iBlockAccess.getTileEntity(x, y, z);
+        TEDarkColor te = (TEDarkColor) iBlockAccess.getTileEntity(x, y, z);
         switch(te.color){
             case 0:
                 crystalColor = te.color;
@@ -113,10 +112,10 @@ public class BlockDarkGlass extends BlockContainer {
         if (!world.isRemote) {
             TileEntity te = world.getTileEntity(x, y, z);
             ItemStack item = player.inventory.getCurrentItem();
-            if (te instanceof TEDarkGlass && ((TEDarkGlass) te).color == 12) {
+            if (te instanceof TEDarkColor && ((TEDarkColor) te).color == 12) {
                 if (item != null) {
                     if (item.isItemEqual(new ItemStack(TCInits.darkCrystal_WHITE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLACK)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_RED)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_ORANGE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_YELLOW)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LIME)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_GREEN)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_SKY)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLUE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LILAC)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PURPLE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PINK))) {
-                        ((TEDarkGlass) te).setColor(item.getItem());
+                        ((TEDarkColor) te).setColor(item.getItem());
                         world.setBlockMetadataWithNotify(x, y, z, 1, 0);
                         this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
@@ -157,8 +156,8 @@ public class BlockDarkGlass extends BlockContainer {
     public void breakBlock(World world, int x, int y, int z, Block block, int par6) {
         TileEntity te = world.getTileEntity(x, y, z);
         EntityItem entityCrystal;
-        if (te instanceof TEDarkGlass && ((TEDarkGlass) te).color != 12) {
-            switch (((TEDarkGlass) te).color) {
+        if (te instanceof TEDarkColor && ((TEDarkColor) te).color != 12) {
+            switch (((TEDarkColor) te).color) {
                 case 0:
                     entityCrystal = new EntityItem(world, (double) (x), (double) (y), (double) (z), new ItemStack(TCInits.glowCrystal_WHITE));
                     world.spawnEntityInWorld(entityCrystal);
@@ -241,7 +240,7 @@ public class BlockDarkGlass extends BlockContainer {
 
     @Override
     public TileEntity createNewTileEntity(World world, int par2) {
-        return new TEDarkGlass();
+        return new TEDarkColor();
     }
 
     public boolean shouldConnectToBlock(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, Block par5, int par6) {

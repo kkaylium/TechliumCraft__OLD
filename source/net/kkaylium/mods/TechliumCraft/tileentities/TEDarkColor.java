@@ -8,15 +8,14 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 /**
- * Created by Kayla Marie on 8/5/14.
+ * Created by Kayla Marie on 8/7/14.
  */
-public class TEGlowFence extends TileEntity {
-
+public class TEDarkColor extends TileEntity {
 
     private boolean dirty = false;
     public int color; //12 is uncolored
 
-    public TEGlowFence(){
+    public TEDarkColor(){
         color = 12;
     }
 
@@ -30,29 +29,29 @@ public class TEGlowFence extends TileEntity {
     }
 
     public int setColor(Item crystal){
-        if(crystal == TCInits.glowCrystal_WHITE){
+        if(crystal == TCInits.darkCrystal_WHITE){
             color = 0;
-        }else if(crystal == TCInits.glowCrystal_BLACK){
+        }else if(crystal == TCInits.darkCrystal_BLACK){
             color = 1;
-        }else if(crystal == TCInits.glowCrystal_RED){
+        }else if(crystal == TCInits.darkCrystal_RED){
             color = 2;
-        }else if(crystal == TCInits.glowCrystal_ORANGE){
+        }else if(crystal == TCInits.darkCrystal_ORANGE){
             color = 3;
-        }else if(crystal == TCInits.glowCrystal_YELLOW){
+        }else if(crystal == TCInits.darkCrystal_YELLOW){
             color = 4;
-        }else if(crystal == TCInits.glowCrystal_LIME){
+        }else if(crystal == TCInits.darkCrystal_LIME){
             color = 5;
-        }else if(crystal == TCInits.glowCrystal_GREEN){
+        }else if(crystal == TCInits.darkCrystal_GREEN){
             color = 6;
-        }else if(crystal == TCInits.glowCrystal_SKY){
+        }else if(crystal == TCInits.darkCrystal_SKY){
             color = 7;
-        }else if(crystal == TCInits.glowCrystal_BLUE){
+        }else if(crystal == TCInits.darkCrystal_BLUE){
             color = 8;
-        }else if(crystal == TCInits.glowCrystal_LILAC){
+        }else if(crystal == TCInits.darkCrystal_LILAC){
             color = 9;
-        }else if(crystal == TCInits.glowCrystal_PURPLE){
+        }else if(crystal == TCInits.darkCrystal_PURPLE){
             color = 10;
-        }else if(crystal == TCInits.glowCrystal_PINK){
+        }else if(crystal == TCInits.darkCrystal_PINK){
             color = 11;
         }else{
             color = 12;

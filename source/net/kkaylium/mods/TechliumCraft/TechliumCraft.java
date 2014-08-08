@@ -11,6 +11,7 @@ import net.kkaylium.mods.TechliumCraft.creativetabs.GlowGlassTab;
 import net.kkaylium.mods.TechliumCraft.creativetabs.TechliumCraftTab;
 import net.kkaylium.mods.TechliumCraft.gen.OverworldOreGen;
 import net.kkaylium.mods.TechliumCraft.init.TCRegisters;
+import net.kkaylium.mods.TechliumCraft.init.recipes.TCRecipes;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityDarkSlime;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityDarkTurtle;
@@ -53,7 +54,6 @@ public class TechliumCraft {
 
     @Mod.EventHandler
     public void load(FMLInitializationEvent event) {
-        //TODO Fix biome type specific ore generation!
         GameRegistry.registerWorldGenerator(new OverworldOreGen(), 3);
 
         proxy.registerRenderInformation();
@@ -67,6 +67,7 @@ public class TechliumCraft {
         EntityRegistry.registerModEntity(EntityDarkTurtle.class, "DarkTurtle", 5, this, 20, 3, true);
         EntityRegistry.addSpawn(EntityDarkTurtle.class, 5, 2, 3, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.desertHills);
 
+        TCRecipes.initRecipes();
     }
 
     @Mod.EventHandler

@@ -37,7 +37,7 @@ public class TCInits {
     public static Item glowSlime_RAINBOW;
 
     public static Item darkSlime_RAINBOW;
-    public static Item darkCrystal_DARK;
+    public static Item darkCrystal_RAW;
 
     public static Item glowStick;
 
@@ -62,7 +62,7 @@ public class TCInits {
     public static Block glowBlock;
     public static Block glowGlass;
     public static Block glowFence;
-    public static Block glowPlanks;
+    public static Block glowPlank;
     public static Block glowLog;
     public static Block glowLeaves;
     public static Block glowGenLeaves;
@@ -70,7 +70,7 @@ public class TCInits {
     public static Block darkBlock;
     public static Block darkGlass;
     public static Block darkFence;
-    public static Block darkPlanks;
+    public static Block darkPlank;
     public static Block darkLog;
     public static Block darkLeaves;
     public static Block darkGenLeaves;

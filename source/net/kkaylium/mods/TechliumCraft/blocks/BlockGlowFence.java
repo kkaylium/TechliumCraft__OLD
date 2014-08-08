@@ -6,8 +6,7 @@ import net.kkaylium.mods.TechliumCraft.TechliumCraft;
 import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowBlock;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowFence;
+import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowColor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.ITileEntityProvider;
@@ -36,6 +35,8 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
         super(TCNames.glowFenceName, Material.glass);
         this.setCreativeTab(TechliumCraft.GGTab);
         this.setBlockName(TCNames.glowFenceName);
+        this.setHardness(1.6F);
+        this.setStepSound(soundTypeGlass);
     }
 
     @Override
@@ -49,10 +50,10 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
         if(!world.isRemote){
             TileEntity te = world.getTileEntity(x, y, z);
             ItemStack item = player.inventory.getCurrentItem();
-            if(te instanceof TEGlowFence && ((TEGlowFence) te).color == 12){
+            if(te instanceof TEGlowColor && ((TEGlowColor) te).color == 12){
                 if(item != null){
                     if(item.isItemEqual(new ItemStack(TCInits.glowCrystal_WHITE)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_BLACK)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_RED)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_ORANGE)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_YELLOW)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_LIME)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_GREEN)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_SKY)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_BLUE)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_LILAC)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_PURPLE)) || item.isItemEqual(new ItemStack(TCInits.glowCrystal_PINK))){
-                        ((TEGlowFence) te).setColor(item.getItem());
+                        ((TEGlowColor) te).setColor(item.getItem());
                         world.setBlockMetadataWithNotify(x, y, z, 1, 0);
                         this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
@@ -70,7 +71,7 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
     @SideOnly(Side.CLIENT)
     public int colorMultiplier(IBlockAccess iBlockAccess, int x, int y, int z) {
         int crystalColor;
-        TEGlowFence te = (TEGlowFence) iBlockAccess.getTileEntity(x, y, z);
+        TEGlowColor te = (TEGlowColor) iBlockAccess.getTileEntity(x, y, z);
         switch(te.color){
             case 0:
                 crystalColor = te.color;
@@ -122,8 +123,8 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
     public void breakBlock(World world, int x, int y, int z, Block par5, int par6){
         TileEntity te = world.getTileEntity(x, y, z);
         EntityItem entityCrystal;
-        if(te instanceof TEGlowFence && ((TEGlowFence) te).color != 12){
-            switch(((TEGlowFence) te).color){
+        if(te instanceof TEGlowColor && ((TEGlowColor) te).color != 12){
+            switch(((TEGlowColor) te).color){
                 case 0:
                     entityCrystal = new EntityItem(world, (double)(x), (double)(y), (double)(z), new ItemStack(TCInits.glowCrystal_WHITE));
                     world.spawnEntityInWorld(entityCrystal);
@@ -315,6 +316,6 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
 
     @Override
     public TileEntity createNewTileEntity(World world, int var2) {
-        return new TEGlowFence();
+        return new TEGlowColor();
     }
 }

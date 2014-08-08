@@ -8,35 +8,35 @@ import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
 import net.kkaylium.mods.TechliumCraft.tileentities.TEDarkColor;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockLog;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Created by Kayla Marie on 8/4/14.
+ * Created by Kayla Marie on 8/7/14.
  */
-public class BlockDarkBlock extends BlockContainer {
+public class BlockDarkLog extends BlockLog implements ITileEntityProvider {
 
     public int[] blockColor = new int[]{0xE3E3E3, 0x252526, 0x941313, 0xC96208, 0xDBC232, 0x00D60F, 0x065C1C, 0x31AEB5, 0x07128C, 0xA25ECC, 0x5A078C, 0xC94099, 0xEBF2FA};
 
-    public BlockDarkBlock(){
-        super(Material.rock);
-        this.setCreativeTab(TechliumCraft.GGTab);
-        this.setBlockName(TCNames.darkBlockName);
-        this.setHardness(4.5F);
-        this.setResistance(10.0F);
-        this.setStepSound(soundTypeStone);
-    }
-    @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconregister) {
-        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkBlock");
+    protected IIcon topIcon;
+    @SideOnly(Side.CLIENT)
+    protected IIcon sideIcon;
+
+    public BlockDarkLog(){
+        super();
+        this.setCreativeTab(TechliumCraft.GGTab);
+        this.setBlockName(TCNames.darkLogName);
+        this.setHardness(2.0F);
+        this.setStepSound(soundTypeWood);
     }
 
     @Override
@@ -49,6 +49,7 @@ public class BlockDarkBlock extends BlockContainer {
                     if(item.isItemEqual(new ItemStack(TCInits.darkCrystal_WHITE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLACK)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_RED)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_ORANGE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_YELLOW)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LIME)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_GREEN)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_SKY)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLUE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LILAC)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PURPLE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PINK))){
                         ((TEDarkColor) te).setColor(item.getItem());
                         world.setBlockMetadataWithNotify(x, y, z, 1, 0);
+                        this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
                         world.markBlockForUpdate(x, y, z);
                         return true;
@@ -173,6 +174,38 @@ public class BlockDarkBlock extends BlockContainer {
             }
         }
         world.removeTileEntity(x, y, z);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconregister) {
+        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkLog_side");
+        sideIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkLog_side");
+        topIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkLog_top");
+    }
+
+    @SideOnly(Side.CLIENT)
+    protected IIcon getSideIcon(int p_150163_1_)
+    {
+        return this.sideIcon;
+    }
+
+    @SideOnly(Side.CLIENT)
+    protected IIcon getTopIcon(int p_150161_1_)
+    {
+        return this.topIcon;
+    }
+
+    @Override
+    public boolean canSustainLeaves(IBlockAccess world, int x, int y, int z)
+    {
+        return true;
+    }
+
+    @Override
+    public boolean isWood(IBlockAccess world, int x, int y, int z)
+    {
+        return true;
     }
 
     @Override

@@ -2,8 +2,7 @@ package net.kkaylium.mods.TechliumCraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.kkaylium.mods.TechliumCraft.blocks.*;
-import net.kkaylium.mods.TechliumCraft.items.ItemDarkCrystal;
-import net.kkaylium.mods.TechliumCraft.items.ItemGlowCrystal;
+import net.kkaylium.mods.TechliumCraft.items.*;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
 import net.kkaylium.mods.TechliumCraft.tileentities.*;
 
@@ -62,6 +61,14 @@ public class TCRegisters {
             GameRegistry.registerItem(TCInits.darkCrystal_PURPLE, TCNames.darkCrystalName + "_purple");
         TCInits.darkCrystal_PINK = new ItemDarkCrystal(11);
             GameRegistry.registerItem(TCInits.darkCrystal_PINK, TCNames.darkCrystalName + "_pink");
+
+        TCInits.darkCrystal_RAW = new ItemRawDarkCrystal();
+            GameRegistry.registerItem(TCInits.darkCrystal_RAW, TCNames.rawDarkCrystalName);
+
+        TCInits.glowStick = new ItemGlowStick();
+            GameRegistry.registerItem(TCInits.glowStick, TCNames.glowStickName);
+        TCInits.darkStick = new ItemDarkStick();
+            GameRegistry.registerItem(TCInits.darkStick, TCNames.darkStickName);
     }
 
     public static void registerBlocks(){
@@ -111,6 +118,14 @@ public class TCRegisters {
             GameRegistry.registerBlock(TCInits.glowGenLeaves, TCNames.glowGenLeavesName);
         TCInits.darkGenLeaves = new BlockGenLeaves(1);
             GameRegistry.registerBlock(TCInits.darkGenLeaves, TCNames.darkGenLeavesName);
+        TCInits.glowLog = new BlockGlowLog();
+            GameRegistry.registerBlock(TCInits.glowLog, TCNames.glowLogName);
+        TCInits.darkLog = new BlockDarkLog();
+            GameRegistry.registerBlock(TCInits.darkLog, TCNames.darkLogName);
+        TCInits.glowPlank = new BlockGlowPlank();
+            GameRegistry.registerBlock(TCInits.glowPlank, TCNames.glowPlankName);
+        TCInits.darkPlank = new BlockDarkPlank();
+            GameRegistry.registerBlock(TCInits.darkPlank, TCNames.darkPlankName);
 
         TCInits.glowFence = new BlockGlowFence();
             GameRegistry.registerBlock(TCInits.glowFence, TCNames.glowFenceName);
@@ -131,14 +146,7 @@ public class TCRegisters {
     }
 
     public static void registerTileEntities(){
-        GameRegistry.registerTileEntity(TEGlowBlock.class, TCNames.teGlowBlockId);
-        GameRegistry.registerTileEntity(TEDarkBlock.class, TCNames.teDarkBlockId);
-        GameRegistry.registerTileEntity(TEGlowGlass.class, TCNames.teGlowGlassId);
-        GameRegistry.registerTileEntity(TEDarkGlass.class, TCNames.teDarkGlassId);
-        GameRegistry.registerTileEntity(TEGlowLeaves.class, TCNames.teGlowLeavesId);
-        GameRegistry.registerTileEntity(TEDarkLeaves.class, TCNames.teDarkLeavesId);
-        GameRegistry.registerTileEntity(TEGenLeaves.class, TCNames.teGenLeavesId);
-        GameRegistry.registerTileEntity(TEGlowFence.class, TCNames.teGlowFenceId);
-        GameRegistry.registerTileEntity(TEDarkFence.class, TCNames.teDarkFenceId);
+        GameRegistry.registerTileEntity(TEGlowColor.class, TCNames.teGlowColorId);
+        GameRegistry.registerTileEntity(TEDarkColor.class, TCNames.teDarkColorId);
     }
 }

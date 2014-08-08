@@ -19,16 +19,16 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Created by Kayla Marie on 8/4/14.
+ * Created by Kayla Marie on 8/7/14.
  */
-public class BlockDarkBlock extends BlockContainer {
+public class BlockDarkPlank extends BlockContainer {
 
     public int[] blockColor = new int[]{0xE3E3E3, 0x252526, 0x941313, 0xC96208, 0xDBC232, 0x00D60F, 0x065C1C, 0x31AEB5, 0x07128C, 0xA25ECC, 0x5A078C, 0xC94099, 0xEBF2FA};
 
-    public BlockDarkBlock(){
+    public BlockDarkPlank(){
         super(Material.rock);
         this.setCreativeTab(TechliumCraft.GGTab);
-        this.setBlockName(TCNames.darkBlockName);
+        this.setBlockName(TCNames.darkPlankName);
         this.setHardness(4.5F);
         this.setResistance(10.0F);
         this.setStepSound(soundTypeStone);
@@ -36,7 +36,7 @@ public class BlockDarkBlock extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconregister) {
-        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkBlock");
+        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkPlank");
     }
 
     @Override

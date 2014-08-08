@@ -46,11 +46,10 @@ public class EntityDarkTurtle extends EntityAnimal {
     {
         return true;
     }
-    // Helpful thing, this is: par1ItemStack.getItem() ==
 
     public boolean isBreedingItem(ItemStack par1ItemStack)
     {
-        return par1ItemStack.getItem() == Items.glowstone_dust;
+        return par1ItemStack.getItem() == Items.coal;
     }
 
     public void onLivingUpdate()

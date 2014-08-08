@@ -6,8 +6,7 @@ import net.kkaylium.mods.TechliumCraft.TechliumCraft;
 import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEDarkFence;
-import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowFence;
+import net.kkaylium.mods.TechliumCraft.tileentities.TEDarkColor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.ITileEntityProvider;
@@ -36,6 +35,8 @@ public class BlockDarkFence extends BlockFence implements ITileEntityProvider {
         super(TCNames.darkFenceName, Material.glass);
         this.setCreativeTab(TechliumCraft.GGTab);
         this.setBlockName(TCNames.darkFenceName);
+        this.setHardness(1.6F);
+        this.setStepSound(soundTypeGlass);
     }
 
     @Override
@@ -49,10 +50,10 @@ public class BlockDarkFence extends BlockFence implements ITileEntityProvider {
         if(!world.isRemote){
             TileEntity te = world.getTileEntity(x, y, z);
             ItemStack item = player.inventory.getCurrentItem();
-            if(te instanceof TEDarkFence && ((TEDarkFence) te).color == 12){
+            if(te instanceof TEDarkColor && ((TEDarkColor) te).color == 12){
                 if(item != null){
                     if(item.isItemEqual(new ItemStack(TCInits.darkCrystal_WHITE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLACK)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_RED)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_ORANGE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_YELLOW)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LIME)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_GREEN)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_SKY)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_BLUE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_LILAC)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PURPLE)) || item.isItemEqual(new ItemStack(TCInits.darkCrystal_PINK))){
-                        ((TEDarkFence) te).setColor(item.getItem());
+                        ((TEDarkColor) te).setColor(item.getItem());
                         world.setBlockMetadataWithNotify(x, y, z, 1, 0);
                         this.setLightLevel(1.0F);
                         player.inventory.getCurrentItem().stackSize--;
@@ -70,7 +71,7 @@ public class BlockDarkFence extends BlockFence implements ITileEntityProvider {
     @SideOnly(Side.CLIENT)
     public int colorMultiplier(IBlockAccess iBlockAccess, int x, int y, int z) {
         int crystalColor;
-        TEDarkFence te = (TEDarkFence) iBlockAccess.getTileEntity(x, y, z);
+        TEDarkColor te = (TEDarkColor) iBlockAccess.getTileEntity(x, y, z);
         switch(te.color){
             case 0:
                 crystalColor = te.color;
@@ -122,8 +123,8 @@ public class BlockDarkFence extends BlockFence implements ITileEntityProvider {
     public void breakBlock(World world, int x, int y, int z, Block par5, int par6){
         TileEntity te = world.getTileEntity(x, y, z);
         EntityItem entityCrystal;
-        if(te instanceof TEDarkFence && ((TEDarkFence) te).color != 12){
-            switch(((TEDarkFence) te).color){
+        if(te instanceof TEDarkColor && ((TEDarkColor) te).color != 12){
+            switch(((TEDarkColor) te).color){
                 case 0:
                     entityCrystal = new EntityItem(world, (double)(x), (double)(y), (double)(z), new ItemStack(TCInits.glowCrystal_WHITE));
                     world.spawnEntityInWorld(entityCrystal);
@@ -315,6 +316,6 @@ public class BlockDarkFence extends BlockFence implements ITileEntityProvider {
 
     @Override
     public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-        return new TEDarkFence();
+        return new TEDarkColor();
     }
 }

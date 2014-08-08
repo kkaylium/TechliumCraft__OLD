@@ -8,14 +8,14 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
 /**
- * Created by Kayla Marie on 8/4/14.
+ * Created by Kayla Marie on 8/7/14.
  */
-public class TEGlowGlass extends TileEntity{
+public class TEGlowColor extends TileEntity{
 
     private boolean dirty = false;
     public int color; //12 is uncolored
 
-    public TEGlowGlass(){
+    public TEGlowColor(){
         color = 12;
     }
 
