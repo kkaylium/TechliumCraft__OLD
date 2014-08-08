@@ -21,12 +21,13 @@ import java.util.Random;
 public class BlockGlowOre extends BlockLayeredTexture {
 
     private String[] texturesName = new String[]{"White", "Black", "Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
+    private String[] blockName = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink"};
     public int theColor;
 
     public BlockGlowOre(int color) {
         super(Material.rock);
         this.setCreativeTab(TechliumCraft.GGTab);
-        this.setBlockName(TCNames.glowOreName + color);
+        this.setBlockName(TCNames.glowOreName + "_" + blockName[color]);
         this.setHardness(5.0F);
         this.setResistance(10.0F);
         this.setLightLevel(0.5F);

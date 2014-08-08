@@ -66,6 +66,18 @@ public class TCInits {
     public static Block glowLog;
     public static Block glowLeaves;
     public static Block glowGenLeaves;
+        public static Block glowDirt_WHITE;
+        public static Block glowDirt_BLACK;
+        public static Block glowDirt_RED;
+        public static Block glowDirt_ORANGE;
+        public static Block glowDirt_YELLOW;
+        public static Block glowDirt_LIME;
+        public static Block glowDirt_GREEN;
+        public static Block glowDirt_SKY;
+        public static Block glowDirt_BLUE;
+        public static Block glowDirt_LILAC;
+        public static Block glowDirt_PURPLE;
+        public static Block glowDirt_PINK;
 
     public static Block darkBlock;
     public static Block darkGlass;
@@ -74,4 +86,5 @@ public class TCInits {
     public static Block darkLog;
     public static Block darkLeaves;
     public static Block darkGenLeaves;
+    public static Block darkDirt;
 }

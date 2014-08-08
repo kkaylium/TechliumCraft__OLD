@@ -110,6 +110,31 @@ public class TCRegisters {
         TCInits.darkGlass = new BlockDarkGlass("darkglass", false);
             GameRegistry.registerBlock(TCInits.darkGlass, TCNames.darkGlassName);
 
+        TCInits.glowDirt_WHITE = new BlockGlowDirt(0);
+            GameRegistry.registerBlock(TCInits.glowDirt_WHITE, TCNames.glowDirtName + "_white");
+        TCInits.glowDirt_BLACK = new BlockGlowDirt(1);
+            GameRegistry.registerBlock(TCInits.glowDirt_BLACK, TCNames.glowDirtName + "_black");
+        TCInits.glowDirt_RED = new BlockGlowDirt(2);
+            GameRegistry.registerBlock(TCInits.glowDirt_RED, TCNames.glowDirtName + "_red");
+        TCInits.glowDirt_ORANGE = new BlockGlowDirt(3);
+            GameRegistry.registerBlock(TCInits.glowDirt_ORANGE, TCNames.glowDirtName + "_orange");
+        TCInits.glowDirt_YELLOW = new BlockGlowDirt(4);
+            GameRegistry.registerBlock(TCInits.glowDirt_YELLOW, TCNames.glowDirtName + "_yellow");
+        TCInits.glowDirt_LIME = new BlockGlowDirt(5);
+            GameRegistry.registerBlock(TCInits.glowDirt_LIME, TCNames.glowDirtName + "_lime");
+        TCInits.glowDirt_GREEN = new BlockGlowDirt(6);
+            GameRegistry.registerBlock(TCInits.glowDirt_GREEN, TCNames.glowDirtName + "_green");
+        TCInits.glowDirt_SKY = new BlockGlowDirt(7);
+            GameRegistry.registerBlock(TCInits.glowDirt_SKY, TCNames.glowDirtName + "_sky");
+        TCInits.glowDirt_BLUE = new BlockGlowDirt(8);
+            GameRegistry.registerBlock(TCInits.glowDirt_BLUE, TCNames.glowDirtName + "_blue");
+        TCInits.glowDirt_LILAC = new BlockGlowDirt(9);
+            GameRegistry.registerBlock(TCInits.glowDirt_LILAC, TCNames.glowDirtName + "_lilac");
+        TCInits.glowDirt_PURPLE = new BlockGlowDirt(10);
+            GameRegistry.registerBlock(TCInits.glowDirt_PURPLE, TCNames.glowDirtName + "_purple");
+        TCInits.glowDirt_PINK = new BlockGlowDirt(11);
+            GameRegistry.registerBlock(TCInits.glowDirt_PINK, TCNames.glowDirtName + "_pink");
+
         TCInits.glowLeaves = new BlockGlowLeaves();
             GameRegistry.registerBlock(TCInits.glowLeaves, TCNames.glowLeavesName);
         TCInits.darkLeaves = new BlockDarkLeaves();

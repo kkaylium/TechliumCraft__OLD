@@ -20,6 +20,12 @@ public class TCNames {
     public static String glowGlassName = "glowglass";
     public static String darkGlassName = "darkglass";
 
+    public static String glowDirtName = "glowdirt";
+    public static String darkDirtName = "darkdirt";
+
+    public static String glowStoneName = "glowstone";
+    public static String darkStoneName = "darkstone";
+
     public static String glowLeavesName = "glowleaves";
     public static String glowGenLeavesName = "glowgenleaves";
     public static String darkLeavesName = "darkleaves";

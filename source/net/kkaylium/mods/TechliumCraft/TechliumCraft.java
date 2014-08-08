@@ -11,6 +11,7 @@ import net.kkaylium.mods.TechliumCraft.creativetabs.GlowGlassTab;
 import net.kkaylium.mods.TechliumCraft.creativetabs.TechliumCraftTab;
 import net.kkaylium.mods.TechliumCraft.gen.OverworldOreGen;
 import net.kkaylium.mods.TechliumCraft.init.TCRegisters;
+import net.kkaylium.mods.TechliumCraft.init.gen.TCBiomeInits;
 import net.kkaylium.mods.TechliumCraft.init.recipes.TCRecipes;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityDarkSlime;
@@ -54,7 +55,6 @@ public class TechliumCraft {
 
     @Mod.EventHandler
     public void load(FMLInitializationEvent event) {
-        GameRegistry.registerWorldGenerator(new OverworldOreGen(), 3);
 
         proxy.registerRenderInformation();
         EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 20, 3, true);
@@ -66,6 +66,9 @@ public class TechliumCraft {
         EntityRegistry.addSpawn(EntityRainbowTurtle.class, 5, 2, 3, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
         EntityRegistry.registerModEntity(EntityDarkTurtle.class, "DarkTurtle", 5, this, 20, 3, true);
         EntityRegistry.addSpawn(EntityDarkTurtle.class, 5, 2, 3, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.desertHills);
+
+        GameRegistry.registerWorldGenerator(new OverworldOreGen(), 3);
+        TCBiomeInits.initBiomes();
 
         TCRecipes.initRecipes();
     }
