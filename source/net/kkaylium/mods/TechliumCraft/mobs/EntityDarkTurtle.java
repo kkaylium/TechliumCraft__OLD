@@ -153,12 +153,12 @@ public class EntityDarkTurtle extends EntityAnimal {
         ItemStack itemstack = par1EntityPlayer.inventory.getCurrentItem();
 
         Random random = new Random();
-        int n = random.nextInt(13 - 1) + 1;
+        int n = random.nextInt(12 - 1) + 1;
         n--;
 
-        if(par1EntityPlayer.isSneaking())
+        if(par1EntityPlayer.isSneaking() && itemstack != null)
         {
-            if (itemstack != null && itemstack.getItem() == TCInits.darkCrystal_WHITE || itemstack.getItem() == TCInits.darkCrystal_BLACK || itemstack.getItem() == TCInits.darkCrystal_RED || itemstack.getItem() == TCInits.darkCrystal_ORANGE || itemstack.getItem() == TCInits.darkCrystal_YELLOW || itemstack.getItem() == TCInits.darkCrystal_LIME || itemstack.getItem() == TCInits.darkCrystal_GREEN || itemstack.getItem() == TCInits.darkCrystal_SKY || itemstack.getItem() == TCInits.darkCrystal_BLUE || itemstack.getItem() == TCInits.darkCrystal_LILAC || itemstack.getItem() == TCInits.darkCrystal_PURPLE || itemstack.getItem() == TCInits.darkCrystal_PINK && !par1EntityPlayer.capabilities.isCreativeMode)
+            if (itemstack.getItem() == TCInits.darkCrystal_WHITE || itemstack.getItem() == TCInits.darkCrystal_BLACK || itemstack.getItem() == TCInits.darkCrystal_RED || itemstack.getItem() == TCInits.darkCrystal_ORANGE || itemstack.getItem() == TCInits.darkCrystal_YELLOW || itemstack.getItem() == TCInits.darkCrystal_LIME || itemstack.getItem() == TCInits.darkCrystal_GREEN || itemstack.getItem() == TCInits.darkCrystal_SKY || itemstack.getItem() == TCInits.darkCrystal_BLUE || itemstack.getItem() == TCInits.darkCrystal_LILAC || itemstack.getItem() == TCInits.darkCrystal_PURPLE || itemstack.getItem() == TCInits.darkCrystal_PINK && !par1EntityPlayer.capabilities.isCreativeMode)
             {
                 switch(n){
                     case 0:

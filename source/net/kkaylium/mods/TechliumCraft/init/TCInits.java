@@ -1,6 +1,7 @@
 package net.kkaylium.mods.TechliumCraft.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPortal;
 import net.minecraft.item.Item;
 
 /**
@@ -34,9 +35,9 @@ public class TCInits {
     public static Item darkCrystal_PURPLE;
     public static Item darkCrystal_PINK;
 
-    public static Item glowSlime_RAINBOW;
+    public static Item glowCrystal_RAINBOW;
 
-    public static Item darkSlime_RAINBOW;
+    public static Item darkCrystal_RAINBOW;
     public static Item darkCrystal_RAW;
 
     public static Item glowStick;
@@ -60,6 +61,19 @@ public class TCInits {
     public static Block darkOre_DARK;
 
     public static Block glowBlock;
+        public static Block glowCrystalStorage_WHITE;
+        public static Block glowCrystalStorage_BLACK;
+        public static Block glowCrystalStorage_RED;
+        public static Block glowCrystalStorage_ORANGE;
+        public static Block glowCrystalStorage_YELLOW;
+        public static Block glowCrystalStorage_LIME;
+        public static Block glowCrystalStorage_GREEN;
+        public static Block glowCrystalStorage_SKY;
+        public static Block glowCrystalStorage_BLUE;
+        public static Block glowCrystalStorage_LILAC;
+        public static Block glowCrystalStorage_PURPLE;
+        public static Block glowCrystalStorage_PINK;
+        public static Block glowCrystalStorage_RAINBOW;
     public static Block glowGlass;
     public static Block glowFence;
     public static Block glowPlank;
@@ -80,6 +94,20 @@ public class TCInits {
         public static Block glowDirt_PINK;
 
     public static Block darkBlock;
+        public static Block darkCrystalStorage_WHITE;
+        public static Block darkCrystalStorage_BLACK;
+        public static Block darkCrystalStorage_RED;
+        public static Block darkCrystalStorage_ORANGE;
+        public static Block darkCrystalStorage_YELLOW;
+        public static Block darkCrystalStorage_LIME;
+        public static Block darkCrystalStorage_GREEN;
+        public static Block darkCrystalStorage_SKY;
+        public static Block darkCrystalStorage_BLUE;
+        public static Block darkCrystalStorage_LILAC;
+        public static Block darkCrystalStorage_PURPLE;
+        public static Block darkCrystalStorage_PINK;
+        public static Block darkCrystalStorage_RAINBOW;
+        public static Block darkCrystalStorage_RAW;
     public static Block darkGlass;
     public static Block darkFence;
     public static Block darkPlank;
@@ -87,4 +115,6 @@ public class TCInits {
     public static Block darkLeaves;
     public static Block darkGenLeaves;
     public static Block darkDirt;
+
+    public static Block glowPortal;
 }

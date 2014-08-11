@@ -156,9 +156,9 @@ public class EntityRainbowTurtle extends EntityAnimal {
         int n = random.nextInt(13 - 1) + 1;
         n--;
 
-        if(par1EntityPlayer.isSneaking())
+        if(par1EntityPlayer.isSneaking() && itemstack != null)
         {
-            if (itemstack != null && itemstack.getItem() == TCInits.glowCrystal_WHITE || itemstack.getItem() == TCInits.glowCrystal_BLACK || itemstack.getItem() == TCInits.glowCrystal_RED || itemstack.getItem() == TCInits.glowCrystal_ORANGE || itemstack.getItem() == TCInits.glowCrystal_YELLOW || itemstack.getItem() == TCInits.glowCrystal_LIME || itemstack.getItem() == TCInits.glowCrystal_GREEN || itemstack.getItem() == TCInits.glowCrystal_SKY || itemstack.getItem() == TCInits.glowCrystal_BLUE || itemstack.getItem() == TCInits.glowCrystal_LILAC || itemstack.getItem() == TCInits.glowCrystal_PURPLE || itemstack.getItem() == TCInits.glowCrystal_PINK && !par1EntityPlayer.capabilities.isCreativeMode)
+            if (itemstack.getItem() == TCInits.glowCrystal_WHITE || itemstack.getItem() == TCInits.glowCrystal_BLACK || itemstack.getItem() == TCInits.glowCrystal_RED || itemstack.getItem() == TCInits.glowCrystal_ORANGE || itemstack.getItem() == TCInits.glowCrystal_YELLOW || itemstack.getItem() == TCInits.glowCrystal_LIME || itemstack.getItem() == TCInits.glowCrystal_GREEN || itemstack.getItem() == TCInits.glowCrystal_SKY || itemstack.getItem() == TCInits.glowCrystal_BLUE || itemstack.getItem() == TCInits.glowCrystal_LILAC || itemstack.getItem() == TCInits.glowCrystal_PURPLE || itemstack.getItem() == TCInits.glowCrystal_PINK && !par1EntityPlayer.capabilities.isCreativeMode)
             {
                 switch(n){
                     case 0:
@@ -217,7 +217,7 @@ public class EntityRainbowTurtle extends EntityAnimal {
             }
             else
             {
-                return super.interact(par1EntityPlayer);
+                return false;
             }
         }else{
             return super.interact(par1EntityPlayer);

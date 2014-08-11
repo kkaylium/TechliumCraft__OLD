@@ -65,6 +65,11 @@ public class TCRegisters {
         TCInits.darkCrystal_RAW = new ItemRawDarkCrystal();
             GameRegistry.registerItem(TCInits.darkCrystal_RAW, TCNames.rawDarkCrystalName);
 
+        TCInits.glowCrystal_RAINBOW = new ItemGlowRainbowCrystal();
+            GameRegistry.registerItem(TCInits.glowCrystal_RAINBOW, TCNames.glowRainbowCrystalName);
+        TCInits.darkCrystal_RAINBOW = new ItemDarkRainbowCrystal();
+            GameRegistry.registerItem(TCInits.darkCrystal_RAINBOW, TCNames.darkRainbowCrystalName);
+
         TCInits.glowStick = new ItemGlowStick();
             GameRegistry.registerItem(TCInits.glowStick, TCNames.glowStickName);
         TCInits.darkStick = new ItemDarkStick();
@@ -156,6 +161,68 @@ public class TCRegisters {
             GameRegistry.registerBlock(TCInits.glowFence, TCNames.glowFenceName);
         TCInits.darkFence = new BlockDarkFence();
             GameRegistry.registerBlock(TCInits.darkFence, TCNames.darkFenceName);
+
+        TCInits.glowCrystalStorage_WHITE = new BlockGlowCrystalStorage(0);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_WHITE, TCNames.glowCrystalStorageName + "_white");
+        TCInits.glowCrystalStorage_BLACK = new BlockGlowCrystalStorage(1);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_BLACK, TCNames.glowCrystalStorageName + "_black");
+        TCInits.glowCrystalStorage_RED = new BlockGlowCrystalStorage(2);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_RED, TCNames.glowCrystalStorageName + "_red");
+        TCInits.glowCrystalStorage_ORANGE = new BlockGlowCrystalStorage(3);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_ORANGE, TCNames.glowCrystalStorageName + "_orange");
+        TCInits.glowCrystalStorage_YELLOW = new BlockGlowCrystalStorage(4);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_YELLOW, TCNames.glowCrystalStorageName + "_yellow");
+        TCInits.glowCrystalStorage_LIME = new BlockGlowCrystalStorage(5);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_LIME, TCNames.glowCrystalStorageName + "_lime");
+        TCInits.glowCrystalStorage_GREEN = new BlockGlowCrystalStorage(6);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_GREEN, TCNames.glowCrystalStorageName + "_green");
+        TCInits.glowCrystalStorage_SKY = new BlockGlowCrystalStorage(7);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_SKY, TCNames.glowCrystalStorageName + "_sky");
+        TCInits.glowCrystalStorage_BLUE = new BlockGlowCrystalStorage(8);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_BLUE, TCNames.glowCrystalStorageName + "_blue");
+        TCInits.glowCrystalStorage_LILAC = new BlockGlowCrystalStorage(9);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_LILAC, TCNames.glowCrystalStorageName + "_lilac");
+        TCInits.glowCrystalStorage_PURPLE = new BlockGlowCrystalStorage(10);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_PURPLE, TCNames.glowCrystalStorageName + "_purple");
+        TCInits.glowCrystalStorage_PINK = new BlockGlowCrystalStorage(11);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_PINK, TCNames.glowCrystalStorageName + "_pink");
+
+        TCInits.glowCrystalStorage_RAINBOW = new BlockGlowCrystalStorage(12);
+            GameRegistry.registerBlock(TCInits.glowCrystalStorage_RAINBOW, TCNames.glowCrystalStorageName + "_rainbow");
+
+        TCInits.darkCrystalStorage_WHITE = new BlockDarkCrystalStorage(0);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_WHITE, TCNames.darkCrystalStorageName + "_white");
+        TCInits.darkCrystalStorage_BLACK = new BlockDarkCrystalStorage(1);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_BLACK, TCNames.darkCrystalStorageName + "_black");
+        TCInits.darkCrystalStorage_RED = new BlockDarkCrystalStorage(2);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_RED, TCNames.darkCrystalStorageName + "_red");
+        TCInits.darkCrystalStorage_ORANGE = new BlockDarkCrystalStorage(3);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_ORANGE, TCNames.darkCrystalStorageName + "_orange");
+        TCInits.darkCrystalStorage_YELLOW = new BlockDarkCrystalStorage(4);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_YELLOW, TCNames.darkCrystalStorageName + "_yellow");
+        TCInits.darkCrystalStorage_LIME = new BlockDarkCrystalStorage(5);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_LIME, TCNames.darkCrystalStorageName + "_lime");
+        TCInits.darkCrystalStorage_GREEN = new BlockDarkCrystalStorage(6);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_GREEN, TCNames.darkCrystalStorageName + "_green");
+        TCInits.darkCrystalStorage_SKY = new BlockDarkCrystalStorage(7);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_SKY, TCNames.darkCrystalStorageName + "_sky");
+        TCInits.darkCrystalStorage_BLUE = new BlockDarkCrystalStorage(8);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_BLUE, TCNames.darkCrystalStorageName + "_blue");
+        TCInits.darkCrystalStorage_LILAC = new BlockDarkCrystalStorage(9);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_LILAC, TCNames.darkCrystalStorageName + "_lilac");
+        TCInits.darkCrystalStorage_PURPLE = new BlockDarkCrystalStorage(10);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_PURPLE, TCNames.darkCrystalStorageName + "_purple");
+        TCInits.darkCrystalStorage_PINK = new BlockDarkCrystalStorage(11);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_PINK, TCNames.darkCrystalStorageName + "_pink");
+
+        TCInits.darkCrystalStorage_RAINBOW = new BlockDarkCrystalStorage(12);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_RAINBOW, TCNames.darkCrystalStorageName + "_rainbow");
+        TCInits.darkCrystalStorage_RAW = new BlockDarkCrystalStorage(13);
+            GameRegistry.registerBlock(TCInits.darkCrystalStorage_RAW, TCNames.darkCrystalStorageName + "_raw");
+
+        TCInits.glowPortal = new BlockGlowPortal();
+            GameRegistry.registerBlock(TCInits.glowPortal, TCNames.glowPortalName);
+
     }
 
     public static void registerMachines(){

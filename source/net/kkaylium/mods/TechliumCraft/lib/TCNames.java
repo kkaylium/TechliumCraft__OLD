@@ -7,6 +7,8 @@ public class TCNames {
     public static String glowCrystalName = "glowcrystal";
     public static String darkCrystalName = "darkcrystal";
     public static String rawDarkCrystalName = "rawdarkcrystal";
+    public static String glowRainbowCrystalName = "glowrainbowcrystal";
+    public static String darkRainbowCrystalName = "darkrainbowcrystal";
 
     public static String glowOreName = "glowore";
     public static String darkOreName = "darkore";
@@ -42,6 +44,8 @@ public class TCNames {
 
     public static String glowFenceName = "glowfence";
     public static String darkFenceName = "darkfence";
+
+    public static String glowPortalName = "glowportal";
 
     public static String teDarkColorId = "tedarkcolor";
     public static String teGlowColorId = "teglowcolor";

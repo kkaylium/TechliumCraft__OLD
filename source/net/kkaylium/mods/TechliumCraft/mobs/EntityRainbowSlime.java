@@ -12,6 +12,8 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 /**
  * Created by Kayla Marie on 8/3/14.
  */
@@ -308,7 +310,32 @@ public class EntityRainbowSlime extends EntitySlime {
 
     protected Item getDropItem()
     {
-        return new ItemStack(TCInits.glowCrystal_WHITE).getItem();
+        Random rand = new Random();
+        if(getSlimeSize() > 2){return TCInits.glowCrystal_RAINBOW;}
+        else{
+            int random = rand.nextInt(8 - 1) + 1;
+            random--;
+            switch(random){
+                case 0:
+                    return TCInits.glowCrystal_WHITE;
+                case 1:
+                    return TCInits.glowCrystal_BLACK;
+                case 2:
+                    return TCInits.glowCrystal_RED;
+                case 3:
+                    return TCInits.glowCrystal_ORANGE;
+                case 4:
+                    return TCInits.glowCrystal_YELLOW;
+                case 5:
+                    return TCInits.glowCrystal_GREEN;
+                case 6:
+                    return TCInits.glowCrystal_BLUE;
+                case 7:
+                    return TCInits.glowCrystal_PURPLE;
+                default:
+                    return TCInits.glowCrystal_RAINBOW;
+            }
+        }
     }
 
     @Override
