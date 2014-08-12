@@ -17,7 +17,6 @@ public class BlockDarkCrystalStorage extends Block {
 
     private int colorMade;
     private String[] blockNames = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink", "rainbow", "raw"};
-    public int[] blockColor = new int[]{0xE3E3E3, 0x252526, 0x941313, 0xC96208, 0xDBC232, 0x00D60F, 0x065C1C, 0x31AEB5, 0x07128C, 0xA25ECC, 0x5A078C, 0xC94099, 0xEBF2FA};
 
     public BlockDarkCrystalStorage(int color){
         super(Material.glass);
@@ -37,7 +36,7 @@ public class BlockDarkCrystalStorage extends Block {
         }else if(colorMade == 13){
             blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkCrystalStorage_Raw");
         }else{
-            blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkCrystalStorage" + "_" + blockColor[colorMade]);
+            blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "darkCrystalStorage" + "_" + blockNames[colorMade]);
         }
     }
 }

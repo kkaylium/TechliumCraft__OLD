@@ -10,6 +10,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.kkaylium.mods.TechliumCraft.creativetabs.GlowGlassTab;
 import net.kkaylium.mods.TechliumCraft.creativetabs.TechliumCraftTab;
 import net.kkaylium.mods.TechliumCraft.gen.OverworldOreGen;
+import net.kkaylium.mods.TechliumCraft.gen.glowdimention.GDWorldProvider;
 import net.kkaylium.mods.TechliumCraft.init.TCRegisters;
 import net.kkaylium.mods.TechliumCraft.init.gen.TCBiomeInits;
 import net.kkaylium.mods.TechliumCraft.init.recipes.TCRecipes;
@@ -22,6 +23,7 @@ import net.kkaylium.mods.TechliumCraft.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
 
 import java.util.logging.Logger;
 
@@ -44,6 +46,8 @@ public class TechliumCraft {
 
     public static CreativeTabs GGTab = new GlowGlassTab(CreativeTabs.getNextID(), "Glow Glass");
     public static CreativeTabs TCTab = new TechliumCraftTab(CreativeTabs.getNextID(), "Techlium Craft");
+
+    public static int glowDimensionID = -16;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -71,6 +75,9 @@ public class TechliumCraft {
         TCBiomeInits.initBiomes();
 
         TCRecipes.initRecipes();
+
+        DimensionManager.registerProviderType(glowDimensionID, GDWorldProvider.class, true);
+        DimensionManager.registerDimension(glowDimensionID, glowDimensionID);
     }
 
     @Mod.EventHandler

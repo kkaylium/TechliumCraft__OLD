@@ -18,7 +18,6 @@ public class BlockGlowCrystalStorage extends Block {
 
     private int colorMade;
     private String[] blockNames = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink", "rainbow"};
-    public int[] blockColor = new int[]{0xFFFFFF, 0x363638, 0xB81A1A, 0xF0760C, 0xF2D94B, 0x21ED2F, 0x097A25, 0x4CECF5, 0x0010C4, 0xC977FC, 0x6F05B0, 0xFF57C4, 0xEBF2FA};
 
     public BlockGlowCrystalStorage(int color){
         super(Material.glass);
