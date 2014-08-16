@@ -9,6 +9,7 @@ import net.kkaylium.mods.TechliumCraft.tileentities.TEGlowColor;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 
 /**
@@ -17,6 +18,7 @@ import net.minecraft.world.IBlockAccess;
 public class BlockGlowCrystalStorage extends Block {
 
     private int colorMade;
+    private IIcon[] textures = new IIcon[14];
     private String[] blockNames = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink", "rainbow"};
 
     public BlockGlowCrystalStorage(int color){
@@ -31,10 +33,14 @@ public class BlockGlowCrystalStorage extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconregister) {
-        if(colorMade > 11){
-            blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "glowCrystalStorage_Rainbow");
-        }else{
-        blockIcon = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "glowCrystalStorage" + "_" + blockNames[colorMade]);
+        for(int i = 0; i < textures.length; i++){
+            textures[i] = iconregister.registerIcon(ModInfo.MOD_ID + ":" + "glowCrystalStorage" + "_" + blockNames[colorMade]);
         }
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int side, int meta) {
+        return textures[colorMade];
     }
 }

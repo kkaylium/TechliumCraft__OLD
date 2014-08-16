@@ -2,7 +2,6 @@ package net.kkaylium.mods.TechliumCraft.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import libs.allout58.libs.LayeredTextureBlock.block.BlockLayeredTexture;
 import net.kkaylium.mods.TechliumCraft.TechliumCraft;
 import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;

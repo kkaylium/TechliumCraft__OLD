@@ -34,7 +34,7 @@ import java.util.logging.Logger;
  * @version 1.0.1a
  *
  */
-@Mod(name = ModInfo.MOD_NAME, modid = ModInfo.MOD_ID, version = "1.0.0a")
+@Mod(name = ModInfo.MOD_NAME, modid = ModInfo.MOD_ID, version = "0.0.2a")
 public class TechliumCraft {
 
     public static final Logger logger = Logger.getLogger("TechliumCraft");

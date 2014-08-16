@@ -30,42 +30,42 @@ public class TCBiomeInits {
     public static BiomeGenBase[] biomesCopy;
 
     public static void initBiomes(){
-        //Glow Biome: WHITE
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_WHITE, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_WHITE, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: BLACK
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLACK, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_BLACK, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: RED
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_RED, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_RED, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: ORANGE
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_ORANGE, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_ORANGE, BiomeDictionary.Type.PLAINS);
-       //Glow Biome: YELLOW
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_YELLOW, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_YELLOW, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: LIME
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LIME, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_LIME, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: GREEN
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_GREEN, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_GREEN, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: SKY
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_SKY, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_SKY, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: BLUE
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLUE, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_BLUE, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: LILAC
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LILAC, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_LILAC, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: PURPLE
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PURPLE, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_PURPLE, BiomeDictionary.Type.PLAINS);
-        //Glow Biome: PINK
-        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PINK, 50));
-        BiomeDictionary.registerBiomeType(GlowBiome_PINK, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: WHITE
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_WHITE, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_WHITE, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: BLACK
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLACK, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_BLACK, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: RED
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_RED, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_RED, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: ORANGE
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_ORANGE, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_ORANGE, BiomeDictionary.Type.PLAINS);
+//       //Glow Biome: YELLOW
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_YELLOW, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_YELLOW, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: LIME
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LIME, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_LIME, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: GREEN
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_GREEN, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_GREEN, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: SKY
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_SKY, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_SKY, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: BLUE
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLUE, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_BLUE, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: LILAC
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LILAC, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_LILAC, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: PURPLE
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PURPLE, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_PURPLE, BiomeDictionary.Type.PLAINS);
+//        //Glow Biome: PINK
+//        BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PINK, 50));
+//        BiomeDictionary.registerBiomeType(GlowBiome_PINK, BiomeDictionary.Type.PLAINS);
 
         try{
             Field biomesField = BiomeGenBase.class.getDeclaredField("biomeList");
