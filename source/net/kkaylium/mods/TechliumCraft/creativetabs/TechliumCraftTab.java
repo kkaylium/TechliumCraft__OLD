@@ -1,8 +1,10 @@
 package net.kkaylium.mods.TechliumCraft.creativetabs;
 
+import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 /**
  * Created by Kayla Marie on 7/26/14.
@@ -15,6 +17,6 @@ public class TechliumCraftTab extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return Items.golden_apple;
+        return Item.getItemFromBlock(TCInits.glowCrystalStorage_PINK);
     }
 }

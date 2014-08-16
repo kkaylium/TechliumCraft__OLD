@@ -262,7 +262,6 @@ public class GDChunkProvider implements IChunkProvider {
         return chunk;
     }
 
-    @SuppressWarnings("unused")
     private void func_147423_a(int x, int y, int z)
     {
         double d0 = 684.412D;
@@ -533,7 +532,7 @@ public class GDChunkProvider implements IChunkProvider {
         return creatureType == EnumCreatureType.monster && this.scatteredFeatureGenerator.func_143030_a(x, y, z) ? this.scatteredFeatureGenerator.getScatteredFeatureSpawnList() : currentBiome.getSpawnableList(creatureType);
     }
 
-    public ChunkPosition func_147416_a(World world, String genType, int x, int y, int z)
+     public ChunkPosition func_147416_a(World world, String genType, int x, int y, int z)
     {
         return genType.equals("Stronghold") && this.strongholdGenerator != null ? this.strongholdGenerator.func_151545_a(world, x, y, z) : null;
     }

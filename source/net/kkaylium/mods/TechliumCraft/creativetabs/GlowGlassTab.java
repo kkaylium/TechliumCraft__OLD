@@ -1,5 +1,6 @@
 package net.kkaylium.mods.TechliumCraft.creativetabs;
 
+import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -14,6 +15,6 @@ public class GlowGlassTab extends CreativeTabs {
     }
     @Override
     public Item getTabIconItem() {
-        return Items.apple;
+        return TCInits.glowCrystal_PINK;
     }
 }

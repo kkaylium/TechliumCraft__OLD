@@ -7,6 +7,8 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeManager;
 
+import java.lang.reflect.Field;
+
 /**
  * Created by Kayla Marie on 8/8/14.
  */
@@ -25,67 +27,52 @@ public class TCBiomeInits {
     public static BiomeGenBase GlowBiome_PURPLE = (new BiomeGlow(90, 0x3D0066, TCInits.glowDirt_PURPLE)).setBiomeName("Glow Biome: Purple");
     public static BiomeGenBase GlowBiome_PINK = (new BiomeGlow(91, 0xDB0066, TCInits.glowDirt_PINK)).setBiomeName("Glow Biome: Pink");
 
+    public static BiomeGenBase[] biomesCopy;
+
     public static void initBiomes(){
         //Glow Biome: WHITE
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_WHITE, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_WHITE);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_WHITE);
         BiomeDictionary.registerBiomeType(GlowBiome_WHITE, BiomeDictionary.Type.PLAINS);
         //Glow Biome: BLACK
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLACK, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_BLACK);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_BLACK);
         BiomeDictionary.registerBiomeType(GlowBiome_BLACK, BiomeDictionary.Type.PLAINS);
         //Glow Biome: RED
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_RED, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_RED);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_RED);
         BiomeDictionary.registerBiomeType(GlowBiome_RED, BiomeDictionary.Type.PLAINS);
         //Glow Biome: ORANGE
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_ORANGE, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_ORANGE);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_ORANGE);
         BiomeDictionary.registerBiomeType(GlowBiome_ORANGE, BiomeDictionary.Type.PLAINS);
        //Glow Biome: YELLOW
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_YELLOW, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_YELLOW);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_YELLOW);
         BiomeDictionary.registerBiomeType(GlowBiome_YELLOW, BiomeDictionary.Type.PLAINS);
         //Glow Biome: LIME
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LIME, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_LIME);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_LIME);
         BiomeDictionary.registerBiomeType(GlowBiome_LIME, BiomeDictionary.Type.PLAINS);
         //Glow Biome: GREEN
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_GREEN, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_GREEN);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_GREEN);
         BiomeDictionary.registerBiomeType(GlowBiome_GREEN, BiomeDictionary.Type.PLAINS);
         //Glow Biome: SKY
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_SKY, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_SKY);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_SKY);
         BiomeDictionary.registerBiomeType(GlowBiome_SKY, BiomeDictionary.Type.PLAINS);
         //Glow Biome: BLUE
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_BLUE, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_BLUE);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_BLUE);
         BiomeDictionary.registerBiomeType(GlowBiome_BLUE, BiomeDictionary.Type.PLAINS);
         //Glow Biome: LILAC
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_LILAC, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_LILAC);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_LILAC);
         BiomeDictionary.registerBiomeType(GlowBiome_LILAC, BiomeDictionary.Type.PLAINS);
         //Glow Biome: PURPLE
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PURPLE, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_PURPLE);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_PURPLE);
         BiomeDictionary.registerBiomeType(GlowBiome_PURPLE, BiomeDictionary.Type.PLAINS);
         //Glow Biome: PINK
         BiomeManager.warmBiomes.add(new BiomeManager.BiomeEntry(GlowBiome_PINK, 50));
-        BiomeManager.addSpawnBiome(GlowBiome_PINK);
-        WorldChunkManager.allowedBiomes.add(GlowBiome_PINK);
         BiomeDictionary.registerBiomeType(GlowBiome_PINK, BiomeDictionary.Type.PLAINS);
+
+        try{
+            Field biomesField = BiomeGenBase.class.getDeclaredField("biomeList");
+            biomesField.setAccessible(true);
+            biomesCopy = ((BiomeGenBase[])biomesField.get(null)).clone();
+        }catch(Exception e){
+        }
 
     }
 }

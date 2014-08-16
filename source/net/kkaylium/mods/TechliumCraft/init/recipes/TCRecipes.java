@@ -2,6 +2,7 @@ package net.kkaylium.mods.TechliumCraft.init.recipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.kkaylium.mods.TechliumCraft.init.TCInits;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
@@ -57,11 +58,23 @@ public class TCRecipes {
         GameRegistry.addRecipe(new ItemStack(TCInits.darkCrystalStorage_RAINBOW, 1), "###", "###", "###", '#', TCInits.darkCrystal_RAINBOW);
         GameRegistry.addRecipe(new ItemStack(TCInits.darkCrystalStorage_RAW, 1), "###", "###", "###", '#', TCInits.darkCrystal_RAW);
 
+        GameRegistry.addRecipe(new ItemStack(TCInits.glowSapling, 8), "###", "#*#", "###", '#', Blocks.sapling, '*', TCInits.glowCrystal_WHITE);
+        GameRegistry.addRecipe(new ItemStack(TCInits.darkSapling, 8), "###", "#*#", "###", '#', Blocks.sapling, '*', TCInits.darkCrystal_WHITE);
+
         GameRegistry.addRecipe(new ItemStack(TCInits.glowPlank, 4), "#", '#', TCInits.glowLog);
         GameRegistry.addRecipe(new ItemStack(TCInits.darkPlank, 4), "#", '#', TCInits.darkLog);
 
         GameRegistry.addShapedRecipe(new ItemStack(TCInits.glowStick, 8), "#", "#", '#', TCInits.glowPlank);
         GameRegistry.addShapedRecipe(new ItemStack(TCInits.darkStick, 8), "#", "#", '#', TCInits.darkPlank);
+
+        GameRegistry.addRecipe(new ItemStack(TCInits.glowBlock, 16), "@#@", "#@#", "@#@", '@', TCInits.glowStick, '#', Blocks.stone);
+        GameRegistry.addRecipe(new ItemStack(TCInits.darkBlock, 16), "@#@", "#@#", "@#@", '@', TCInits.darkStick, '#', Blocks.stone);
+
+        GameRegistry.addRecipe(new ItemStack(TCInits.glowGlass, 16), "@@@", "@#@", "@@@", '@', TCInits.glowStick, '#', Blocks.glass);
+        GameRegistry.addRecipe(new ItemStack(TCInits.darkGlass, 16), "@@@", "@#@", "@@@", '@', TCInits.darkStick, '#', Blocks.glass);
+
+        GameRegistry.addRecipe(new ItemStack(TCInits.glowFence, 8), "@@@", "@@@", '@', TCInits.glowStick);
+        GameRegistry.addRecipe(new ItemStack(TCInits.darkFence, 8), "@@@", "@@@", '@', TCInits.darkStick);
 
     }
 }

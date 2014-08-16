@@ -1,5 +1,7 @@
 package net.kkaylium.mods.TechliumCraft.init;
 
+import net.kkaylium.mods.TechliumCraft.blocks.BlockDarkSapling;
+import net.kkaylium.mods.TechliumCraft.blocks.BlockGlowSapling;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.item.Item;
@@ -117,4 +119,6 @@ public class TCInits {
     public static Block darkDirt;
 
     public static Block glowPortal;
+    public static BlockGlowSapling glowSapling;
+    public static BlockDarkSapling darkSapling;
 }

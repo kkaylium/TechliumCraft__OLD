@@ -29,7 +29,7 @@ public class GDWorldProvider extends WorldProvider {
     @SideOnly(Side.CLIENT)
     public boolean isSkyColored()
     {
-        return false;
+        return true;
     }
 
     public IChunkProvider createChunkGenerator()
@@ -103,30 +103,38 @@ public class GDWorldProvider extends WorldProvider {
      */
     public boolean doesXZShowFog(int par1, int par2)
     {
-        return true;
+        return false;
     }
 
     /**
      * Creates the light to brightness table
      */
-    protected void generateLightBrightnessTable()
-    {
-        float var1;
+//    protected void generateLightBrightnessTable()
+//    {
+//        float var1;
+//
+//        if (2>3) {
+//            var1 = 0.1F;
+//        }
+//        else {
+//            var1 = 2.1F;
+//        }
+//
+//        for (int var2 = 0; var2 <= 15; ++var2)
+//        {
+//            float var3 = 1.0F - (float)var2 / 15.0F;
+//            this.lightBrightnessTable[var2] = (1.0F - var3) / (var3 * 3.0F + 1.0F) * (1.0F - var1) + var1 - 2;
+//        }
+//    }
 
-        if (2>3) {
-            var1 = 0.1F;
-        }
-        else {
-            var1 = 2.1F;
-        }
-
-        for (int var2 = 0; var2 <= 15; ++var2)
-        {
-            float var3 = 1.0F - (float)var2 / 15.0F;
-            this.lightBrightnessTable[var2] = (1.0F - var3) / (var3 * 3.0F + 1.0F) * (1.0F - var1) + var1 - 2;
-        }
-    }
-
+    protected void generateLightBrightnessTable() {
+		float f = 12.0F;
+		for (int i = 0; i <= 15; i++) {
+			float f1 = 12.0F - i / 15.0F;
+			this.lightBrightnessTable[i] = ((1.0F - f1) / (f1 * 3.0F + 1.0F)
+					* (1.0F - f) + f);
+		}
+	}
     /**
      * Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".
      */

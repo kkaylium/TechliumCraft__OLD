@@ -13,6 +13,7 @@ import net.kkaylium.mods.TechliumCraft.gen.OverworldOreGen;
 import net.kkaylium.mods.TechliumCraft.gen.glowdimention.GDWorldProvider;
 import net.kkaylium.mods.TechliumCraft.init.TCRegisters;
 import net.kkaylium.mods.TechliumCraft.init.gen.TCBiomeInits;
+import net.kkaylium.mods.TechliumCraft.init.gen.tree.GlowTreeGen;
 import net.kkaylium.mods.TechliumCraft.init.recipes.TCRecipes;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityDarkSlime;

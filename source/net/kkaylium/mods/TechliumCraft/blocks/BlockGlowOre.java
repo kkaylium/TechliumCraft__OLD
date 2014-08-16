@@ -18,7 +18,7 @@ import java.util.Random;
 /**
  * Created by Kayla Marie on 7/28/14.
  */
-public class BlockGlowOre extends BlockLayeredTexture {
+public class BlockGlowOre extends Block {
 
     private String[] texturesName = new String[]{"White", "Black", "Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
     private String[] blockName = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink"};

@@ -47,6 +47,9 @@ public class TCNames {
 
     public static String glowPortalName = "glowportal";
 
+    public static String glowSaplingName = "glowsapling";
+    public static String darkSaplingName = "darksapling";
+
     public static String teDarkColorId = "tedarkcolor";
     public static String teGlowColorId = "teglowcolor";
 

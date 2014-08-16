@@ -223,6 +223,11 @@ public class TCRegisters {
         TCInits.glowPortal = new BlockGlowPortal();
             GameRegistry.registerBlock(TCInits.glowPortal, TCNames.glowPortalName);
 
+        TCInits.glowSapling = new BlockGlowSapling();
+            GameRegistry.registerBlock(TCInits.glowSapling, TCNames.glowSaplingName);
+        TCInits.darkSapling = new BlockDarkSapling();
+            GameRegistry.registerBlock(TCInits.darkSapling, TCNames.darkSaplingName);
+
     }
 
     public static void registerMachines(){

@@ -2,9 +2,7 @@ package net.kkaylium.mods.TechliumCraft.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import libs.allout58.libs.LayeredTextureBlock.block.BlockLayeredTexture;
 import net.kkaylium.mods.TechliumCraft.TechliumCraft;
-import net.kkaylium.mods.TechliumCraft.init.TCInits;
 import net.kkaylium.mods.TechliumCraft.lib.ModInfo;
 import net.kkaylium.mods.TechliumCraft.lib.TCNames;
 import net.minecraft.block.Block;
@@ -25,7 +23,7 @@ import java.util.Random;
 /**
  * Created by Kayla Marie on 8/8/14.
  */
-public class BlockGlowDirt extends BlockLayeredTexture implements IGrowable {
+public class BlockGlowDirt extends Block implements IGrowable {
 
     @SideOnly(Side.CLIENT)
     private IIcon[] topIcon = new IIcon[12];
@@ -55,7 +53,7 @@ public class BlockGlowDirt extends BlockLayeredTexture implements IGrowable {
     public void registerBlockIcons(IIconRegister ir) {
         blockIcon = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowDirt_bottom");
         bottomIcon = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowDirt_bottom");
-        for(int i = 0; i < blockColor.length; i++){
+        for (int i = 0; i < blockColor.length; i++) {
             sideIcon[i] = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowDirt" + blockColor[i] + "_side");
             topIcon[i] = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowDirt" + blockColor[i] + "_top");
         }
@@ -66,7 +64,7 @@ public class BlockGlowDirt extends BlockLayeredTexture implements IGrowable {
     public IIcon getIcon(int side, int meta) {
         if (side == 0) {
             return bottomIcon;
-        } else if(side == 1) {
+        } else if (side == 1) {
             return topIcon[colored];
         }
         return sideIcon[colored];

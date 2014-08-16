@@ -1,5 +1,6 @@
 package net.kkaylium.mods.TechliumCraft.gen.glowdimention;
 
+import cpw.mods.fml.common.asm.transformers.AccessTransformer;
 import net.kkaylium.mods.TechliumCraft.init.gen.TCBiomeInits;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
@@ -10,6 +11,7 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -18,7 +20,6 @@ import java.util.Random;
  * Created by Kayla Marie on 8/11/14.
  */
 public class GDWorldChunkManager extends WorldChunkManager {
-
     /**
      * The biome generator object.
      */
@@ -87,7 +88,7 @@ public class GDWorldChunkManager extends WorldChunkManager {
 
         for (int i = 0; i < par4 * par5; ++i) {
             if (aint[i] >= 0) {
-                par1ArrayOfBiomeGenBase[i] = TCBiomeInits.GlowBiome_BLACK;
+                par1ArrayOfBiomeGenBase[i] = TCBiomeInits.biomesCopy[aint[i]];
             } else {
                 //Change this to a biome
                 par1ArrayOfBiomeGenBase[i] = TCBiomeInits.GlowBiome_WHITE;
@@ -127,7 +128,7 @@ public class GDWorldChunkManager extends WorldChunkManager {
 
             for (int i = 0; i < width * length; ++i) {
                 if (aint[i] >= 0) {
-                    par1ArrayOfBiomeGenBase[i] = TCBiomeInits.GlowBiome_BLACK;
+                    par1ArrayOfBiomeGenBase[i] = TCBiomeInits.biomesCopy[aint[i]];
                 } else {
                     //Change this to a biome
                     par1ArrayOfBiomeGenBase[i] = TCBiomeInits.GlowBiome_WHITE;
@@ -152,11 +153,10 @@ public class GDWorldChunkManager extends WorldChunkManager {
         int[] aint = this.myGenBiomes.getInts(l, i1, l1, i2);
 
         for (int j2 = 0; j2 < l1 * i2; ++j2) {
-            BiomeGenBase biomegenbase = TCBiomeInits.GlowBiome_BLACK;
-
-            if (!par4List.contains(biomegenbase)) {
-                return false;
-            }
+                BiomeGenBase biomegenbase = TCBiomeInits.biomesCopy[aint[j2]];
+                if (!par4List.contains(biomegenbase)) {
+                    return false;
+                }
         }
 
         return true;
@@ -182,7 +182,7 @@ public class GDWorldChunkManager extends WorldChunkManager {
         for (int k2 = 0; k2 < l1 * i2; ++k2) {
             int l2 = l + k2 % l1 << 2;
             int i3 = i1 + k2 / l1 << 2;
-            BiomeGenBase biomegenbase = TCBiomeInits.GlowBiome_BLACK;
+            BiomeGenBase biomegenbase = TCBiomeInits.biomesCopy[aint[k2]];
 
             if (par4List.contains(biomegenbase) && (chunkposition == null || par5Random.nextInt(j2 + 1) == 0)) {
                 chunkposition = new ChunkPosition(l2, 0, i3);
@@ -210,7 +210,7 @@ public class GDWorldChunkManager extends WorldChunkManager {
 
         for (int i1 = 0; i1 < par4 * par5; ++i1)
         {
-            float f = (float) TCBiomeInits.GlowBiome_BLACK.getIntRainfall() / 65536.0F;
+            float f = (float) TCBiomeInits.biomesCopy[aint[i1]].getIntRainfall() / 65536.0F;
 
             if (f > 1.0F) {
                 f = 1.0F;
