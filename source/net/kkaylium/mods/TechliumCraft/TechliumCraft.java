@@ -21,6 +21,7 @@ import net.kkaylium.mods.TechliumCraft.mobs.EntityDarkTurtle;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityRainbowSlime;
 import net.kkaylium.mods.TechliumCraft.mobs.EntityRainbowTurtle;
 import net.kkaylium.mods.TechliumCraft.proxy.CommonProxy;
+import net.kkaylium.mods.TechliumCraft.util.ObfHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -56,6 +57,7 @@ public class TechliumCraft {
         TCRegisters.registerBlocks();
 
         TCRegisters.registerTileEntities();
+        ObfHelper.init();
     }
 
     @Mod.EventHandler

@@ -34,7 +34,7 @@ public class BlockGlowPortal extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister ir){
-        blockIcon = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowportal");
+        blockIcon = ir.registerIcon(ModInfo.MOD_ID + ":" + "glowPortal");
     }
 
     @Override

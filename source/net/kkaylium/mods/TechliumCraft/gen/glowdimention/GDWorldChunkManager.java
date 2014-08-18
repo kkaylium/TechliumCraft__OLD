@@ -207,16 +207,18 @@ public class GDWorldChunkManager extends WorldChunkManager {
         }
 
         int[] aint = this.myBiomeIndexLayer.getInts(par2, par3, par4, par5);
-
         for (int i1 = 0; i1 < par4 * par5; ++i1)
         {
+            if(TCBiomeInits.biomesCopy[aint[i1]] != null){
             float f = (float) TCBiomeInits.biomesCopy[aint[i1]].getIntRainfall() / 65536.0F;
 
             if (f > 1.0F) {
                 f = 1.0F;
             }
 
+
             par1ArrayOfFloat[i1] = f;
+            }
         }
 
         return par1ArrayOfFloat;
