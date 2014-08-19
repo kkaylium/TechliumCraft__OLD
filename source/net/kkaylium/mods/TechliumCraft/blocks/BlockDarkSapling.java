@@ -48,6 +48,12 @@ public class BlockDarkSapling extends BlockSapling {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(int side, int meta){
+        return texture;
+    }
+
+    @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
         if (!world.isRemote) {
             if (player.inventory.getCurrentItem().getItem() == TCInits.darkCrystal_WHITE) {

@@ -26,16 +26,16 @@ import java.util.Random;
 public class BlockGlowDirt extends Block implements IGrowable {
 
     @SideOnly(Side.CLIENT)
-    private IIcon[] topIcon = new IIcon[12];
+    public IIcon[] topIcon = new IIcon[12];
     @SideOnly(Side.CLIENT)
     public IIcon[] sideIcon = new IIcon[12];
     @SideOnly(Side.CLIENT)
-    private IIcon bottomIcon;
+    public IIcon bottomIcon;
 
     private String[] blockColor = {"White", "Black", "Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
     private String[] blockName = {"white", "black", "red", "orange", "yellow", "lime", "green", "sky", "blue", "lilac", "purple", "pink"};
 
-    private int colored;
+    public int colored;
 
     public BlockGlowDirt(int color) {
         super(Material.grass);
