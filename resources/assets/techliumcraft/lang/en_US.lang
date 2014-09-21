@@ -1,6 +1,8 @@
 itemGroup.Glow Glass=Glow Glass
 itemGroup.Techlium Craft=Techlium Craft
 
+death.attack.player.rainbowcrystal=%1$s could not withstand the rainbows
+
 item.glowcrystal0.name=Glow Crystal: White
 item.glowcrystal1.name=Glow Crystal: Black
 item.glowcrystal2.name=Glow Crystal: Red
@@ -12,7 +14,10 @@ item.glowcrystal7.name=Glow Crystal: Sky
 item.glowcrystal8.name=Glow Crystal: Blue
 item.glowcrystal9.name=Glow Crystal: Lilac
 item.glowcrystal10.name=Glow Crystal: Purple
-item.glowcrystal11.name=Glow Crystal: Pink
+item.glowcrystal11.name=Glow Crystal: Baby Pink
+item.glowcrystal12.name=Glow Crystal: Pink
+item.glowcrystal13.name=Glow Crystal: Cream
+item.glowcrystal14.name=Glow Crystal: Chocolate
 
 item.darkcrystal0.name=Dark Crystal: White
 item.darkcrystal1.name=Dark Crystal: Black
@@ -25,17 +30,101 @@ item.darkcrystal7.name=Dark Crystal: Sky
 item.darkcrystal8.name=Dark Crystal: Blue
 item.darkcrystal9.name=Dark Crystal: Lilac
 item.darkcrystal10.name=Dark Crystal: Purple
-item.darkcrystal11.name=Dark Crystal: Pink
+item.darkcrystal11.name=Dark Crystal: Baby Pink
+item.darkcrystal12.name=Dark Crystal: Pink
+item.darkcrystal13.name=Dark Crystal: Cream
+item.darkcrystal14.name=Dark Crystal: Chocolate
 
-tile.glowore0.name=Glow Ore: White
-tile.glowore1.name=Glow Ore: Black
-tile.glowore2.name=Glow Ore: Red
-tile.glowore3.name=Glow Ore: Orange
-tile.glowore4.name=Glow Ore: Yellow
-tile.glowore5.name=Glow Ore: Lime
-tile.glowore6.name=Glow Ore: Green
-tile.glowore7.name=Glow Ore: Sky
-tile.glowore8.name=Glow Ore: Blue
-tile.glowore9.name=Glow Ore: Lilac
-tile.glowore10.name=Glow Ore: Purple
-tile.glowore11.name=Glow Ore: Pink
+item.rawdarkcrystal.name=Dark Crystal: Raw
+
+item.glowrainbowcrystal.name=Glow Crystal: Rainbow
+item.darkrainbowcrystal.name=Dark Crystal: Rainbow
+
+tile.glowore_white.name=Glow Ore: White
+tile.glowore_black.name=Glow Ore: Black
+tile.glowore_red.name=Glow Ore: Red
+tile.glowore_orange.name=Glow Ore: Orange
+tile.glowore_yellow.name=Glow Ore: Yellow
+tile.glowore_lime.name=Glow Ore: Lime
+tile.glowore_green.name=Glow Ore: Green
+tile.glowore_sky.name=Glow Ore: Sky
+tile.glowore_blue.name=Glow Ore: Blue
+tile.glowore_lilac.name=Glow Ore: Lilac
+tile.glowore_purple.name=Glow Ore: Purple
+tile.glowore_babypink.name=Glow Ore: Baby Pink
+tile.glowore_pink.name=Glow Ore: Pink
+tile.glowore_cream.name=Glow Ore: Cream
+tile.glowore_chocolate.name=Glow Ore: Chocolate
+
+tile.darkore.name=Raw Dark Ore
+
+tile.glowcrystalstorage_white.name=Glow Crystal Block: White
+tile.glowcrystalstorage_black.name=Glow Crystal Block: Black
+tile.glowcrystalstorage_red.name=Glow Crystal Block: Red
+tile.glowcrystalstorage_orange.name=Glow Crystal Block: Orange
+tile.glowcrystalstorage_yellow.name=Glow Crystal Block: Yellow
+tile.glowcrystalstorage_lime.name=Glow Crystal Block: Lime
+tile.glowcrystalstorage_green.name=Glow Crystal Block: Green
+tile.glowcrystalstorage_sky.name=Glow Crystal Block: Sky
+tile.glowcrystalstorage_blue.name=Glow Crystal Block: Blue
+tile.glowcrystalstorage_lilac.name=Glow Crystal Block: Lilac
+tile.glowcrystalstorage_purple.name=Glow Crystal Block: Purple
+tile.glowcrystalstorage_babypink.name=Glow Crystal Block: Baby Pink
+tile.glowcrystalstorage_pink.name=Glow Crystal Block: Pink
+tile.glowcrystalstorage_cream.name=Glow Crystal Block: Cream
+tile.glowcrystalstorage_chocolate.name=Glow Crystal Block: Chocolate
+
+tile.darkcrystalstorage_white.name=Dark Crystal Block: White
+tile.darkcrystalstorage_black.name=Dark Crystal Block: Black
+tile.darkcrystalstorage_red.name=Dark Crystal Block: Red
+tile.darkcrystalstorage_orange.name=Dark Crystal Block: Orange
+tile.darkcrystalstorage_yellow.name=Dark Crystal Block: Yellow
+tile.darkcrystalstorage_lime.name=Dark Crystal Block: Lime
+tile.darkcrystalstorage_green.name=Dark Crystal Block: Green
+tile.darkcrystalstorage_sky.name=Dark Crystal Block: Sky
+tile.darkcrystalstorage_blue.name=Dark Crystal Block: Blue
+tile.darkcrystalstorage_lilac.name=Dark Crystal Block: Lilac
+tile.darkcrystalstorage_purple.name=Dark Crystal Block: Purple
+tile.darkcrystalstorage_babypink.name=Dark Crystal Block: Baby Pink
+tile.darkcrystalstorage_pink.name=Dark Crystal Block: Pink
+tile.darkcrystalstorage_cream.name=Dark Crystal Block: Cream
+tile.darkcrystalstorage_chocolate.name=Dark Crystal Block: Chocolate
+
+tile.darkcrystalstorage_raw.name=Dark Crystal Block: Raw
+tile.glowcrystalstorage_rainbow.name=Glow Crystal Block: Rainbow
+tile.darkcrystalstorage_rainbow.name=Dark Crystal Block: Rainbow
+
+tile.glowblock.name=Glow Block
+tile.darkblock.name=Dark Block
+
+tile.glowglass.name=Glow Glass
+tile.darkglass.name=Dark Glass
+
+tile.glowfence.name=Glow Fence
+tile.darkfence.name=Dark Fence
+
+tile.glowdirt_white.name=Glow Dirt: White
+tile.glowdirt_black.name=Glow Dirt: Black
+tile.glowdirt_red.name=Glow Dirt: Red
+tile.glowdirt_orange.name=Glow Dirt: Orange
+tile.glowdirt_yellow.name=Glow Dirt: Yellow
+tile.glowdirt_lime.name=Glow Dirt: Lime
+tile.glowdirt_green.name=Glow Dirt: Green
+tile.glowdirt_sky.name=Glow Dirt: Sky
+tile.glowdirt_blue.name=Glow Dirt: Blue
+tile.glowdirt_lilac.name=Glow Dirt: Lilac
+tile.glowdirt_purple.name=Glow Dirt: Purple
+tile.glowdirt_pink.name=Glow Dirt: Pink
+
+tile.glowleaves.name=Glow Leaves
+tile.glowgenleaves.name=Glow Gen Leaves
+tile.darkleaves.name=Dark Leaves
+tile.darkgenleaves.name=Dark Gen Leaves
+tile.glowlog.name=Glow Log
+tile.darklog.name=Dark Log
+tile.glowsapling.name=Glow Sapling
+tile.darksapling.name=Dark Sapling
+tile.glowplank.name=Glow Planks
+tile.darkplank.name=Dark Planks
+item.glowstick.name=Glow Stick
+item.darkstick.name=Dark Stick
