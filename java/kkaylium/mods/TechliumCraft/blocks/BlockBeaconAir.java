@@ -17,7 +17,7 @@ public class BlockBeaconAir extends Block {
 
     public BlockBeaconAir() {
         super(Material.glass);
-        this.setBlockBounds(0.4F, 0.0F, 0.4F, 0.4F, 1.0F, 0.4F);
+        this.setBlockBounds(0.8F, 0.0F, 0.8F, 0.6F, 1.0F, 0.6F);
         this.setLightLevel(1.0F);
     }
 

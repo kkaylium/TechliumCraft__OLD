@@ -2,6 +2,9 @@ package kkaylium.mods.TechliumCraft.gen.glowdimension.biomes;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import kkaylium.mods.TechliumCraft.gen.structures.StructureRainbow;
+import kkaylium.mods.TechliumCraft.gen.tree.DarkTreeGen;
+import kkaylium.mods.TechliumCraft.gen.tree.GlowTreeGen;
 import kkaylium.mods.TechliumCraft.mobs.*;
 import net.minecraft.block.Block;
 import net.minecraft.entity.passive.EntityChicken;
@@ -9,7 +12,12 @@ import net.minecraft.entity.passive.EntityMooshroom;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
+import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.feature.WorldGenDungeons;
+import net.minecraft.world.gen.feature.WorldGenerator;
+
+import java.util.Random;
 
 /**
  * Created by Kayla Marie on 8/8/14.
@@ -45,6 +53,30 @@ public class BiomeGlow extends BiomeGenBase {
         spawnableCreatureList.add(new SpawnListEntry(EntityDarkSlime.class, 9, 20, 20));
         spawnableCreatureList.add(new SpawnListEntry(EntityDarkTurtle.class, 10, 20, 20));
         spawnableCreatureList.add(new SpawnListEntry(EntityPinkSnowman.class, 11, 5, 5));
+    }
+
+    public void decorate(World par1World, Random par2Random, int par3, int par4)
+    {
+        super.decorate(par1World, par2Random, par3, par4);
+
+        if (par2Random.nextInt(42) == 0)
+        {
+            int k = par3 + par2Random.nextInt(16) + 8;
+            int l = par4 + par2Random.nextInt(16) + 8;
+            StructureRainbow structureRainbow = new StructureRainbow();
+            GlowTreeGen glowTreeGen = new GlowTreeGen();
+            DarkTreeGen darkTreeGen = new DarkTreeGen();
+            structureRainbow.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+            glowTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+            darkTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+        }
+        if (par2Random.nextInt(16) == 2)
+        {
+            int k = par3 + par2Random.nextInt(16) + 8;
+            int l = par4 + par2Random.nextInt(16) + 8;
+            WorldGenDungeons worldgendungeons = new WorldGenDungeons();
+            worldgendungeons.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+        }
     }
 
     @Override
