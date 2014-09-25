@@ -59,8 +59,14 @@ public class TCInits {
     public static Item glowRainbowLauncher;
     public static Item darkRainbowLauncher;
 
-    public static Item glowArmor;
-    public static Item darkArmor;
+    public static Item glowArmor_HELM;
+    public static Item glowArmor_CHESTPLATE;
+    public static Item glowArmor_LEGGINGS;
+    public static Item glowArmor_BOOTS;
+    public static Item darkArmor_HELM;
+    public static Item darkArmor_CHESTPLATE;
+    public static Item darkArmor_LEGGINGS;
+    public static Item darkArmor_BOOTS;
 
 
     public static Block glowOre_WHITE;

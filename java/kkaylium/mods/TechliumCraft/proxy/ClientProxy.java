@@ -17,6 +17,7 @@ import kkaylium.mods.TechliumCraft.mobs.RainbowTurtle.RenderRainbowTurtle;
  * Created by Kayla Marie on 7/26/14.
  */
 public class ClientProxy extends CommonProxy {
+
     public void registerRenderInformation()
     {
         super.registerRenderInformation();
@@ -25,5 +26,9 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityRainbowTurtle.class, new RenderRainbowTurtle(new ModelRainbowTurtle(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityDarkTurtle.class, new RenderDarkTurtle(new ModelDarkTurtle(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityPinkSnowman.class, new RenderPinkSnowman(new ModelPinkSnowman(), 0.5F));
+    }
+
+    public int addArmor(String armor){
+        return RenderingRegistry.addNewArmourRendererPrefix(armor);
     }
 }

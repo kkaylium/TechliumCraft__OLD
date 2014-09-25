@@ -10,7 +10,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import kkaylium.mods.TechliumCraft.creativetabs.GlowGlassTab;
 import kkaylium.mods.TechliumCraft.creativetabs.TechliumCraftTab;
 import kkaylium.mods.TechliumCraft.gen.OverworldOreGen;
-import kkaylium.mods.TechliumCraft.gen.OverworldStructureGen;
 import kkaylium.mods.TechliumCraft.gen.glowdimension.GDWorldProvider;
 import kkaylium.mods.TechliumCraft.handlers.ConfigHandler;
 import kkaylium.mods.TechliumCraft.handlers.DamageSourceCrystal;

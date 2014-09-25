@@ -6,9 +6,13 @@ import kkaylium.mods.TechliumCraft.lib.TCInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 /**
  * Created by kkaylium on 9/21/14.
@@ -17,7 +21,7 @@ public class BlockBeaconAir extends Block {
 
     public BlockBeaconAir() {
         super(Material.glass);
-        this.setBlockBounds(0.8F, 0.0F, 0.8F, 0.6F, 1.0F, 0.6F);
+        this.setBlockBounds(0.37F, 0.0F, 0.37F, 0.62F, 1.0F, 0.62F);
         this.setLightLevel(1.0F);
     }
 
