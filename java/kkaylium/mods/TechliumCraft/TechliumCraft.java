@@ -59,9 +59,13 @@ public class TechliumCraft {
         ConfigHandler.configOptions(config);
         TCRegisters.registerItems();
         TCRegisters.registerBlocks();
+        TCRegisters.registerArmor();
+        TCRegisters.registerTools();
 
         TCRegisters.registerTileEntities();
         ObfHelper.init();
+
+        proxy.load();
     }
 
     @Mod.EventHandler

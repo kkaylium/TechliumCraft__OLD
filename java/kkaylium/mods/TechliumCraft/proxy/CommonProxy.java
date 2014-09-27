@@ -7,6 +7,16 @@ import kkaylium.mods.TechliumCraft.mobs.*;
  * Created by Kayla Marie on 7/26/14.
  */
 public class CommonProxy {
+
+    public void load() {
+        initRenderers();
+        initSounds();
+    }
+
+    public void initSounds() {}
+
+    public void initRenderers() {}
+
     public void registerRenderInformation()
     {
         EntityRegistry.registerGlobalEntityID(EntityRainbowSlime.class, "RainbowSlime", EntityRegistry.findGlobalUniqueEntityId(), 0xffffff, 0x000000);

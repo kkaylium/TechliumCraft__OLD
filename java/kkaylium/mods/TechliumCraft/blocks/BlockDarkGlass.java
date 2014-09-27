@@ -168,16 +168,11 @@ public class BlockDarkGlass extends BlockContainer {
         if (shouldRenderSelectionBox) {
             return super.getSelectedBoundingBoxFromPool(par1World, par2, par3, par4);
         } else {
-            //return AxisAlignedBB.getAABBPool().getAABB(0D, 0D, 0D, 0D, 0D, 0D);
             return AxisAlignedBB.getBoundingBox(0D, 0D, 0D, 0D, 0D, 0D);
         }
     }
 
     public IIcon getConnectedBlockTexture(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5, IIcon[] icons) {
-//        if (PHConstruct.connectedTexturesMode == 0)
-//        {
-//            return icons[0];
-//        }
 
         boolean isOpenUp = false, isOpenDown = false, isOpenLeft = false, isOpenRight = false;
 

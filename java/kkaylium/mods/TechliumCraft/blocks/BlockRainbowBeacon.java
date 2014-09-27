@@ -33,7 +33,7 @@ public class BlockRainbowBeacon extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister ir){
-        blockIcon = ir.registerIcon(TCInfo.MOD_ID + "rainbowBeacon");
+        blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":" + TCNames.rainbowBeaconName);
     }
 
     @Override

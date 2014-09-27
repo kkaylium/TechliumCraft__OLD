@@ -1,10 +1,17 @@
 package kkaylium.mods.TechliumCraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import kkaylium.mods.TechliumCraft.armor.ArmorGlow;
+import kkaylium.mods.TechliumCraft.armor.ArmorGlowHelm;
 import kkaylium.mods.TechliumCraft.blocks.*;
 import kkaylium.mods.TechliumCraft.items.*;
+import kkaylium.mods.TechliumCraft.items.tools.ItemGlowPickaxe;
+import kkaylium.mods.TechliumCraft.items.tools.ItemGlowSword;
 import kkaylium.mods.TechliumCraft.lib.TCNames;
 import kkaylium.mods.TechliumCraft.tileentities.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraftforge.common.util.EnumHelper;
 
 /**
  * Created by Kayla Marie on 7/29/14.
@@ -259,16 +266,16 @@ public class TCRegisters {
             GameRegistry.registerBlock(TCInits.rainbowBeacon, TCNames.rainbowBeaconName);
         TCInits.beaconAir = new BlockBeaconAir();
             GameRegistry.registerBlock(TCInits.beaconAir, TCNames.beaconAirName);
-        TCInits.rainbowFire = new BlockRainbowFire();
-            GameRegistry.registerBlock(TCInits.rainbowFire, TCNames.rainbowFireName);
+//        TCInits.rainbowFire = new BlockRainbowFire();
+//            GameRegistry.registerBlock(TCInits.rainbowFire, TCNames.rainbowFireName);
 
         TCInits.glowSapling = new BlockGlowSapling();
             GameRegistry.registerBlock(TCInits.glowSapling, TCNames.glowSaplingName);
         TCInits.darkSapling = new BlockDarkSapling();
             GameRegistry.registerBlock(TCInits.darkSapling, TCNames.darkSaplingName);
 
-        TCInits.glowTNT = new BlockGlowTNT();
-            GameRegistry.registerBlock(TCInits.glowTNT, TCNames.glowTNTName);
+//        TCInits.glowTNT = new BlockGlowTNT();
+//            GameRegistry.registerBlock(TCInits.glowTNT, TCNames.glowTNTName);
 
         TCInits.glowTorch = new BlockGlowTorches();
             GameRegistry.registerBlock(TCInits.glowTorch, TCNames.glowTorchName);
@@ -281,15 +288,30 @@ public class TCRegisters {
 
     public static void registerTools(){
 
+        Item.ToolMaterial GlowTool = EnumHelper.addToolMaterial("GlowTool", 3, 1000, 8.5F, 4.0F, 18);
+
+        TCInits.glowPickaxe = new ItemGlowPickaxe(GlowTool);
+            GameRegistry.registerItem(TCInits.glowPickaxe, TCNames.glowPickaxeName);
+        TCInits.glowSword = new ItemGlowSword(GlowTool);
+            GameRegistry.registerItem(TCInits.glowSword, TCNames.glowSwordName);
     }
 
     public static void registerArmor(){
-
+        TCInits.glowArmor_HELM = new ArmorGlowHelm(ItemArmor.ArmorMaterial.DIAMOND, 0, 0);
+            GameRegistry.registerItem(TCInits.glowArmor_HELM, TCNames.glowArmorName + "_helm");
+//        TCInits.glowArmor_CHESTPLATE = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 1);
+//            GameRegistry.registerItem(TCInits.glowArmor_CHESTPLATE, TCNames.glowArmorName + "_chestplate");
+//        TCInits.glowArmor_LEGGINGS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 2);
+//            GameRegistry.registerItem(TCInits.glowArmor_LEGGINGS, TCNames.glowArmorName + "_leggings");
+//        TCInits.glowArmor_BOOTS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 3);
+//            GameRegistry.registerItem(TCInits.glowArmor_BOOTS, TCNames.glowArmorName + "_boots");
     }
 
     public static void registerTileEntities(){
         GameRegistry.registerTileEntity(TEGlowColor.class, TCNames.teGlowColorId);
         GameRegistry.registerTileEntity(TEDarkColor.class, TCNames.teDarkColorId);
         GameRegistry.registerTileEntity(TERainbowBeacon.class, TCNames.teRainbowBeaconId);
+        GameRegistry.registerTileEntity(TEGlowTorch.class, "teGlowTorch");
     }
+
 }
