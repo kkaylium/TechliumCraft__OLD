@@ -12,11 +12,11 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by Kayla Marie on 9/25/14.
+ * Created by Kayla Marie on 9/30/14.
  */
-public class ArmorGlowHelm extends ItemArmor {
+public class ArmorGlowLeggings extends ItemArmor {
 
-    public ArmorGlowHelm(ArmorMaterial material, int renderer, int armorPiece) {
+    public ArmorGlowLeggings(ArmorMaterial material, int renderer, int armorPiece) {
         super(material, renderer, armorPiece);
         this.setCreativeTab(TechliumCraft.TCTab);
         this.setUnlocalizedName(TCNames.glowArmorName + "_helm");
@@ -27,9 +27,7 @@ public class ArmorGlowHelm extends ItemArmor {
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase player, ItemStack stack, int slot) {
         ModelBiped model = new ModelGlowArmor(0.5F);
-
-        model.bipedRightLeg.isHidden = true;
-        model.bipedLeftLeg.isHidden = true;
+        model.bipedHead.isHidden = true;
         model.bipedBody.isHidden = true;
         model.bipedRightArm.isHidden = true;
         model.bipedLeftArm.isHidden = true;

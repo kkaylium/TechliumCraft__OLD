@@ -45,9 +45,9 @@ public class ArmorGlow extends ItemArmor{
                 getBootsModel(model);
                 break;
         }
-        //model.isSneak = player.isSneaking();
-       // model.isRiding = player.isRiding();
-       // model.isChild = player.isChild();
+        model.isSneak = player.isSneaking();
+        model.isRiding = player.isRiding();
+        model.isChild = player.isChild();
 
         return model;
     }

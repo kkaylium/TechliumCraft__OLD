@@ -370,10 +370,10 @@ public class ModelGlowArmor extends ModelBiped
       this.bipedBody.addChild(ChestplateBack2);
       this.bipedBody.addChild(ChestplateBack3);
 
-      this.bipedBody.addChild(LeggingFront1);
-      this.bipedBody.addChild(LeggingBack1);
-      this.bipedBody.addChild(LeggingLeft1);
-      this.bipedBody.addChild(LeggingRight1);
+      this.bipedLeftLeg.addChild(LeggingFront1);
+      this.bipedLeftLeg.addChild(LeggingBack1);
+      this.bipedLeftLeg.addChild(LeggingLeft1);
+      this.bipedRightLeg.addChild(LeggingRight1);
       this.bipedLeftLeg.addChild(LeggingLeft2);
       this.bipedRightLeg.addChild(LeggingRight2);
 
@@ -388,58 +388,6 @@ public class ModelGlowArmor extends ModelBiped
       this.bipedRightLeg.addChild(RBootRight1);
       this.bipedRightLeg.addChild(RBootLeft1);
       this.bipedRightLeg.addChild(RBootRim);
-  }
-  
-  public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-  {
-    super.render(entity, f, f1, f2, f3, f4, f5);
-    setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-    hoodRight1.render(f5);
-    hoodRight2.render(f5);
-    hoodRight3.render(f5);
-    hoodRight4.render(f5);
-    hoodLeft1.render(f5);
-    hoodLeft2.render(f5);
-    hoodLeft3.render(f5);
-    hoodLeft4.render(f5);
-    hoodTop1.render(f5);
-    hoodBottom3.render(f5);
-    hoodBottom2.render(f5);
-    hoodBottom1.render(f5);
-    hoodBack1.render(f5);
-    ChestplateFront1.render(f5);
-    ChestplateFront2.render(f5);
-    ChestplateFront3.render(f5);
-    ChestplateFront4.render(f5);
-    ChestplateFront5.render(f5);
-    ChestplateFront6.render(f5);
-    ChestplateLeft1.render(f5);
-    ChestplateLeft2.render(f5);
-    ChestplateLeft3.render(f5);
-    ChestplateLeft4.render(f5);
-    ChestplateRight1.render(f5);
-    ChestplateRight2.render(f5);
-    ChestplateRight3.render(f5);
-    ChestplateRight4.render(f5);
-    ChestplateBack1.render(f5);
-    ChestplateBack2.render(f5);
-    ChestplateBack3.render(f5);
-    LeggingFront1.render(f5);
-    LeggingLeft1.render(f5);
-    LeggingLeft2.render(f5);
-    LeggingRight1.render(f5);
-    LeggingRight2.render(f5);
-    LeggingBack1.render(f5);
-    LBootFront1.render(f5);
-    LBootLeft1.render(f5);
-    LBootRight1.render(f5);
-    LBootBack1.render(f5);
-    LBootRim.render(f5);
-    RBootFront1.render(f5);
-    RBootLeft1.render(f5);
-    RBootRight1.render(f5);
-    RBootBack1.render(f5);
-    RBootRim.render(f5);
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)

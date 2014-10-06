@@ -12,11 +12,11 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 /**
- * Created by Kayla Marie on 9/25/14.
+ * Created by Kayla Marie on 9/30/14.
  */
-public class ArmorGlowHelm extends ItemArmor {
+public class ArmorGlowChestplate extends ItemArmor {
 
-    public ArmorGlowHelm(ArmorMaterial material, int renderer, int armorPiece) {
+    public ArmorGlowChestplate(ArmorMaterial material, int renderer, int armorPiece) {
         super(material, renderer, armorPiece);
         this.setCreativeTab(TechliumCraft.TCTab);
         this.setUnlocalizedName(TCNames.glowArmorName + "_helm");
@@ -30,10 +30,13 @@ public class ArmorGlowHelm extends ItemArmor {
 
         model.bipedRightLeg.isHidden = true;
         model.bipedLeftLeg.isHidden = true;
-        model.bipedBody.isHidden = true;
         model.bipedRightArm.isHidden = true;
         model.bipedLeftArm.isHidden = true;
         model.bipedHeadwear.isHidden = true;
+        ((ModelGlowArmor)model).LeggingFront1.isHidden = true;
+        ((ModelGlowArmor)model).LeggingBack1.isHidden = true;
+        ((ModelGlowArmor)model).LeggingLeft1.isHidden = true;
+        ((ModelGlowArmor)model).LeggingRight1.isHidden = true;
 
         model.isSneak = player.isSneaking();
         model.isRiding = player.isRiding();

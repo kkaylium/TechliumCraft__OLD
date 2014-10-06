@@ -2,6 +2,7 @@ package kkaylium.mods.TechliumCraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import kkaylium.mods.TechliumCraft.armor.ArmorGlow;
+import kkaylium.mods.TechliumCraft.armor.ArmorGlowChestplate;
 import kkaylium.mods.TechliumCraft.armor.ArmorGlowHelm;
 import kkaylium.mods.TechliumCraft.blocks.*;
 import kkaylium.mods.TechliumCraft.items.*;
@@ -297,14 +298,14 @@ public class TCRegisters {
     }
 
     public static void registerArmor(){
-        TCInits.glowArmor_HELM = new ArmorGlowHelm(ItemArmor.ArmorMaterial.DIAMOND, 0, 0);
+        TCInits.glowArmor_HELM = new ArmorGlowHelm(ItemArmor.ArmorMaterial.DIAMOND, 1, 0);
             GameRegistry.registerItem(TCInits.glowArmor_HELM, TCNames.glowArmorName + "_helm");
-//        TCInits.glowArmor_CHESTPLATE = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 1);
-//            GameRegistry.registerItem(TCInits.glowArmor_CHESTPLATE, TCNames.glowArmorName + "_chestplate");
-//        TCInits.glowArmor_LEGGINGS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 2);
-//            GameRegistry.registerItem(TCInits.glowArmor_LEGGINGS, TCNames.glowArmorName + "_leggings");
-//        TCInits.glowArmor_BOOTS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 3);
-//            GameRegistry.registerItem(TCInits.glowArmor_BOOTS, TCNames.glowArmorName + "_boots");
+        TCInits.glowArmor_CHESTPLATE = new ArmorGlowChestplate(ItemArmor.ArmorMaterial.DIAMOND, 1, 1);
+            GameRegistry.registerItem(TCInits.glowArmor_CHESTPLATE, TCNames.glowArmorName + "_chestplate");
+        TCInits.glowArmor_LEGGINGS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 2);
+            GameRegistry.registerItem(TCInits.glowArmor_LEGGINGS, TCNames.glowArmorName + "_leggings");
+        TCInits.glowArmor_BOOTS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 3);
+            GameRegistry.registerItem(TCInits.glowArmor_BOOTS, TCNames.glowArmorName + "_boots");
     }
 
     public static void registerTileEntities(){
