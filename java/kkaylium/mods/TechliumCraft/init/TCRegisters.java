@@ -1,9 +1,7 @@
 package kkaylium.mods.TechliumCraft.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import kkaylium.mods.TechliumCraft.armor.ArmorGlow;
-import kkaylium.mods.TechliumCraft.armor.ArmorGlowChestplate;
-import kkaylium.mods.TechliumCraft.armor.ArmorGlowHelm;
+import kkaylium.mods.TechliumCraft.armor.*;
 import kkaylium.mods.TechliumCraft.blocks.*;
 import kkaylium.mods.TechliumCraft.items.*;
 import kkaylium.mods.TechliumCraft.items.tools.ItemGlowPickaxe;
@@ -306,6 +304,11 @@ public class TCRegisters {
             GameRegistry.registerItem(TCInits.glowArmor_LEGGINGS, TCNames.glowArmorName + "_leggings");
         TCInits.glowArmor_BOOTS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 3);
             GameRegistry.registerItem(TCInits.glowArmor_BOOTS, TCNames.glowArmorName + "_boots");
+
+        TCInits.darkArmor_HELM = new ArmorDarkHelm(ItemArmor.ArmorMaterial.DIAMOND, 1, 0);
+            GameRegistry.registerItem(TCInits.darkArmor_HELM, TCNames.darkArmorName + "_helm");
+        TCInits.darkArmor_CHESTPLATE = new ArmorDarkChestplate(ItemArmor.ArmorMaterial.DIAMOND, 1, 1);
+            GameRegistry.registerItem(TCInits.darkArmor_CHESTPLATE, TCNames.darkArmorName + "_chestplate");
     }
 
     public static void registerTileEntities(){
