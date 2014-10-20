@@ -26,7 +26,7 @@ public class ArmorGlowHelm extends ItemArmor {
     @Override
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase player, ItemStack stack, int slot) {
-        ModelBiped model = new ModelGlowArmor(0.5F);
+        ModelBiped model = new ModelGlowChestplate(0.5F);
 
         model.bipedRightLeg.isHidden = true;
         model.bipedLeftLeg.isHidden = true;

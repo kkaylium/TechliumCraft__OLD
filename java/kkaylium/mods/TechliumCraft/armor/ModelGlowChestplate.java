@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelGlowArmor extends ModelBiped
+public class ModelGlowChestplate extends ModelBiped
 {
   //fields
     ModelRenderer hoodRight1;
@@ -54,7 +54,7 @@ public class ModelGlowArmor extends ModelBiped
     ModelRenderer RBootBack1;
     ModelRenderer RBootRim;
   
-  public ModelGlowArmor(float scale){
+  public ModelGlowChestplate(float scale){
 
     super(scale, 0.0F, 64, 64);
     textureWidth = 256;

@@ -114,7 +114,7 @@ public class BlockDarkGlass extends BlockContainer {
     public void breakBlock(World world, int x, int y, int z, Block block, int par6) {
         TileEntity te = world.getTileEntity(x, y, z);
         EntityItem entityCrystal;
-        if(te instanceof TEDarkColor && ((TEDarkColor) te).color != 12){
+        if(te instanceof TEDarkColor && ((TEDarkColor) te).color != TCInfo.DARK_CRYSTALS.length){
             entityCrystal = new EntityItem(world, (double)x, (double)y, (double)z, TCInfo.DARK_CRYSTALS[((TEDarkColor) te).color]);
             world.spawnEntityInWorld(entityCrystal);
         }

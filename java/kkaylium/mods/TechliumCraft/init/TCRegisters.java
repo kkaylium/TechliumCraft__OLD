@@ -300,10 +300,6 @@ public class TCRegisters {
             GameRegistry.registerItem(TCInits.glowArmor_HELM, TCNames.glowArmorName + "_helm");
         TCInits.glowArmor_CHESTPLATE = new ArmorGlowChestplate(ItemArmor.ArmorMaterial.DIAMOND, 1, 1);
             GameRegistry.registerItem(TCInits.glowArmor_CHESTPLATE, TCNames.glowArmorName + "_chestplate");
-        TCInits.glowArmor_LEGGINGS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 2);
-            GameRegistry.registerItem(TCInits.glowArmor_LEGGINGS, TCNames.glowArmorName + "_leggings");
-        TCInits.glowArmor_BOOTS = new ArmorGlow(ItemArmor.ArmorMaterial.DIAMOND, 0, 3);
-            GameRegistry.registerItem(TCInits.glowArmor_BOOTS, TCNames.glowArmorName + "_boots");
 
         TCInits.darkArmor_HELM = new ArmorDarkHelm(ItemArmor.ArmorMaterial.DIAMOND, 1, 0);
             GameRegistry.registerItem(TCInits.darkArmor_HELM, TCNames.darkArmorName + "_helm");

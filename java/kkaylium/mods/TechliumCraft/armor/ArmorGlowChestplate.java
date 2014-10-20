@@ -26,17 +26,17 @@ public class ArmorGlowChestplate extends ItemArmor {
     @Override
     @SideOnly(Side.CLIENT)
     public ModelBiped getArmorModel(EntityLivingBase player, ItemStack stack, int slot) {
-        ModelBiped model = new ModelGlowArmor(0.5F);
+        ModelBiped model = new ModelGlowChestplate(0.5F);
 
         model.bipedRightLeg.isHidden = true;
         model.bipedLeftLeg.isHidden = true;
         model.bipedRightArm.isHidden = true;
         model.bipedLeftArm.isHidden = true;
         model.bipedHeadwear.isHidden = true;
-        ((ModelGlowArmor)model).LeggingFront1.isHidden = true;
-        ((ModelGlowArmor)model).LeggingBack1.isHidden = true;
-        ((ModelGlowArmor)model).LeggingLeft1.isHidden = true;
-        ((ModelGlowArmor)model).LeggingRight1.isHidden = true;
+        ((ModelGlowChestplate)model).LeggingFront1.isHidden = true;
+        ((ModelGlowChestplate)model).LeggingBack1.isHidden = true;
+        ((ModelGlowChestplate)model).LeggingLeft1.isHidden = true;
+        ((ModelGlowChestplate)model).LeggingRight1.isHidden = true;
 
         model.isSneak = player.isSneaking();
         model.isRiding = player.isRiding();
