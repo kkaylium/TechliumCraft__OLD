@@ -1,4 +1,4 @@
-package kkaylium.mods.TechliumCraft.blocks;
+package kkaylium.mods.TechliumCraft.blocks.advanced;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -23,6 +23,7 @@ public class BlockGlowTorches extends BlockContainer {
         this.setCreativeTab(TechliumCraft.GGTab);
         this.setBlockName(TCNames.glowTorchName);
         this.setLightLevel(1.0F);
+        this.setBlockBounds(0.3f, 0f, 0.3f, 0.7f, 1f, 0.7f);
     }
 
     @Override
@@ -35,6 +36,11 @@ public class BlockGlowTorches extends BlockContainer {
     public boolean isOpaqueCube()
     {
         return false;
+    }
+
+    @Override
+    public int getRenderType() {
+        return -1;
     }
 
     @Override

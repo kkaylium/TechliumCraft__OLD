@@ -3,6 +3,8 @@ package kkaylium.mods.TechliumCraft.init;
 import cpw.mods.fml.common.registry.GameRegistry;
 import kkaylium.mods.TechliumCraft.armor.*;
 import kkaylium.mods.TechliumCraft.blocks.*;
+import kkaylium.mods.TechliumCraft.blocks.advanced.BlockGlowTorches;
+import kkaylium.mods.TechliumCraft.blocks.advanced.BlockRainbow;
 import kkaylium.mods.TechliumCraft.items.*;
 import kkaylium.mods.TechliumCraft.items.tools.ItemGlowPickaxe;
 import kkaylium.mods.TechliumCraft.items.tools.ItemGlowSword;
@@ -267,6 +269,8 @@ public class TCRegisters {
             GameRegistry.registerBlock(TCInits.beaconAir, TCNames.beaconAirName);
 //        TCInits.rainbowFire = new BlockRainbowFire();
 //            GameRegistry.registerBlock(TCInits.rainbowFire, TCNames.rainbowFireName);
+        TCInits.rainbow = new BlockRainbow();
+            GameRegistry.registerBlock(TCInits.rainbow, TCNames.rainbowName);
 
         TCInits.glowSapling = new BlockGlowSapling();
             GameRegistry.registerBlock(TCInits.glowSapling, TCNames.glowSaplingName);
@@ -312,6 +316,7 @@ public class TCRegisters {
         GameRegistry.registerTileEntity(TEDarkColor.class, TCNames.teDarkColorId);
         GameRegistry.registerTileEntity(TERainbowBeacon.class, TCNames.teRainbowBeaconId);
         GameRegistry.registerTileEntity(TEGlowTorch.class, "teGlowTorch");
+        GameRegistry.registerTileEntity(TERainbow.class, "teRainbow");
     }
 
 }

@@ -2,7 +2,7 @@ package kkaylium.mods.TechliumCraft.proxy;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import kkaylium.mods.TechliumCraft.init.TCInits;
+import kkaylium.mods.TechliumCraft.blocks.advanced.RenderRainbow;
 import kkaylium.mods.TechliumCraft.mobs.*;
 import kkaylium.mods.TechliumCraft.mobs.DarkSlime.ModelDarkSlime;
 import kkaylium.mods.TechliumCraft.mobs.DarkSlime.RenderDarkSlime;
@@ -15,9 +15,8 @@ import kkaylium.mods.TechliumCraft.mobs.RainbowSlime.RenderRainbowSlime;
 import kkaylium.mods.TechliumCraft.mobs.RainbowTurtle.ModelRainbowTurtle;
 import kkaylium.mods.TechliumCraft.mobs.RainbowTurtle.RenderRainbowTurtle;
 import kkaylium.mods.TechliumCraft.tileentities.TEGlowTorch;
-import kkaylium.mods.TechliumCraft.util.RenderGlowTorch;
-import kkaylium.mods.TechliumCraft.util.CustomItemRenderer;
-import net.minecraftforge.client.MinecraftForgeClient;
+import kkaylium.mods.TechliumCraft.tileentities.TERainbow;
+import kkaylium.mods.TechliumCraft.blocks.advanced.RenderGlowTorch;
 
 /**
  * Created by Kayla Marie on 7/26/14.
@@ -47,5 +46,6 @@ public class ClientProxy extends CommonProxy {
 
     public void renderBlocks(){
         ClientRegistry.bindTileEntitySpecialRenderer(TEGlowTorch.class, new RenderGlowTorch());
+        ClientRegistry.bindTileEntitySpecialRenderer(TERainbow.class, new RenderRainbow());
     }
 }

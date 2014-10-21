@@ -157,6 +157,7 @@ public class TCInits {
     public static Block rainbowFire;
 
     public static Block glowTorch;
+    public static Block rainbow;
 
     public static Block glowTNT;
     public static Block darkTNT;

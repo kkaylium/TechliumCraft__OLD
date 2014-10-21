@@ -57,6 +57,8 @@ public class TCNames {
 
     public static String rainbowFireName = "rainbowfire";
 
+    public static String rainbowName = "rainbow";
+
     public static String glowPickaxeName = "glowpickaxe";
     public static String darkPickaxeName = "darkpickaxe";
     public static String glowSwordName = "glowsword";
