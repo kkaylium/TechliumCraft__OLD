@@ -20,7 +20,7 @@ public class ArmorGlowHelm extends ItemArmor {
         super(material, renderer, armorPiece);
         this.setCreativeTab(TechliumCraft.TCTab);
         this.setUnlocalizedName(TCNames.glowArmorName + "_helm");
-        this.setTextureName(TCInfo.MOD_ID + ":armor/glowarmor");
+        this.setTextureName(TCInfo.MOD_ID + ":armor/glowHelm");
     }
 
     @Override
