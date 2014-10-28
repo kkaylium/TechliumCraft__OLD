@@ -78,9 +78,6 @@ public class BlockGGlass extends BlockContainer {
         EntityItem entityCrystal;
         if(te instanceof TileEntityGlow && ((TileEntityGlow) te).color != TCInfo.glow_colors[0][0]){
             entityCrystal = new EntityItem(world, (double)x, (double)y, (double)z, new ItemStack(((TileEntityGlow)te).crystalsToDrop));
-            if(((TileEntityGlow)te).crystalsToDropSecondary != null){
-                entityCrystal = new EntityItem(world, (double)x, (double)y, (double)z, new ItemStack(((TileEntityGlow)te).crystalsToDropSecondary));
-            }
             world.spawnEntityInWorld(entityCrystal);
         }
         world.removeBlockTileEntity(x, y, z);
