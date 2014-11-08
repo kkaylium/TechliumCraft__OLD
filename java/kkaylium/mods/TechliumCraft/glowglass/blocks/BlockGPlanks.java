@@ -7,6 +7,7 @@ import kkaylium.mods.TechliumCraft.glowglass.info.GGInfo;
 import kkaylium.mods.TechliumCraft.glowglass.tileentities.TileEntityGlow;
 import kkaylium.mods.TechliumCraft.main.TechliumCraft;
 import kkaylium.mods.TechliumCraft.main.info.TCInfo;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -19,15 +20,20 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Created by kkaylium on 10/26/14.
+ * Created by kkaylium on 11/5/14.
  */
-public class BlockGGlass extends BlockContainer {
+public class BlockGPlanks extends BlockContainer {
 
-    public BlockGGlass(int id, Material material){
+    public BlockGPlanks(int id, Material material){
         super(id, material);
         this.setCreativeTab(TechliumCraft.GGTab);
-        this.setHardness(0.5F);
         this.setLightValue(0.5F);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister iconregister) {
+        blockIcon = iconregister.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_planks_name);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9){
@@ -86,34 +92,6 @@ public class BlockGGlass extends BlockContainer {
             world.spawnEntityInWorld(entityCrystal);
         }
         world.removeBlockTileEntity(x, y, z);
-    }
-
-    public void registerIcons(IconRegister ir){
-        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":glass/" + GGInfo.glow_glass_name);
-    }
-
-//    @SideOnly(Side.CLIENT)
-//    public Icon getIcon(int side, int meta){
-//        return null;
-//    }
-
-    @Override
-    public int getRenderBlockPass() {
-        return 0;
-    }
-
-    @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-
-    protected boolean canSilkHarvest() {
-        return true;
     }
 
     @Override

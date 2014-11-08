@@ -5,26 +5,22 @@ import cpw.mods.fml.relauncher.SideOnly;
 import kkaylium.mods.TechliumCraft.main.TechliumCraft;
 import kkaylium.mods.TechliumCraft.main.info.TCInfo;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
+import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.item.ItemSpade;
 
 /**
- * Created by kkaylium on 10/26/14.
+ * Created by kkaylium on 11/6/14.
  */
-public class ItemGCrystal extends Item {
+public class ItemGShovel extends ItemSpade {
 
-    private int color;
-    private String[] colorNames = {"RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE", "BLACK", "BROWN", "WHITE"};
-
-    public ItemGCrystal(int id, int setColor){
-        super(id);
+    public ItemGShovel(int par1, EnumToolMaterial enumToolMaterial) {
+        super(par1, enumToolMaterial);
         this.setCreativeTab(TechliumCraft.GGTab);
-        color = setColor;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconregister) {
-        itemIcon = iconregister.registerIcon(TCInfo.MOD_ID + ":" + "glowcrystal_" + colorNames[color]);
+        itemIcon = iconregister.registerIcon(TCInfo.MOD_ID + ":" + "glowshovel");
     }
-
 }

@@ -19,15 +19,16 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 /**
- * Created by kkaylium on 10/26/14.
+ * Created by kkaylium on 10/28/14.
  */
-public class BlockGGlass extends BlockContainer {
+public class BlockGBlock extends BlockContainer {
 
-    public BlockGGlass(int id, Material material){
+    public BlockGBlock(int id, Material material){
         super(id, material);
         this.setCreativeTab(TechliumCraft.GGTab);
-        this.setHardness(0.5F);
         this.setLightValue(0.5F);
+        this.setHardness(1.5F);
+        this.setResistance(5.0F);
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9){
@@ -89,31 +90,7 @@ public class BlockGGlass extends BlockContainer {
     }
 
     public void registerIcons(IconRegister ir){
-        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":glass/" + GGInfo.glow_glass_name);
-    }
-
-//    @SideOnly(Side.CLIENT)
-//    public Icon getIcon(int side, int meta){
-//        return null;
-//    }
-
-    @Override
-    public int getRenderBlockPass() {
-        return 0;
-    }
-
-    @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-
-    protected boolean canSilkHarvest() {
-        return true;
+        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_block_name);
     }
 
     @Override

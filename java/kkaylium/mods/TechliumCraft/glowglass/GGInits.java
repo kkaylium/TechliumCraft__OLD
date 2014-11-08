@@ -22,18 +22,11 @@ public class GGInits {
     public static Block GSapling;
     public static Block GStone;
     public static Block GDirt;
-    public static Block GOres;
-    public static Block GOres_RED;
-    public static Block GOres_ORANGE;
-    public static Block GOres_YELLOW;
-    public static Block GOres_GREEN;
-    public static Block GOres_BLUE;
-    public static Block GOres_PURPLE;
-    public static Block GOres_BLACK;
-    public static Block GOres_WHITE;
+    public static Block GOre;
 
     //GGItems
-    public static Item GCrystal;
+    public static Item GRawCrystal;
+
     public static Item GCrystal_RED;
     public static Item GCrystal_ORANGE;
     public static Item GCrystal_YELLOW;
@@ -44,5 +37,18 @@ public class GGInits {
     public static Item GCrystal_BROWN;
     public static Item GCrystal_WHITE;
     public static Item GRainbowCrystal;
+
+    public static Item GTool_SWORD;
+    public static Item GTool_PICKAXE;
+    public static Item GTool_AXE;
+    public static Item GTool_SHOVEL;
+    public static Item GTool_HOE;
+
+    public static Item RTool_SWORD;
+    public static Item RTool_PICKAXE;
+    public static Item RTool_AXE;
+    public static Item RTool_SHOVEL;
+    public static Item RTool_HOE;
+
     public static Item GStick;
 }

@@ -7,6 +7,7 @@ import kkaylium.mods.TechliumCraft.glowglass.info.GGInfo;
 import kkaylium.mods.TechliumCraft.glowglass.tileentities.TileEntityGlow;
 import kkaylium.mods.TechliumCraft.main.TechliumCraft;
 import kkaylium.mods.TechliumCraft.main.info.TCInfo;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -15,19 +16,32 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-/**
- * Created by kkaylium on 10/26/14.
- */
-public class BlockGGlass extends BlockContainer {
+import java.util.Random;
 
-    public BlockGGlass(int id, Material material){
+/**
+ * Created by kkaylium on 11/5/14.
+ */
+public class BlockGLog extends BlockContainer {
+
+    @SideOnly(Side.CLIENT)
+    private Icon iconLogTop;
+    @SideOnly(Side.CLIENT)
+    private Icon iconLogBottom;
+
+    public BlockGLog(int id, Material material){
         super(id, material);
         this.setCreativeTab(TechliumCraft.GGTab);
-        this.setHardness(0.5F);
         this.setLightValue(0.5F);
+    }
+
+    public void registerIcons(IconRegister ir){
+        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_log_name);
+        this.iconLogTop = ir.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_log_name + "_top");
+        this.iconLogBottom = ir.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_log_name + "_top");
     }
 
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9){
@@ -88,31 +102,51 @@ public class BlockGGlass extends BlockContainer {
         world.removeBlockTileEntity(x, y, z);
     }
 
-    public void registerIcons(IconRegister ir){
-        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":glass/" + GGInfo.glow_glass_name);
+    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9){
+        int j1 = par9 & 3;
+        byte b0 = 0;
+        switch (par5){
+            case 0:
+            case 1:
+                b0 = 0;
+                break;
+            case 2:
+            case 3:
+                b0 = 8;
+                break;
+            case 4:
+            case 5:
+                b0 = 4;
+        }
+        return j1 | b0;
     }
 
-//    @SideOnly(Side.CLIENT)
-//    public Icon getIcon(int side, int meta){
-//        return null;
-//    }
+    /**
+     * Returns the ID of the items to drop on destruction.
+     */
+    public int idDropped(int par1, Random par2Random, int par3){
+        return this.blockID;
+    }
+    /**
+     * Returns the quantity of items to drop on block destruction.
+     */
+    public int quantityDropped(Random par1Random){
+        return 1;
+    }
+
+    /** gets the icon **/
+    public Icon getIcon(int par1, int par2){
+        return par1 == 1 ? this.iconLogTop : (par1 == 0 ? this.iconLogBottom : this.blockIcon);
+    }
+
 
     @Override
-    public int getRenderBlockPass() {
-        return 0;
+    public boolean canSustainLeaves(World world, int x, int y, int z){
+        return true;
     }
 
     @Override
-    public boolean isOpaqueCube() {
-        return false;
-    }
-
-    @Override
-    public boolean renderAsNormalBlock() {
-        return false;
-    }
-
-    protected boolean canSilkHarvest() {
+    public boolean isWood(World world, int x, int y, int z){
         return true;
     }
 
@@ -120,4 +154,6 @@ public class BlockGGlass extends BlockContainer {
     public TileEntity createNewTileEntity(World world) {
         return new TileEntityGlow();
     }
+
+
 }

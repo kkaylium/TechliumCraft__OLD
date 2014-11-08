@@ -8,23 +8,18 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
 /**
- * Created by kkaylium on 10/26/14.
+ * Created by kkaylium on 11/4/14.
  */
-public class ItemGCrystal extends Item {
+public class ItemRainbowCrystal extends Item {
 
-    private int color;
-    private String[] colorNames = {"RED", "ORANGE", "YELLOW", "GREEN", "BLUE", "PURPLE", "BLACK", "BROWN", "WHITE"};
-
-    public ItemGCrystal(int id, int setColor){
+    public ItemRainbowCrystal(int id){
         super(id);
         this.setCreativeTab(TechliumCraft.GGTab);
-        color = setColor;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconregister) {
-        itemIcon = iconregister.registerIcon(TCInfo.MOD_ID + ":" + "glowcrystal_" + colorNames[color]);
+        itemIcon = iconregister.registerIcon(TCInfo.MOD_ID + ":" + "glowcrystal_RAINBOW");
     }
-
 }
