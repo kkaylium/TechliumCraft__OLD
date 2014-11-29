@@ -29,13 +29,13 @@ public class BlockRainbow extends BlockContainer {
         this.blockIcon = icon.registerIcon("");
     }
 
-    public int onBlockPlaced(World world, int x, int y, int z, int unkn, float xf, float yf, float zf, int unkn2)
-    {
-        TERainbow te = (TERainbow)world.getTileEntity(x, y, z);
-        if(te.direction == 0 || te.direction == 2) GL11.glRotatef(te.direction * (-90), 0.0F, te.direction * (-90), 1f);
-        if(te.direction == 1 || te.direction == 3) GL11.glRotatef(te.direction * (90), 0.0F, te.direction * (-90), 1f);
-        return unkn2;
-    }
+//    public int onBlockPlaced(World world, int x, int y, int z, int unkn, float xf, float yf, float zf, int unkn2)
+//    {
+//        TERainbow te = (TERainbow)world.getTileEntity(x, y, z);
+//        if(te.direction == 0 || te.direction == 2) GL11.glRotatef(te.direction * (-90), 0.0F, te.direction * (-90), 1f);
+//        if(te.direction == 1 || te.direction == 3) GL11.glRotatef(te.direction * (90), 0.0F, te.direction * (-90), 1f);
+//        return unkn2;
+//    }
 
     @Override
     public int getRenderType() {

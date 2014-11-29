@@ -1,5 +1,6 @@
 package kkaylium.mods.TechliumCraft.creativetabs;
 
+import kkaylium.mods.TechliumCraft.glowglass.GGInits;
 import kkaylium.mods.TechliumCraft.init.TCInits;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,6 +16,6 @@ public class TechliumCraftTab extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return Item.getItemFromBlock(TCInits.glowCrystalStorage_PINK);
+        return Item.getItemFromBlock(GGInits.GBlock);
     }
 }
