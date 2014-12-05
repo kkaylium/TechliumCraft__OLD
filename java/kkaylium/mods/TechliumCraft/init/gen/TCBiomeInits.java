@@ -21,17 +21,4 @@ public class TCBiomeInits {
     public static BiomeGenBase GlowBiome_LILAC = (new BiomeGlow(89, 0xB86BFF, TCInits.glowDirt_LILAC)).setBiomeName("Glow Biome: Lilac");
     public static BiomeGenBase GlowBiome_PURPLE = (new BiomeGlow(90, 0x3D0066, TCInits.glowDirt_PURPLE)).setBiomeName("Glow Biome: Purple");
     public static BiomeGenBase GlowBiome_PINK = (new BiomeGlow(91, 0xDB0066, TCInits.glowDirt_PINK)).setBiomeName("Glow Biome: Pink");
-
-    //public static BiomeGenBase[] biomesCopy;
-
-    public static void initBiomes(){
-
-//        try{
-//            Field biomesField = BiomeGenBase.class.getDeclaredField("biomeList");
-//            biomesField.setAccessible(true);
-//            biomesCopy = ((BiomeGenBase[])biomesField.get(null)).clone();
-//        }catch(Exception e){
-//        }
-
-    }
 }

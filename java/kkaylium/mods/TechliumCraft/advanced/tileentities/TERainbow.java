@@ -1,4 +1,4 @@
-package kkaylium.mods.TechliumCraft.tileentities;
+package kkaylium.mods.TechliumCraft.advanced.tileentities;
 
 import net.minecraft.tileentity.TileEntity;
 

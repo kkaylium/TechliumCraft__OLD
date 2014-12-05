@@ -20,7 +20,6 @@ import kkaylium.mods.TechliumCraft.glowglass.gui.GuiHandler;
 import kkaylium.mods.TechliumCraft.glowglass.info.GGRecipes;
 import kkaylium.mods.TechliumCraft.handlers.ConfigHandler;
 import kkaylium.mods.TechliumCraft.init.gen.TCBiomeInits;
-import kkaylium.mods.TechliumCraft.init.recipes.TCRecipes;
 import kkaylium.mods.TechliumCraft.lib.TCInfo;
 import kkaylium.mods.TechliumCraft.glowglass.mobs.*;
 import kkaylium.mods.TechliumCraft.proxy.CommonProxy;
@@ -82,7 +81,6 @@ public class TechliumCraft {
         EntityRegistry.addSpawn(EntityRainbowTurtle.class, 5, 2, 3, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
 
         GameRegistry.registerWorldGenerator(new GOreGen(), 3);
-        TCBiomeInits.initBiomes();
 
         GGRecipes.initGGRecipes();
         //TCRecipes.initRecipes();

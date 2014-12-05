@@ -1,7 +1,8 @@
-package kkaylium.mods.TechliumCraft.blocks.advanced;
+package kkaylium.mods.TechliumCraft.advanced.renderers;
 
+import kkaylium.mods.TechliumCraft.advanced.models.ModelRainbow;
 import kkaylium.mods.TechliumCraft.lib.TCInfo;
-import kkaylium.mods.TechliumCraft.tileentities.TERainbow;
+import kkaylium.mods.TechliumCraft.advanced.tileentities.TERainbow;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;

@@ -2,7 +2,6 @@ package kkaylium.mods.TechliumCraft.blocks.advanced;
 
 import kkaylium.mods.TechliumCraft.lib.TCInfo;
 import kkaylium.mods.TechliumCraft.tileentities.TEGlowTorch;
-import kkaylium.mods.TechliumCraft.tileentities.TERainbow;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;

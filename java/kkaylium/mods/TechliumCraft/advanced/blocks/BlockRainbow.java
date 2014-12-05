@@ -1,17 +1,13 @@
-package kkaylium.mods.TechliumCraft.blocks.advanced;
+package kkaylium.mods.TechliumCraft.advanced.blocks;
 
 import kkaylium.mods.TechliumCraft.TechliumCraft;
 import kkaylium.mods.TechliumCraft.lib.TCNames;
-import kkaylium.mods.TechliumCraft.tileentities.TERainbow;
+import kkaylium.mods.TechliumCraft.advanced.tileentities.TERainbow;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import org.lwjgl.opengl.GL11;
 
 /**
  * Created by Kayla Marie on 10/20/14.

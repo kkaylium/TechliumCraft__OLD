@@ -1,4 +1,4 @@
-package kkaylium.mods.TechliumCraft.blocks.advanced;
+package kkaylium.mods.TechliumCraft.advanced.models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
