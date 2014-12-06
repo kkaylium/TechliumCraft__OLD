@@ -10,7 +10,6 @@ import kkaylium.mods.TechliumCraft.glowglass.mobs.rainbowslime.RenderRainbowSlim
 import kkaylium.mods.TechliumCraft.glowglass.mobs.rainbowturtle.ModelRainbowTurtle;
 import kkaylium.mods.TechliumCraft.glowglass.mobs.rainbowturtle.RenderRainbowTurtle;
 import kkaylium.mods.TechliumCraft.advanced.tileentities.TERainbow;
-import kkaylium.mods.TechliumCraft.blocks.advanced.RenderGlowTorch;
 
 /**
  * Created by Kayla Marie on 7/26/14.
@@ -32,7 +31,7 @@ public class ClientProxy extends CommonProxy {
     }
 
     public void renderItems(){
-        //MinecraftForgeClient.registerItemRenderer(TCInits.glowPickaxe, new CustomItemRenderer());
+
     }
 
     public void renderBlocks(){

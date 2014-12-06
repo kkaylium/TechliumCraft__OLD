@@ -3,9 +3,8 @@ package kkaylium.mods.TechliumCraft.gen.glowdimension.biomes;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import kkaylium.mods.TechliumCraft.gen.structures.StructureRainbow;
-import kkaylium.mods.TechliumCraft.gen.tree.DarkTreeGen;
-import kkaylium.mods.TechliumCraft.gen.tree.GlowTreeGen;
-import kkaylium.mods.TechliumCraft.mobs.*;
+import kkaylium.mods.TechliumCraft.glowglass.mobs.EntityRainbowSlime;
+import kkaylium.mods.TechliumCraft.glowglass.mobs.EntityRainbowTurtle;
 import net.minecraft.block.Block;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityMooshroom;
@@ -50,9 +49,6 @@ public class BiomeGlow extends BiomeGenBase {
         spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 6, 5, 5));
         spawnableCreatureList.add(new SpawnListEntry(EntityRainbowSlime.class, 7, 20, 20));
         spawnableCreatureList.add(new SpawnListEntry(EntityRainbowTurtle.class, 8, 20, 20));
-        spawnableCreatureList.add(new SpawnListEntry(EntityDarkSlime.class, 9, 20, 20));
-        spawnableCreatureList.add(new SpawnListEntry(EntityDarkTurtle.class, 10, 20, 20));
-        spawnableCreatureList.add(new SpawnListEntry(EntityPinkSnowman.class, 11, 5, 5));
     }
 
     public void decorate(World par1World, Random par2Random, int par3, int par4)
@@ -64,11 +60,11 @@ public class BiomeGlow extends BiomeGenBase {
             int k = par3 + par2Random.nextInt(16) + 8;
             int l = par4 + par2Random.nextInt(16) + 8;
             StructureRainbow structureRainbow = new StructureRainbow();
-            GlowTreeGen glowTreeGen = new GlowTreeGen();
-            DarkTreeGen darkTreeGen = new DarkTreeGen();
+//            GlowTreeGen glowTreeGen = new GlowTreeGen();
+//            DarkTreeGen darkTreeGen = new DarkTreeGen();
             structureRainbow.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
-            glowTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
-            darkTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+//            glowTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
+//            darkTreeGen.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
         }
         if (par2Random.nextInt(16) == 2)
         {

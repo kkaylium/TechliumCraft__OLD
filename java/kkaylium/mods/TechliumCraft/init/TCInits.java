@@ -1,7 +1,5 @@
 package kkaylium.mods.TechliumCraft.init;
 
-import kkaylium.mods.TechliumCraft.blocks.BlockDarkSapling;
-import kkaylium.mods.TechliumCraft.blocks.BlockGlowSapling;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
@@ -148,8 +146,8 @@ public class TCInits {
     public static Block darkLeaves;
     public static Block darkGenLeaves;
 
-    public static BlockGlowSapling glowSapling;
-    public static BlockDarkSapling darkSapling;
+    //public static BlockGlowSapling glowSapling;
+    //public static BlockDarkSapling darkSapling;
 
     public static Block glowPortal;
     public static Block rainbowBeacon;

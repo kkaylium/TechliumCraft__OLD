@@ -5,7 +5,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import kkaylium.mods.TechliumCraft.TechliumCraft;
 import kkaylium.mods.TechliumCraft.lib.TCInfo;
 import kkaylium.mods.TechliumCraft.lib.TCNames;
-import kkaylium.mods.TechliumCraft.tileentities.TEGlowColor;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.ITileEntityProvider;
