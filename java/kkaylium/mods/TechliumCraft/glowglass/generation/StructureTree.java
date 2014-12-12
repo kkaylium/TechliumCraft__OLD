@@ -1,5 +1,6 @@
 package kkaylium.mods.TechliumCraft.glowglass.generation;
 
+import kkaylium.mods.TechliumCraft.glowglass.GGInits;
 import kkaylium.mods.TechliumCraft.init.TCInits;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
@@ -91,7 +92,7 @@ public class StructureTree extends WorldGenTrees {
                                     Block block1 = par1World.getBlock(i2, k1, k2);
 
                                     if (block1.isAir(par1World, i2, k1, k2) || block1.isLeaves(par1World, i2, k1, k2)) {
-                                        this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, TCInits.glowGenLeaves, 0);
+                                        this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, GGInits.GGenLeaves, 0);
                                     }
                                 }
                             }
@@ -101,8 +102,9 @@ public class StructureTree extends WorldGenTrees {
                     for (k1 = 0; k1 < l; ++k1) {
                         block = par1World.getBlock(par3, par4 + k1, par5);
 
-                        if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5) || block == TCInits.glowSapling) {
-                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, TCInits.glowLog, 0);
+                        //add the || block == GGInits.glowSapling later
+                        if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5)) {
+                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, GGInits.GLog, 0);
                         }
                     }
 
@@ -122,7 +124,8 @@ public class StructureTree extends WorldGenTrees {
         return isGlowTreeBlock(block) || super.isReplaceable(world, x, y, z);
     }
 
+    //add the || block == GGInits.glowSapling later
     private boolean isGlowTreeBlock(Block block) {
-        return block == TCInits.glowGenLeaves || block == TCInits.glowLog || block == TCInits.glowSapling;
+        return block == GGInits.GGenLeaves || block == GGInits.GLog;
     }
 }
