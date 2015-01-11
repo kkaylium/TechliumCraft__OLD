@@ -15,6 +15,8 @@ public class GlowGlass {
     public static void initGGBlocks(){
         GGInits.GGlass = new BlockGGlass(Material.glass).setBlockName(GGInfo.glow_glass_name);
             GameRegistry.registerBlock(GGInits.GGlass, GGInfo.glow_glass_name);
+        GGInits.FGlass = new BlockFancyGlass(Material.glass).setBlockName(GGInfo.fancy_glass_name);
+            GameRegistry.registerBlock(GGInits.FGlass, GGInfo.fancy_glass_name);
         GGInits.GBlock = new BlockGBlock(Material.rock).setBlockName(GGInfo.glow_block_name);
             GameRegistry.registerBlock(GGInits.GBlock, GGInfo.glow_block_name);
         GGInits.GFence = new BlockGFence(Material.glass).setBlockName(GGInfo.glow_fence_name);
@@ -27,6 +29,8 @@ public class GlowGlass {
             GameRegistry.registerBlock(GGInits.GLog, GGInfo.glow_log_name);
         GGInits.GPlank = new BlockGPlanks(Material.wood).setBlockName(GGInfo.glow_planks_name);
             GameRegistry.registerBlock(GGInits.GPlank, GGInfo.glow_planks_name);
+        GGInits.GSapling = new BlockGSapling().setBlockName(GGInfo.glow_sapling_name);
+            GameRegistry.registerBlock(GGInits.GSapling, GGInfo.glow_sapling_name);
     }
 
     public static void initGGItems(){

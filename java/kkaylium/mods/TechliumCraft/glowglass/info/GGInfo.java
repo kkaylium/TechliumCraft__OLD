@@ -9,6 +9,8 @@ public class GGInfo {
     public static String glow_block_igname = "Glow Block";
     public static String glow_glass_name = "glowglass";
     public static String glow_glass_igname = "Glow Glass";
+    public static String fancy_glass_name = "fancyglass";
+    public static String super_fancy_glass_name = "superfancyglass";
     public static String glow_fence_name = "glowfence";
     public static String glow_fence_igname = "Glow Fence";
     public static String glow_gate_name = "glowgate";
@@ -23,6 +25,8 @@ public class GGInfo {
     public static String glow_planks_igname = "Glow Planks";
     public static String glow_stick_name = "glowstick";
     public static String glow_stick_igname = "Glow Stack";
+    public static String glow_sapling_name = "glowsapling";
+    public static String getGlow_sapling_igname = "Glow Sapling";
 
     public static String glow_crystal_name = "glowcrystal";
     public static String glow_crystal_igname = "Glow Crystal";

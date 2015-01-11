@@ -11,6 +11,8 @@ public class GGInits {
     //GGBlocks
     public static Block GLight;
     public static Block GBlock;
+    public static Block FGlass;
+    public static Block SFGlass;
     public static Block GGlass;
     public static Block GFence;
     public static Block GGate;
@@ -19,10 +21,10 @@ public class GGInits {
     public static Block GPlank;
     public static Block GLeaves;
     public static Block GGenLeaves;
-    public static Block GSapling;
     public static Block GStone;
     public static Block GDirt;
     public static Block GOre;
+    public static Block GSapling;
 
     //GGItems
     public static Item GRawCrystal;

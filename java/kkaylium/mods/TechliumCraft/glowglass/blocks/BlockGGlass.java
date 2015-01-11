@@ -7,6 +7,7 @@ import kkaylium.mods.TechliumCraft.glowglass.GGInits;
 import kkaylium.mods.TechliumCraft.glowglass.info.GGInfo;
 import kkaylium.mods.TechliumCraft.glowglass.tileentities.TileEntityGlow;
 import kkaylium.mods.TechliumCraft.lib.TCInfo;
+import kkaylium.mods.TechliumCraft.util.ConnectedTextureHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -16,6 +17,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -23,6 +25,9 @@ import net.minecraft.world.World;
  * Created by kkaylium on 10/26/14.
  */
 public class BlockGGlass extends BlockContainer {
+
+    public static final int NUMBER_OF_ICONS = 47;
+    protected IIcon[] icons = new IIcon[NUMBER_OF_ICONS];
 
     public BlockGGlass(Material material){
         super(material);
@@ -89,8 +94,30 @@ public class BlockGGlass extends BlockContainer {
         world.removeTileEntity(x, y, z);
     }
 
-    public void registerBlockIcons(IIconRegister ir){
-        this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":glass/" + GGInfo.glow_glass_name);
+    @Override
+    public void registerBlockIcons(IIconRegister ir) {
+        blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":basicglass/glass_0");
+
+        for( int i = 0; i < NUMBER_OF_ICONS; i++ )
+        {
+            icons[i] = ir.registerIcon(TCInfo.MOD_ID + ":basicglass/glass_" + i);
+        }
+    }
+
+
+    @Override
+    public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side) {
+        Block b1 = blockAccess.getBlock(x, y, z);
+        if (b1 == this || b1 == GGInits.GGlass) {
+            return false;
+        }
+        return super.shouldSideBeRendered(blockAccess, x, y, z, side);
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public IIcon getIcon(IBlockAccess blockAccess, int x, int y, int z, int side) {
+        return blockAccess.getBlockMetadata(x, y, z) == 15 ? icons[0] : ConnectedTextureHelper.getConnectedBlockTexture(blockAccess, x, y, z, side, icons, this);
     }
 
     @Override

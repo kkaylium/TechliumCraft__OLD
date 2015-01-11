@@ -21,4 +21,20 @@ public class BlockGLeaves extends Block {
     public void registerBlockIcons(IIconRegister ir){
         this.blockIcon = ir.registerIcon(TCInfo.MOD_ID + ":" + GGInfo.glow_leaves_name);
     }
+
+    @Override
+    public int getRenderBlockPass() {
+        return 0;
+    }
+
+    @Override
+    public boolean isOpaqueCube() {
+        return false;
+    }
+
+    @Override
+    public boolean renderAsNormalBlock() {
+        return false;
+    }
+
 }

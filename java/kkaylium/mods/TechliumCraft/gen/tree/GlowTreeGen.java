@@ -1,5 +1,6 @@
 package kkaylium.mods.TechliumCraft.gen.tree;
 
+import kkaylium.mods.TechliumCraft.glowglass.GGInits;
 import kkaylium.mods.TechliumCraft.init.TCInits;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
@@ -91,7 +92,7 @@ public class GlowTreeGen extends WorldGenTrees {
                                     Block block1 = par1World.getBlock(i2, k1, k2);
 
                                     if (block1.isAir(par1World, i2, k1, k2) || block1.isLeaves(par1World, i2, k1, k2)) {
-                                        this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, TCInits.glowGenLeaves, 0);
+                                        this.setBlockAndNotifyAdequately(par1World, i2, k1, k2, GGInits.GLeaves, 0);
                                     }
                                 }
                             }
@@ -101,8 +102,8 @@ public class GlowTreeGen extends WorldGenTrees {
                     for (k1 = 0; k1 < l; ++k1) {
                         block = par1World.getBlock(par3, par4 + k1, par5);
 
-                        if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5) || block == TCInits.glowSapling) {
-                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, TCInits.glowLog, 0);
+                        if (block.isAir(par1World, par3, par4 + k1, par5) || block.isLeaves(par1World, par3, par4 + k1, par5) || block == GGInits.GSapling) {
+                            this.setBlockAndNotifyAdequately(par1World, par3, par4 + k1, par5, GGInits.GLog, 0);
                         }
                     }
 
@@ -123,6 +124,6 @@ public class GlowTreeGen extends WorldGenTrees {
     }
 
     private boolean isGlowTreeBlock(Block block) {
-        return block == TCInits.glowGenLeaves || block == TCInits.glowLog || block == TCInits.glowSapling;
+        return block == GGInits.GLeaves || block ==GGInits.GLog || block == GGInits.GSapling;
     }
 }
