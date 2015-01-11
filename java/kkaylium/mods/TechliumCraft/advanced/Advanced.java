@@ -1,6 +1,7 @@
 package kkaylium.mods.TechliumCraft.advanced;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import kkaylium.mods.TechliumCraft.advanced.blocks.BlockRainbow;
 import kkaylium.mods.TechliumCraft.advanced.liquids.DarkLiquid;
 import kkaylium.mods.TechliumCraft.advanced.liquids.FluidDark;
 import kkaylium.mods.TechliumCraft.advanced.liquids.FluidGlow;
@@ -26,5 +27,8 @@ public class Advanced {
 
         AdvancedInits.darkFluidBlock = new DarkLiquid().setBlockName("fluidblock_dark");
         GameRegistry.registerBlock(AdvancedInits.darkFluidBlock, "fluidblock_dark");
+
+        AdvancedInits.rainbow = new BlockRainbow().setBlockName("rainbow");
+        GameRegistry.registerBlock(AdvancedInits.rainbow, "rainbow");
     }
 }

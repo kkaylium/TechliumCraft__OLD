@@ -8,6 +8,8 @@ import net.minecraftforge.fluids.Fluid;
  */
 public class AdvancedInits {
 
+    public static Block rainbow;
+
     public static Fluid glowFluid;
     public static Fluid darkFluid;
 
